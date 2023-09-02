@@ -3,6 +3,7 @@ plugins:
 - jekyll-remote-theme
 - jekyll-redirect-from
 - jekyll-feed
+- jekyll-sitemap
 logo: /assets/img/logo.png
 title: Collin M Barrett
 tagline: Senior Software Engineer | Memphis, TN
