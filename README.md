@@ -1,5 +1,9 @@
-# collinbarrett.github.io
-A simple static GitHub Pages portfolio to replace my old WordPress site
+---
+layout: default
+title: Home
+---
+
+# Collin M. Barrett
 
 ## Blog
 
