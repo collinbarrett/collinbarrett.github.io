@@ -1,0 +1,30 @@
+---
+layout: null
+title: 404 Not Found
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  {% include head-custom.html %}
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+    <h1>404: Page Not Found</h1>
+
+    <a href="{{ "/" | absolute_url }}">Collin M. Barrett Home</a>
+    <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Collin M. Barrett" /></a>
+</body>
+
+</html>
