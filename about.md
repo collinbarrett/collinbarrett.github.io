@@ -1,13 +1,15 @@
 ---
 id: 200
-title: 'Start Here'
+title: 'About'
 date: '2016-01-05T20:30:07-06:00'
 author: 'Collin M. Barrett'
 layout: default
 guid: '/?page_id=200'
 image: /assets/img/startHereCollinJenny_collinmbarrett.jpg
+permalink: /about
 redirect_from:
 - /start/
+- /start
 - /about/
 ---
 

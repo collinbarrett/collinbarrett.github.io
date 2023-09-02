@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
 ## Blog
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
