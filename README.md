@@ -5,6 +5,6 @@ A simple static GitHub Pages portfolio to replace my old WordPress site
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 {% for post in sorted_posts limit:10 %}
-* {{ post.date | date: "%Y-%m-%d" }} | [{{ post.title }}]({{ post.url }})
+* {{ post.date | date: "%Y-%m-%d" }} &#124; [{{ post.title }}]({{ post.url }})
 {% endfor %}
 * [View All](/blog)
