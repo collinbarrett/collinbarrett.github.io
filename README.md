@@ -1,8 +1,3 @@
----
-layout: default
-title: Home
----
-
 # Collin M. Barrett
 
 ## Blog
