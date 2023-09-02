@@ -1,5 +1,3 @@
-# Collin M. Barrett
-
 ## Blog
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
