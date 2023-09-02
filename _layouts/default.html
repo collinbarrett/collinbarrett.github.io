@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-  {% include head-custom.html %}
+  {% include head.html %}
 </head>
 
 <body>
@@ -28,11 +28,9 @@
       {{ content }}
 
     </section>
-    <footer>
-      <p><small>Collin M. Barrett © {{ 'now' | date: "%Y" }}</small></p>
-    </footer>
+    {% include footer.html %}
   </div>
-  <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  {% include scripts.html %}
 </body>
 
 </html>

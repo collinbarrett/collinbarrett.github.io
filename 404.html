@@ -7,7 +7,7 @@ title: Page Not Found
 <html lang="en-US">
 
 <head>
-    {% include head-custom.html %}
+    {% include head.html %}
     <style>
         body {
             display: flex;
@@ -26,12 +26,16 @@ title: Page Not Found
 </head>
 
 <body>
-    <h1>Page Not Found</h1>
-    <p>
-        <a href="{{ "/" | absolute_url }}">
-            <img src="{{site.logo | relative_url}}" alt="Collin M. Barrett" />
-        </a>
-    </p>
+    <div class="wrapper">
+        <h1>Page Not Found</h1>
+        <p>
+            <a href="{{ "/" | absolute_url }}">
+                <img src="{{site.logo | relative_url}}" alt="Collin M. Barrett" />
+            </a>
+        </p>
+        {% include footer.html %}
+    </div>
+    {% include scripts.html %}
 </body>
 
 </html>
