@@ -3,12 +3,12 @@
 
 @import "{{ site.theme }}";
 
-.no-bullet-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.no-bullet-ul li a img {
-    margin-right: 4px;
+.social-icons a {
+    margin: 0 5px;
 }
