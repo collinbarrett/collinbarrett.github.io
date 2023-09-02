@@ -59,7 +59,7 @@ the .woff2 mime type configured by default.
 
 <figure aria-describedby="caption-attachment-1733" class="wp-caption alignright" id="attachment_1733"
     style="width: 300px">[![Poor Example of Serving Web
-    Fonts](/assets/img/2016/02/webFontBadExample_cb-300x84.jpg)](/assets/img/2016/02/webFontBadExample_cb.jpg)
+    Fonts](/assets/img/webFontBadExample_cb-300x84.jpg)](/assets/img/webFontBadExample_cb.jpg)
     <figcaption class="wp-caption-text" id="caption-attachment-1733">**Fig. 1.** Poor Example of Serving Web Fonts
     </figcaption>
 </figure>

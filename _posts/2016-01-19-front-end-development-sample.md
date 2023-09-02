@@ -20,7 +20,7 @@ tags:
 
 <figure aria-describedby="caption-attachment-782" class="wp-caption alignright" id="attachment_782"
     style="width: 297px">[![JPG Export of PSD for Front-End Development
-    Mockup](/assets/img/2016/01/sampleFrontEndMockup_cb-297x300.jpg)](/assets/img/2016/01/sampleFrontEndMockup_cb.jpg)
+    Mockup](/assets/img/sampleFrontEndMockup_cb-297x300.jpg)](/assets/img/sampleFrontEndMockup_cb.jpg)
     <figcaption class="wp-caption-text" id="caption-attachment-782">**Fig. 1.** JPG Export of Layered PSD from Which I
         Developed My Mockup</figcaption>
 </figure>

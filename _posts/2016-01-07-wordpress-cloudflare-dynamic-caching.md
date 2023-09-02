@@ -47,7 +47,7 @@ days, though, and the numbers speak for themselves.
 
 <div class="wp-block-image">
   <figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at three U.S.
-    nodes.](/assets/img/2016/01/dynamicCachingCDN_cb-300x241.png)](/assets/img/2016/01/dynamicCachingCDN_cb.png)
+    nodes.](/assets/img/dynamicCachingCDN_cb-300x241.png)](/assets/img/dynamicCachingCDN_cb.png)
     <figcaption>**Fig. 1.** Before and after enabling full CDN dynamic caching at three U.S. nodes.</figcaption>
   </figure>
 </div>Fig. 1 shows the response times for my site from New Relic’s three U.S. nodes. It is very obvious where I flipped
@@ -55,7 +55,7 @@ the switch to full page caching, **reducing the response time at both of the Wes
 
 <div class="wp-block-image">
   <figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at all global New Relic
-    nodes.](/assets/img/2016/01/dynamicCachingCDN_01_cb-300x182.png)](/assets/img/2016/01/dynamicCachingCDN_01_cb.png)
+    nodes.](/assets/img/dynamicCachingCDN_01_cb-300x182.png)](/assets/img/dynamicCachingCDN_01_cb.png)
     <figcaption>**Fig. 2.** Before and after enabling full CDN dynamic caching at all global New Relic nodes.
     </figcaption>
   </figure>
@@ -70,7 +70,7 @@ This is all served using only a $5 [DigitalOcean](https://www.digitalocean.com/)
 <div class="wp-block-image">
   <figure class="alignright">[![Fig. 3. Load Test of 500 Clients per Sec. for 1 Min. Connecting to collinmbarrett.com
     after Dynamically Caching WordPress on
-    CloudFlare](/assets/img/2016/01/dynamicCachingCDN_02_cb-1-300x202.jpg)](/assets/img/2016/01/dynamicCachingCDN_02_cb-1.jpg)
+    CloudFlare](/assets/img/dynamicCachingCDN_02_cb-1-300x202.jpg)](/assets/img/dynamicCachingCDN_02_cb-1.jpg)
     <figcaption>**Fig. 3.** Load test of 500 clients per sec. for 1 min. connecting to collinmbarrett.com.</figcaption>
   </figure>
 </div>## Part 1. Cloudflare Page Rules

@@ -51,7 +51,7 @@ intrusion Decentraleyes is aiming to block.
 
 <figure aria-describedby="caption-attachment-1460" class="wp-caption alignright" id="attachment_1460"
     style="width: 300px">[![Decentraleyes for
-    Firefox](/assets/img/2016/02/decentraleyes02_cb-300x223.png)](/assets/img/2016/02/decentraleyes02_cb.png)<figcaption
+    Firefox](/assets/img/decentraleyes02_cb-300x223.png)](/assets/img/decentraleyes02_cb.png)<figcaption
         class="wp-caption-text" id="caption-attachment-1460">**Fig. 1.** Decentraleyes for Firefox</figcaption>
 </figure>
 
