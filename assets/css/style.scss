@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.no-bullet-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.no-bullet-ul li a img {
+    margin-right: 2px;
+}
