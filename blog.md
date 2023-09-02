@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+redirect_from: /blog/
 ---
 
 # Blog

@@ -6,7 +6,8 @@ author: 'Collin M. Barrett'
 excerpt: 'I recommend lying properly on website security questions to block hacks by data miners and phishers.'
 layout: post-wp-import
 guid: '/?p=1492'
-permalink: /good-to-lie/
+permalink: /good-to-lie
+redirect-from: /good-to-lie/
 image: /assets/img/goodToLie_collinmbarrett.jpg
 categories:
 - InfoSec

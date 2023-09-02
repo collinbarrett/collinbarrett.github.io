@@ -7,7 +7,8 @@ excerpt: 'Today is my last day as a software developer with Fred''s. I am very t
 opportunities that this role has provided.'
 layout: post-wp-import
 guid: '/?p=4765'
-permalink: /departing-freds/
+permalink: /departing-freds
+redirect-from: /departing-freds/
 image: /assets/img/fredsInc_collinmbarrett.jpg
 categories:
 - Code

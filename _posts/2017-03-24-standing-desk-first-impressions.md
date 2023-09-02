@@ -7,7 +7,8 @@ excerpt: 'After my first week using a standing desk, here are some quick first i
 mental effects.'
 layout: post-wp-import
 guid: '/?p=3840'
-permalink: /standing-desk-first-impressions/
+permalink: /standing-desk-first-impressions
+redirect-from: /standing-desk-first-impressions/
 image: /assets/img/ergotronStandingDesk2_collinmbarrett.png
 categories:
 - Code

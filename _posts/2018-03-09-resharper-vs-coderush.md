@@ -8,7 +8,8 @@ code quality in our .NET application portfolio. I jotted down some unfair observ
 ReSharper for a couple of years and CodeRush for a couple of days.'
 layout: post-wp-import
 guid: '/?p=6305'
-permalink: /resharper-vs-coderush/
+permalink: /resharper-vs-coderush
+redirect-from: /resharper-vs-coderush/
 image: /assets/img/reSharperCodeRush_collinmbarrett.jpg
 categories:
 - Code

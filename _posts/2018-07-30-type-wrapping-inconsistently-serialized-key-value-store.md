@@ -7,7 +7,8 @@ excerpt: 'Migrating CRUD operations of a key-value store with inconsistent seria
 typed POCOs in the data layer.'
 layout: post-wp-import
 guid: '/?p=7111'
-permalink: /type-wrapping-inconsistently-serialized-key-value-store/
+permalink: /type-wrapping-inconsistently-serialized-key-value-store
+redirect-from: /type-wrapping-inconsistently-serialized-key-value-store/
 image: /assets/img/typeWrappingFruit_collinmbarrett.gif
 categories:
 - Code

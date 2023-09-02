@@ -7,7 +7,8 @@ excerpt: 'I will be working on the software team for the first installation of t
 U.S. at Georgia Tech in Atlanta.'
 layout: post-wp-import
 guid: '/?p=2700'
-permalink: /thyssenkrupp-twin-elevator-georgia-tech/
+permalink: /thyssenkrupp-twin-elevator-georgia-tech
+redirect-from: /thyssenkrupp-twin-elevator-georgia-tech/
 image: /assets/img/thyssenkruppTwin_collinmbarrett.jpg
 categories:
 - Code

@@ -6,7 +6,8 @@ author: 'Collin M. Barrett'
 excerpt: 'An example of how to use the T-SQL UNPIVOT operator to transform columns to rows.'
 layout: post-wp-import
 guid: '/?p=4150'
-permalink: /t-sql-unpivoting-data/
+permalink: /t-sql-unpivoting-data
+redirect-from: /t-sql-unpivoting-data/
 image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
 - Code

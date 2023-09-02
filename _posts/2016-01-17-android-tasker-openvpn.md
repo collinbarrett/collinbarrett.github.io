@@ -7,7 +7,8 @@ excerpt: 'How to automatically connect to VPN on Android using Tasker and OpenVP
 you are connected.'
 layout: post-wp-import
 guid: '/?p=744'
-permalink: /android-tasker-openvpn/
+permalink: /android-tasker-openvpn
+redirect-from: /android-tasker-openvpn/
 image: /assets/img/androidTaskerOpenVpn_collinmbarrett.jpg
 categories:
 - InfoSec

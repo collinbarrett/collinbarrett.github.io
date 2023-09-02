@@ -7,7 +7,8 @@ excerpt: 'A verbose build guide for a modern, high-performance production WordPr
 HHVM, Redis, Let''s Encrypt.'
 layout: post-wp-import
 guid: '/?p=1011'
-permalink: /wordpress-vps-build-guide/
+permalink: /wordpress-vps-build-guide
+redirect-from: /wordpress-vps-build-guide/
 image: /assets/img/wordPressVpsBuildGuide_collinmbarrett.jpg
 categories:
 - Code

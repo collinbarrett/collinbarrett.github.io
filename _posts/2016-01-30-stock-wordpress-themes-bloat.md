@@ -6,7 +6,8 @@ author: 'Collin M. Barrett'
 excerpt: 'The why and how to removing bloat in stock WordPress themes by deregistering unused scripts and styles.'
 layout: post-wp-import
 guid: '/?p=1341'
-permalink: /stock-wordpress-themes-bloat/
+permalink: /stock-wordpress-themes-bloat
+redirect-from: /stock-wordpress-themes-bloat/
 image: /assets/img/stockWordPressThemesBloat_collinmbarrett.jpg
 categories:
 - Code

@@ -7,7 +7,8 @@ excerpt: 'I wrote a shell script triggered by cron on my DD-WRT router to automa
 server via the OpenVPN Client'
 layout: post-wp-import
 guid: '/?p=8456'
-permalink: /protonvpn-dd-wrt-api-script/
+permalink: /protonvpn-dd-wrt-api-script
+redirect-from: /protonvpn-dd-wrt-api-script/
 image: /assets/img/serverRack_collinmbarrett.jpg
 categories:
 - InfoSec

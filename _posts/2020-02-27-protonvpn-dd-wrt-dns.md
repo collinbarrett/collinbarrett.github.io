@@ -7,7 +7,8 @@ excerpt: 'I created a custom URL to connect to ProtonVPN from DD-WRT that select
 nearest city.'
 layout: post-wp-import
 guid: '/?p=7858'
-permalink: /protonvpn-dd-wrt-dns/
+permalink: /protonvpn-dd-wrt-dns
+redirect-from: /protonvpn-dd-wrt-dns/
 image: /assets/img/tunnel_collinmbarrett.jpg
 categories:
 - InfoSec

@@ -7,7 +7,8 @@ excerpt: 'I created an Azure Pipeline that automatically performs an Entity Fram
 request of modified JSON data files.'
 layout: post-wp-import
 guid: '/?p=8074'
-permalink: /entity-framework-migrations-azure-pipelines-github/
+permalink: /entity-framework-migrations-azure-pipelines-github
+redirect-from: /entity-framework-migrations-azure-pipelines-github/
 image: /assets/img/azurePipelinesEfCoreMigration_collinmbarrett.jpg
 categories:
 - Code

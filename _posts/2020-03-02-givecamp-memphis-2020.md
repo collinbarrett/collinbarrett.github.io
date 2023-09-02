@@ -7,7 +7,8 @@ excerpt: 'I deeply enjoyed joining 100+ developers and designers to build websit
 Memphis 2020.'
 layout: post-wp-import
 guid: '/?p=8084'
-permalink: /givecamp-memphis-2020/
+permalink: /givecamp-memphis-2020
+redirect-from: /givecamp-memphis-2020/
 image: /assets/img/giveCampMemphis_collinmbarrett.png
 categories:
 - Code

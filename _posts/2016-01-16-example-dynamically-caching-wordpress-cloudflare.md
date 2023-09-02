@@ -7,7 +7,8 @@ excerpt: 'The performance improvements speak for themselves in this example of d
 CloudFlare from a traditional shared hosting server.'
 layout: post-wp-import
 guid: '/?p=677'
-permalink: /example-dynamically-caching-wordpress-cloudflare/
+permalink: /example-dynamically-caching-wordpress-cloudflare
+redirect-from: /example-dynamically-caching-wordpress-cloudflare/
 image: /assets/img/exampleDynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
 - Code

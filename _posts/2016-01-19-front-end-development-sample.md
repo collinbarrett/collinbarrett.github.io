@@ -7,7 +7,8 @@ excerpt: 'A front-end development sample I created for an interview. I was provi
 render using HTML and CSS.'
 layout: post-wp-import
 guid: '/?p=780'
-permalink: /front-end-development-sample/
+permalink: /front-end-development-sample
+redirect-from: /front-end-development-sample/
 image: /assets/img/frontEndDevelopmentSampleQuanto_collinmbarrett.jpg
 categories:
 - Code

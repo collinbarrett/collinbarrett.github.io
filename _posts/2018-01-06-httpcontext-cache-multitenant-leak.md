@@ -8,7 +8,8 @@ leakage in our hosting environment. Keys must always have enough unique informat
 value.'
 layout: post-wp-import
 guid: '/?p=5058'
-permalink: /httpcontext-cache-multitenant-leak/
+permalink: /httpcontext-cache-multitenant-leak
+redirect-from: /httpcontext-cache-multitenant-leak/
 image: /assets/img/cpu_multitenantCacheLeak_collinmbarrett.jpg
 categories:
 - Code

@@ -6,7 +6,9 @@ author: 'Collin M. Barrett'
 layout: default
 guid: '/?page_id=200'
 image: /assets/img/startHereCollinJenny_collinmbarrett.jpg
-redirect_from: /start/
+redirect_from:
+- /start/
+- /about/
 ---
 
 I am a Christian, husband, and senior software engineer in Memphis, TN specializing in .NET.

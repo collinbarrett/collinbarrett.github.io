@@ -7,7 +7,8 @@ excerpt: 'A tale of improperly using a static field, preventing a colleague from
 static fields should be avoided.'
 layout: post-wp-import
 guid: '/?p=6796'
-permalink: /immortality-static-fields/
+permalink: /immortality-static-fields
+redirect-from: /immortality-static-fields/
 image: /assets/img/staticSlide_collinmbarrett.jpg
 categories:
 - Code
