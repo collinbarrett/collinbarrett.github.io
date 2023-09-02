@@ -5,11 +5,11 @@ date: '2020-03-02T07:30:00-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I deeply enjoyed joining 100+ developers and designers to build websites for 20 Memphis nonprofits at GiveCamp Memphis 2020.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=8084'
+guid: '/?p=8084'
 permalink: /givecamp-memphis-2020/
 wp_featherlight_disable:
     - ''
-image: /media/giveCampMemphis_collinmbarrett.png
+image: /assets/img/giveCampMemphis_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -23,7 +23,7 @@ tags:
 
 ## GiveCamp v2020
 
-<div class="wp-block-image"><figure class="alignright size-medium">[![GiveCamp Memphis 2020 Standup](https://collinmbarrett.com/media/giveCampMemphis2020_standup_collinmbarrett-300x258.jpg)](https://collinmbarrett.com/media/giveCampMemphis2020_standup_collinmbarrett.jpg)<figcaption>Standup Meeting</figcaption></figure></div>They did it again. The [GiveCamp Memphis](https://www.givecampmemphis.org) organizing team, in partnership with the [Memphis Technology Foundation](https://memphistechnology.org/) and [AIGA Design for Good](https://www.aiga.org/membership-community), really stepped it up for the 2020 event at the [FedEx Institute of Technology](https://www.memphis.edu/fedex/). This year seems to have been the largest event yet with well over 100 technology and design professionals volunteering and representatives from 20 area nonprofits in attendance. These numbers represent more than double the size of the other two years in which I was able to participate (2018 &amp; 2019).
+<div class="wp-block-image"><figure class="alignright size-medium">[![GiveCamp Memphis 2020 Standup](/assets/img/giveCampMemphis2020_standup_collinmbarrett-300x258.jpg)](/assets/img/giveCampMemphis2020_standup_collinmbarrett.jpg)<figcaption>Standup Meeting</figcaption></figure></div>They did it again. The [GiveCamp Memphis](https://www.givecampmemphis.org) organizing team, in partnership with the [Memphis Technology Foundation](https://memphistechnology.org/) and [AIGA Design for Good](https://www.aiga.org/membership-community), really stepped it up for the 2020 event at the [FedEx Institute of Technology](https://www.memphis.edu/fedex/). This year seems to have been the largest event yet with well over 100 technology and design professionals volunteering and representatives from 20 area nonprofits in attendance. These numbers represent more than double the size of the other two years in which I was able to participate (2018 &amp; 2019).
 
 While technologists constantly press the measurement of scale, this year’s 48-hour hackathon for charity saw improvements by all other metrics as well. Communication was succinct, yet exhaustive. Project managers (a new role this year to help scale) kept their finger on the pulse of team needs and tore down barriers as soon as we hit them. Logistics were executed transparently to the volunteers, facilitating distraction-free output from the teams. The DevOps group delivered impressively rapid and stable infrastructure support to the requirements of 20 different projects. The catering was, simply put, incredible (especially the Friday night dinner of chicken parmesan and mashed potatoes).
 
@@ -31,11 +31,11 @@ The recipient organizations walked away with an incredible amount of value to le
 
 > There is nothing about Memphis that says you can’t be wildly successful here as an individual or as an entrepreneur.
 > 
-> <cite>[Chad Fowler, TechCamp Memphis 2016](https://collinmbarrett.com/chad-fowler-memphis-technology/)</cite>
+> <cite>[Chad Fowler, TechCamp Memphis 2016](/chad-fowler-memphis-technology/)</cite>
 
 ## Team Craft
 
-<div class="wp-block-image"><figure class="alignright size-medium">[![Craft Organization Team - GiveCamp Memphis 2020](https://collinmbarrett.com/media/giveCampMemphis2020_craftOrganization_collinmbarrett-300x228.jpg)](https://collinmbarrett.com/media/giveCampMemphis2020_craftOrganization_collinmbarrett.jpg)<figcaption>Team Craft</figcaption></figure></div>I would have been very happy supporting most of the organizations that were participating, but I ended up choosing Craft Organization because they did not seem to have as many volunteers near the end of the team formation hour (think speed-“dating” while eating). I am quite glad to have met Milton Craft and this small band of volunteers.
+<div class="wp-block-image"><figure class="alignright size-medium">[![Craft Organization Team - GiveCamp Memphis 2020](/assets/img/giveCampMemphis2020_craftOrganization_collinmbarrett-300x228.jpg)](/assets/img/giveCampMemphis2020_craftOrganization_collinmbarrett.jpg)<figcaption>Team Craft</figcaption></figure></div>I would have been very happy supporting most of the organizations that were participating, but I ended up choosing Craft Organization because they did not seem to have as many volunteers near the end of the team formation hour (think speed-“dating” while eating). I am quite glad to have met Milton Craft and this small band of volunteers.
 
 Milton (a third-generation farmer) and Synolve Craft started this fairly new organization to train the urban poor on how to subsistence garden. They are inviting community members to their 9-acre farm to learn, grow, and harvest crops that can be sold or directly consumed to sustain their families. Aspiring gardeners can return to their backyards with the skill to provide a low-cost source of nutrition.
 
@@ -43,9 +43,9 @@ Milton (a third-generation farmer) and Synolve Craft started this fairly new org
 
 The Crafts had a [Wix ](https://www.wix.com/)site that was already in good shape for a new organization. However, Milton wanted to ensure that the site more clearly portrayed the message of their nonprofit and better-facilitated communication and support streams with the community.
 
-Our team of software developers and the GiveCamp Memphis community at large was more skilled with [WordPress](https://collinmbarrett.com/tag/wordpress/) than Wix, so we decided to rebuild the site from scratch. We were able to move quickly, however, since we already had a lot of great copy we could migrate over from their existing site. This decision also provided the long-term benefit of eliminating the ongoing service fees of Wix.
+Our team of software developers and the GiveCamp Memphis community at large was more skilled with [WordPress](/tag/wordpress/) than Wix, so we decided to rebuild the site from scratch. We were able to move quickly, however, since we already had a lot of great copy we could migrate over from their existing site. This decision also provided the long-term benefit of eliminating the ongoing service fees of Wix.
 
-<div class="wp-block-image"><figure class="alignright size-medium">[![New Craft Organization Homepage](https://collinmbarrett.com/media/craftOrganizationHome_collinmbarrett-113x300.jpg)](https://collinmbarrett.com/media/craftOrganizationHome_collinmbarrett-scaled.jpg)<figcaption>New Craft Organization Homepage</figcaption></figure></div>### The Homepage
+<div class="wp-block-image"><figure class="alignright size-medium">[![New Craft Organization Homepage](/assets/img/craftOrganizationHome_collinmbarrett-113x300.jpg)](/assets/img/craftOrganizationHome_collinmbarrett-scaled.jpg)<figcaption>New Craft Organization Homepage</figcaption></figure></div>### The Homepage
 
 Our teammate Amy drove down from Chicago just to attend this event. She has a background in design and took charge of capturing the vision of the Craft Organization in a compelling new homepage featuring a hero time-lapse of seedlings growing and a photo collage tied together by a root system. This element, along with a magnificent new logo by design volunteer Rod, proved to be the standout accomplishment of the project.
 
@@ -57,7 +57,7 @@ Our most significant technical hurdle was allowing the new WordPress site to sen
 
 Normally, this is not too much of a challenge. The GiveCamp DevOps team recommended using [MailJet](https://www.mailjet.com/). I have used [Mandrill](https://mailchimp.com/features/transactional-email/), [SendGrid](https://sendgrid.com/), and [Mailgun ](https://www.mailgun.com/)in the past. The free tiers on many of these platforms are more than adequate.
 
-However, since we were working on a university campus, all of these services seemed to block us or require extensive validation for us to use them. We tried MailJet, SendGrid, and [Sendinblue](https://www.sendinblue.com/) with no luck getting our account validated on a Saturday evening. Signing up through my consumer [VPN](https://collinmbarrett.com/tag/vpn/) provider did not seem to help bypass these restrictions either.
+However, since we were working on a university campus, all of these services seemed to block us or require extensive validation for us to use them. We tried MailJet, SendGrid, and [Sendinblue](https://www.sendinblue.com/) with no luck getting our account validated on a Saturday evening. Signing up through my consumer [VPN](/tag/vpn/) provider did not seem to help bypass these restrictions either.
 
 We ended up using Mr. Craft’s personal Google account to configure the new website to relay mail through Gmail. This solution required configuring an app (secrets, callbacks, etc.) in his Google Developer Console, but we were able to get it working without too much trouble, bypassing the extended validation requirements of the other providers.
 

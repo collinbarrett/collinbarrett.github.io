@@ -5,11 +5,11 @@ date: '2016-02-29T08:11:48-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'FilterLists got a bit of publicity and I began working on a new feature, learning Jekyll, PHP, and WordPress plugin development along the way.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=2004'
+guid: '/?p=2004'
 permalink: /filterlists-gorhill-jekyll-wp-plugin-php/
 wp_featherlight_disable:
     - ''
-image: /media/filterListsGorhillJekyllWpPluginPhp_collinmbarrett.jpg
+image: /assets/img/filterListsGorhillJekyllWpPluginPhp_collinmbarrett.jpg
 categories:
     - Code
 tags:

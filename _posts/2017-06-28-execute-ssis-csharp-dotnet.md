@@ -5,11 +5,11 @@ date: '2017-06-28T06:41:32-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Two methods for executing an SSIS package installed on a SQL Server instance from a C#/.NET application.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4392'
+guid: '/?p=4392'
 permalink: /execute-ssis-csharp-dotnet/
 wp_featherlight_disable:
     - ''
-image: /media/ssis_collinmbarrett.jpg
+image: /assets/img/ssis_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -70,7 +70,7 @@ ssisPackage.Execute(false, null, executionParameter);
 
 After iteratively testing through a variety of errors to get the solution above, we were then faced with one final error:
 
-<figure aria-describedby="caption-attachment-4400" class="wp-caption aligncenter" id="attachment_4400" style="width: 790px">[![SSIS Execution Error Using SQL Server Authentication](https://collinmbarrett.com/media/SsisSqlServerAuthenticationError_collinmbarrett.jpg)](https://collinmbarrett.com/media/SsisSqlServerAuthenticationError_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4400">SSIS Execution Error Using SQL Server Authentication</figcaption></figure>
+<figure aria-describedby="caption-attachment-4400" class="wp-caption aligncenter" id="attachment_4400" style="width: 790px">[![SSIS Execution Error Using SQL Server Authentication](/assets/img/SsisSqlServerAuthenticationError_collinmbarrett.jpg)](/assets/img/SsisSqlServerAuthenticationError_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4400">SSIS Execution Error Using SQL Server Authentication</figcaption></figure>
 
 Oh, the new SQL Server service account we had created could not trigger the package directly. I wish we had discovered that sooner. Using a Windows account was not an option in our environment, so we were forced to scrap this code and move on to plan B.
 

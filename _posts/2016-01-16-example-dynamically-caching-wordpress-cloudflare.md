@@ -5,11 +5,11 @@ date: '2016-01-16T10:45:41-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'The performance improvements speak for themselves in this example of dynamically caching WordPress on CloudFlare from a traditional shared hosting server.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=677'
+guid: '/?p=677'
 permalink: /example-dynamically-caching-wordpress-cloudflare/
 wp_featherlight_disable:
     - ''
-image: /media/exampleDynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
+image: /assets/img/exampleDynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -32,7 +32,7 @@ tags:
     - WordPress
 ---
 
-A few days ago I discussed [Dynamically Caching WordPress on Cloudflare](https://collinmbarrett.com/wordpress-cloudflare-dynamic-caching/). I saw an improvement on my site after implementing this technique, but I wanted to test it out on a more real-world and long-standing blog on traditional shared hosting (vs. the bleeding-edge [SSD VPS stack](https://github.com/collinbarrett/wp-vps-build-guide "wp-vps-build-guide - GitHub") at [DigitalOcean](https://www.digitalocean.com) on which my site is hosted). Suzanne, a friend from college, graciously let me put [The Glorious Mundane](https://www.suzannehines.org/ "Suzanne Hines") to the test in this example of dynamically caching WordPress on Cloudflare.
+A few days ago I discussed [Dynamically Caching WordPress on Cloudflare](/wordpress-cloudflare-dynamic-caching/). I saw an improvement on my site after implementing this technique, but I wanted to test it out on a more real-world and long-standing blog on traditional shared hosting (vs. the bleeding-edge [SSD VPS stack](https://github.com/collinbarrett/wp-vps-build-guide "wp-vps-build-guide - GitHub") at [DigitalOcean](https://www.digitalocean.com) on which my site is hosted). Suzanne, a friend from college, graciously let me put [The Glorious Mundane](https://www.suzannehines.org/ "Suzanne Hines") to the test in this example of dynamically caching WordPress on Cloudflare.
 
 Suzanne is an excellent and consistent writer. She maintains one of the few personal blogs in my RSS reader that gets updated on a truly regular basis, something I am striving for this year on my own blog. Her posts tend to be full of high-resolution images of her children; and those, combined with other 3rd-party assets, tend to slow down her page loads. I asked if I could help her grow her audience by optimizing her site a bit more for speed and, in turn, SEO results.
 
@@ -70,4 +70,4 @@ I also attempted to migrate her site to my VPS to improve her server response ti
 
 ## Conclusion
 
-If you manage a WordPress instance that is not terribly dynamic (comments and posts do not flow in more frequently than every few hours), I highly recommend [implementing full page caching on Cloudflare](https://collinmbarrett.com/wordpress-cloudflare-dynamic-caching/ "Dynamically Caching WordPress on CloudFlare").
+If you manage a WordPress instance that is not terribly dynamic (comments and posts do not flow in more frequently than every few hours), I highly recommend [implementing full page caching on Cloudflare](/wordpress-cloudflare-dynamic-caching/ "Dynamically Caching WordPress on CloudFlare").

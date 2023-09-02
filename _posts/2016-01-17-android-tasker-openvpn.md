@@ -5,11 +5,11 @@ date: '2016-01-17T16:24:31-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'How to automatically connect to VPN on Android using Tasker and OpenVPN Connect based on the network to which you are connected.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=744'
+guid: '/?p=744'
 permalink: /android-tasker-openvpn/
 wp_featherlight_disable:
     - ''
-image: /media/androidTaskerOpenVpn_collinmbarrett.jpg
+image: /assets/img/androidTaskerOpenVpn_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:
@@ -100,4 +100,4 @@ Add profile and configure as follows. Link this profile to the “VPN Disconnect
 - Active: Yes
 - Inverted: {unchecked}
 
-*via [levgen](https://collinmbarrett.com/android-tasker-openvpn/#comment-220)*
+*via [levgen](/android-tasker-openvpn/#comment-220)*

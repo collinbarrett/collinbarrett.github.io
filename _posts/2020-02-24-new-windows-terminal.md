@@ -5,9 +5,9 @@ date: '2020-02-24T07:31:28-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss my current CLIs, terminal configuration, and preferred shells.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=7829'
+guid: '/?p=7829'
 permalink: /new-windows-terminal/
-image: /media/windowsTerminal_collinmbarrett.png
+image: /assets/img/windowsTerminal_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -33,9 +33,9 @@ The new Windows Terminal has been an invaluable tool as I have been focusing on 
 - [ansible](https://docs.ansible.com/ansible/2.4/command_line_tools.html)
 - \*nix and Windows file systems
 
-As a [.NET developer](https://collinmbarrett.com/tag/dotnet/), Windows is my ideal platform due to first-class tooling ([Visual Studio](https://collinmbarrett.com/tag/visual-studio/)). That could be changing; but, for now, Windows makes sense as a primary environment.
+As a [.NET developer](/tag/dotnet/), Windows is my ideal platform due to first-class tooling ([Visual Studio](/tag/visual-studio/)). That could be changing; but, for now, Windows makes sense as a primary environment.
 
-Despite using Windows, I began learning CLIs when I first started managing [Ubuntu](https://collinmbarrett.com/tag/linux/) instances for hosting various applications. When trying to navigate around my Windows file system, I often struggle remembering to type `dir` instead of `ls` (for listing files), `;` instead of `&&` (for chaining operations), etc.
+Despite using Windows, I began learning CLIs when I first started managing [Ubuntu](/tag/linux/) instances for hosting various applications. When trying to navigate around my Windows file system, I often struggle remembering to type `dir` instead of `ls` (for listing files), `;` instead of `&&` (for chaining operations), etc.
 
 For this reason, I like to reach for \*nix-ish solutions on Windows.
 
@@ -92,7 +92,7 @@ Microsoft is [working on a settings UI](https://twitter.com/cinnamon_msft/status
 ### My Current Shells
 
 - **MinGW-w64** – Git for Windows automatically installs MinGW. It provides that \*nix-ish abstraction on Windows that I enjoy so much. I use this shell regularly for git and other development CLIs.
-- **Ubuntu-18.04** – The current release of Windows 10 has version 1 of the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq). I currently use this Ubuntu instance exclusively as an [Ansible control node for updating my web servers](https://collinmbarrett.com/resume/projects/#cbhost-ansible). I would like to shift to using it more frequently, and I am looking forward to WSL 2, specifically for [its improvements to Docker Desktop](https://docs.docker.com/docker-for-windows/wsl-tech-preview/).
+- **Ubuntu-18.04** – The current release of Windows 10 has version 1 of the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq). I currently use this Ubuntu instance exclusively as an [Ansible control node for updating my web servers](/resume/projects/#cbhost-ansible). I would like to shift to using it more frequently, and I am looking forward to WSL 2, specifically for [its improvements to Docker Desktop](https://docs.docker.com/docker-for-windows/wsl-tech-preview/).
 - **Powershell** – I do not know Powershell. I have to touch it once in a blue moon, and when I do, it is mostly copy/paste from StackOverflow.
 - **cmd** – I rarely use cmd anymore. I prefer the \*nix-ish syntax for navigating around Windows. But, it is nice to keep handy for the sentimental value.
 

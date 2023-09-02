@@ -5,9 +5,9 @@ date: '2020-03-15T16:27:00-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'I created an Azure Pipeline that automatically performs an Entity Framework Core migration on a GitHub pull request of modified JSON data files.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=8074'
+guid: '/?p=8074'
 permalink: /entity-framework-migrations-azure-pipelines-github/
-image: /media/azurePipelinesEfCoreMigration_collinmbarrett.jpg
+image: /assets/img/azurePipelinesEfCoreMigration_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -30,7 +30,7 @@ I recently improved the continuous integration of the open-sourced data for the 
 
 ### Version 1: HTML Table in WordPress
 
-I launched the [first ](https://web.archive.org/web/20161129125628/https://filterlists.com/)and [second](https://web.archive.org/web/20180215171316/https://filterlists.com/) designs of FilterLists back in 2015 and 2017 as a simple [WordPress](https://collinmbarrett.com/tag/wordpress/) installation with a table builder plugin. At the time, it only indexed a maximum of about 300 lists, and I managed updates myself through the WordPress back-end.
+I launched the [first ](https://web.archive.org/web/20161129125628/https://filterlists.com/)and [second](https://web.archive.org/web/20180215171316/https://filterlists.com/) designs of FilterLists back in 2015 and 2017 as a simple [WordPress](/tag/wordpress/) installation with a table builder plugin. At the time, it only indexed a maximum of about 300 lists, and I managed updates myself through the WordPress back-end.
 
 Community members could submit new lists through a contact form on the site, and I would have to update the table through tedious copy/paste and manually crafted HTML. It was easy to get up and running and served its purpose for a while, but this solution did not scale with a growing dataset now approaching 2,000 lists.
 
@@ -112,7 +112,7 @@ For FilterLists, I discovered quickly that foreign key constraints are not consi
 
 This article is growing quite long. If you have glazed over thus far, *this is the interesting part of this adventure*, in my opinion.
 
-The handful of community members who help me maintain the FilterLists dataset should not need to know anything about [.NET](https://collinmbarrett.com/tag/dotnet/), EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand the [foreign key relationships in the JSON files](https://github.com/collinbarrett/FilterLists/wiki/Data-Model_sidebar), but I wanted to keep it as easy as possible for folks to contribute.
+The handful of community members who help me maintain the FilterLists dataset should not need to know anything about [.NET](/tag/dotnet/), EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand the [foreign key relationships in the JSON files](https://github.com/collinbarrett/FilterLists/wiki/Data-Model_sidebar), but I wanted to keep it as easy as possible for folks to contribute.
 
 The goal of this endeavor was to build a CI Pipeline to automatically add data migrations and push them back to the pull request on the contributor’s behalf. I will explain how this works in a bit more detail, but [**here is the resulting Pipeline definition**](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/azure-pipelines.migrate.yaml).
 
@@ -237,7 +237,7 @@ dotnet ef migrations add $(System.PullRequest.PullRequestNumber) -p FilterLists.
 
 Before I push the new migration, I [run the aforementioned integration test](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L127) which uses Docker Compose to create a new instance of the API and the database. The test passes if data is seeded to the database without exception.
 
-<figure class="wp-block-image size-large">[![EF Core Add Migration xUnit Test Result in Azure Pipelines](https://collinmbarrett.com/media/addMigrationTest_collinmbarrett.jpg)](https://collinmbarrett.com/media/addMigrationTest_collinmbarrett.jpg)</figure>### Push Migration
+<figure class="wp-block-image size-large">[![EF Core Add Migration xUnit Test Result in Azure Pipelines](/assets/img/addMigrationTest_collinmbarrett.jpg)](/assets/img/addMigrationTest_collinmbarrett.jpg)</figure>### Push Migration
 
 The last step is to push the changes back to the contributor’s PR branch. I am certain there is a better and more secure way of doing this, but for now, I am using the credential helper to push by injecting my GitHub PAT into the URL itself.
 

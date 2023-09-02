@@ -5,11 +5,11 @@ date: '2017-06-19T05:30:31-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A high-level demo of how I configured automated builds and deploys of a .NET Core application using Travis CI from GitHub to a Linux (Ubuntu) server.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4162'
+guid: '/?p=4162'
 permalink: /deploy-dotnet-core-travis-github-linux/
 wp_featherlight_disable:
     - ''
-image: /media/dotNetCoreTravisCi_collinmbarrett.jpg
+image: /assets/img/dotNetCoreTravisCi_collinmbarrett.jpg
 categories:
     - Code
 tags:

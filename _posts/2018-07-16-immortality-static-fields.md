@@ -5,11 +5,11 @@ date: '2018-07-16T05:00:52-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A tale of improperly using a static field, preventing a colleague from doing the same, and a primer on why static fields should be avoided.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=6796'
+guid: '/?p=6796'
 permalink: /immortality-static-fields/
 wp_featherlight_disable:
     - ''
-image: /media/staticSlide_collinmbarrett.jpg
+image: /assets/img/staticSlide_collinmbarrett.jpg
 categories:
     - Code
 tags:

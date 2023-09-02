@@ -5,11 +5,11 @@ date: '2017-03-24T07:30:38-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'After my first week using a standing desk, here are some quick first impressions on the resulting physical and mental effects.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=3840'
+guid: '/?p=3840'
 permalink: /standing-desk-first-impressions/
 wp_featherlight_disable:
     - ''
-image: /media/ergotronStandingDesk2_collinmbarrett.png
+image: /assets/img/ergotronStandingDesk2_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -19,7 +19,7 @@ tags:
     - Productivity
 ---
 
-<figure aria-describedby="caption-attachment-3847" class="wp-caption alignright" id="attachment_3847" style="width: 278px">[![My Standing Desk at fred's, Inc.](https://collinmbarrett.com/media/standingDesk_collinmbarrett-278x300.jpg)](https://collinmbarrett.com/media/standingDesk_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-3847">My Standing Desk at fred’s, Inc.</figcaption></figure>
+<figure aria-describedby="caption-attachment-3847" class="wp-caption alignright" id="attachment_3847" style="width: 278px">[![My Standing Desk at fred's, Inc.](/assets/img/standingDesk_collinmbarrett-278x300.jpg)](/assets/img/standingDesk_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-3847">My Standing Desk at fred’s, Inc.</figcaption></figure>
 
 Despite being way behind the curve on this one, I wanted to jot down some first impressions after one week with a standing desk. At my last gig, they started distributing these out to those who requested them right before I joined. I requested one, but the second wave of desks never arrived before my departure. This Monday, my new boss rolled in the standing desk that I had requested.
 

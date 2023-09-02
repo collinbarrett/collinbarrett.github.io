@@ -5,11 +5,11 @@ date: '2016-02-03T04:00:19-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'Decentraleyes is an add-on for Firefox that blocks CDN tracking by intercepting requests to common JavaScript libraries and serves them from a local store.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1437'
+guid: '/?p=1437'
 permalink: /decentraleyes-block-cdn-tracking/
 wp_featherlight_disable:
     - ''
-image: /media/decentraleyesBlockCdnTracking_collinmbarrett.png
+image: /assets/img/decentraleyesBlockCdnTracking_collinmbarrett.png
 categories:
     - InfoSec
 tags:
@@ -35,7 +35,7 @@ Let’s say that, for some reason, every time you make a purchase at a retail st
 
 ## How It Works
 
-<figure aria-describedby="caption-attachment-1460" class="wp-caption alignright" id="attachment_1460" style="width: 300px">[![Decentraleyes for Firefox](https://collinmbarrett.com/media/2016/02/decentraleyes02_cb-300x223.png)](https://collinmbarrett.com/media/2016/02/decentraleyes02_cb.png)<figcaption class="wp-caption-text" id="caption-attachment-1460">**Fig. 1.** Decentraleyes for Firefox</figcaption></figure>
+<figure aria-describedby="caption-attachment-1460" class="wp-caption alignright" id="attachment_1460" style="width: 300px">[![Decentraleyes for Firefox](/assets/img/2016/02/decentraleyes02_cb-300x223.png)](/assets/img/2016/02/decentraleyes02_cb.png)<figcaption class="wp-caption-text" id="caption-attachment-1460">**Fig. 1.** Decentraleyes for Firefox</figcaption></figure>
 
 When a web browser makes a request for a common library from one of these CDNs to render any given site, Decentraleyes intercepts the request and serves the file from a local store. The concept is simple, but it provides a two-fold benefit. CDN vendors are unable to track users’ habits across the web, and browsing speed and bandwidth use are slightly optimized because this data is already on the local computer.
 

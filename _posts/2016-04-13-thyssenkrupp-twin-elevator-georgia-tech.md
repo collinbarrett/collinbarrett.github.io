@@ -5,11 +5,11 @@ date: '2016-04-13T04:17:19-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'I will be working on the software team for the first installation of the thyssenkrupp TWIN elevator in the U.S. at Georgia Tech in Atlanta.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=2700'
+guid: '/?p=2700'
 permalink: /thyssenkrupp-twin-elevator-georgia-tech/
 wp_featherlight_disable:
     - ''
-image: /media/thyssenkruppTwin_collinmbarrett.jpg
+image: /assets/img/thyssenkruppTwin_collinmbarrett.jpg
 categories:
     - Code
 tags:

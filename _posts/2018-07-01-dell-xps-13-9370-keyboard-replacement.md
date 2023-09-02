@@ -5,11 +5,11 @@ date: '2018-07-01T19:50:17-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A quick overview of how I replaced the keyboard in my Dell XPS 13 9370 after it took a bath in hot tea.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=6614'
+guid: '/?p=6614'
 permalink: /dell-xps-13-9370-keyboard-replacement/
 wp_featherlight_disable:
     - ''
-image: /media/keyboardDellXps9370_collinmbarrett.jpg
+image: /assets/img/keyboardDellXps9370_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -66,18 +66,18 @@ The teardown, replacement, and rebuild took 4.5 hours. I do not recommend applyi
 
 ## Photo Gallery
 
-<figure aria-describedby="caption-attachment-6666" class="wp-caption alignleft" id="attachment_6666" style="width: 300px">[![Dell XPS 9370](https://collinmbarrett.com/media/dell9370_collinmbarrett-300x225.jpg)](https://collinmbarrett.com/media/dell9370_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6666">Dell XPS 9370</figcaption></figure>
+<figure aria-describedby="caption-attachment-6666" class="wp-caption alignleft" id="attachment_6666" style="width: 300px">[![Dell XPS 9370](/assets/img/dell9370_collinmbarrett-300x225.jpg)](/assets/img/dell9370_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6666">Dell XPS 9370</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6673" class="wp-caption alignleft" id="attachment_6673" style="width: 300px">[![iFixit Essential Electronics Toolkit](https://collinmbarrett.com/media/ifixitToolkit_collinmbarrett-300x225.jpg)](https://collinmbarrett.com/media/ifixitToolkit_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6673">iFixit Essential Electronics Toolkit</figcaption></figure>
+<figure aria-describedby="caption-attachment-6673" class="wp-caption alignleft" id="attachment_6673" style="width: 300px">[![iFixit Essential Electronics Toolkit](/assets/img/ifixitToolkit_collinmbarrett-300x225.jpg)](/assets/img/ifixitToolkit_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6673">iFixit Essential Electronics Toolkit</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6667" class="wp-caption alignleft" id="attachment_6667" style="width: 225px">[![Base Cover Removal](https://collinmbarrett.com/media/dell9370BaseCover_collinmbarrett-225x300.jpg)](https://collinmbarrett.com/media/dell9370BaseCover_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6667">Base Cover Removal</figcaption></figure>
+<figure aria-describedby="caption-attachment-6667" class="wp-caption alignleft" id="attachment_6667" style="width: 225px">[![Base Cover Removal](/assets/img/dell9370BaseCover_collinmbarrett-225x300.jpg)](/assets/img/dell9370BaseCover_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6667">Base Cover Removal</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6668" class="wp-caption alignleft" id="attachment_6668" style="width: 225px">[![Disconnecting Battery](https://collinmbarrett.com/media/dell9370DisconnectBattery_collinmbarrett-225x300.jpg)](https://collinmbarrett.com/media/dell9370DisconnectBattery_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6668">Disconnecting Battery</figcaption></figure>
+<figure aria-describedby="caption-attachment-6668" class="wp-caption alignleft" id="attachment_6668" style="width: 225px">[![Disconnecting Battery](/assets/img/dell9370DisconnectBattery_collinmbarrett-225x300.jpg)](/assets/img/dell9370DisconnectBattery_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6668">Disconnecting Battery</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6671" class="wp-caption alignleft" id="attachment_6671" style="width: 300px">[![SSD](https://collinmbarrett.com/media/dell9370Ssd_collinmbarrett-300x226.jpg)](https://collinmbarrett.com/media/dell9370Ssd_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6671">SSD</figcaption></figure>
+<figure aria-describedby="caption-attachment-6671" class="wp-caption alignleft" id="attachment_6671" style="width: 300px">[![SSD](/assets/img/dell9370Ssd_collinmbarrett-300x226.jpg)](/assets/img/dell9370Ssd_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6671">SSD</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6669" class="wp-caption alignleft" id="attachment_6669" style="width: 300px">[![Heat Sync](https://collinmbarrett.com/media/dell9370HeatSync_collinmbarrett-300x234.jpg)](https://collinmbarrett.com/media/dell9370HeatSync_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6669">Heat Sync</figcaption></figure>
+<figure aria-describedby="caption-attachment-6669" class="wp-caption alignleft" id="attachment_6669" style="width: 300px">[![Heat Sync](/assets/img/dell9370HeatSync_collinmbarrett-300x234.jpg)](/assets/img/dell9370HeatSync_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6669">Heat Sync</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6672" class="wp-caption alignleft" id="attachment_6672" style="width: 300px">[![System Board and Fans](https://collinmbarrett.com/media/dell9370SystemBoard_collinmbarrett-300x227.jpg)](https://collinmbarrett.com/media/dell9370SystemBoard_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6672">System Board and Fans</figcaption></figure>
+<figure aria-describedby="caption-attachment-6672" class="wp-caption alignleft" id="attachment_6672" style="width: 300px">[![System Board and Fans](/assets/img/dell9370SystemBoard_collinmbarrett-300x227.jpg)](/assets/img/dell9370SystemBoard_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6672">System Board and Fans</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-6670" class="wp-caption alignleft" id="attachment_6670" style="width: 300px">[![Replacing Keyboard](https://collinmbarrett.com/media/dell9370KeyboardReplacement_collinmbarrett-300x225.jpg)](https://collinmbarrett.com/media/dell9370KeyboardReplacement_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6670">Replacing Keyboard</figcaption></figure>
+<figure aria-describedby="caption-attachment-6670" class="wp-caption alignleft" id="attachment_6670" style="width: 300px">[![Replacing Keyboard](/assets/img/dell9370KeyboardReplacement_collinmbarrett-300x225.jpg)](/assets/img/dell9370KeyboardReplacement_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6670">Replacing Keyboard</figcaption></figure>

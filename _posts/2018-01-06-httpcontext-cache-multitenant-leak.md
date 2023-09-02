@@ -5,11 +5,11 @@ date: '2018-01-06T04:00:17-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'Our team misunderstood the scope of ASP.NET''s HttpContext.Cache. This mishap led to some cross-instance data leakage in our hosting environment. Keys must always have enough unique information to identify their respective cache value.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=5058'
+guid: '/?p=5058'
 permalink: /httpcontext-cache-multitenant-leak/
 wp_featherlight_disable:
     - ''
-image: /media/cpu_multitenantCacheLeak_collinmbarrett.jpg
+image: /assets/img/cpu_multitenantCacheLeak_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -22,11 +22,11 @@ tags:
 
 ## Call for Caching
 
-The [product](https://collinmbarrett.com/joining-shelby-systems/) I support has chart widgets on several pages. We need to refactor some of their inefficient queries, but we were recently under pressure to achieve a quick [performance](https://collinmbarrett.com/tag/performance/) boost. My team attempted to install [caching](https://collinmbarrett.com/tag/cache/) so that the chart datasets were only retrieved once per day.
+The [product](/joining-shelby-systems/) I support has chart widgets on several pages. We need to refactor some of their inefficient queries, but we were recently under pressure to achieve a quick [performance](/tag/performance/) boost. My team attempted to install [caching](/tag/cache/) so that the chart datasets were only retrieved once per day.
 
 ## Flawed Approach
 
-A colleague used [ASP.NET](https://collinmbarrett.com/tag/dotnet/)‘s HttpContext.Cache to persist the dataset in memory. The solution trimmed widget names to use as the key and reduced page load speeds on repeat visits.
+A colleague used [ASP.NET](/tag/dotnet/)‘s HttpContext.Cache to persist the dataset in memory. The solution trimmed widget names to use as the key and reduced page load speeds on repeat visits.
 
 After the release, we received reports from some customers hosted on shared servers. In a few cases, users saw chart data that they did not recognize. They were presumably seeing data cached from other customers.
 

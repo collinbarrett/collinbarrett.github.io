@@ -5,11 +5,11 @@ date: '2016-02-23T04:00:16-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'By implementing .woff2 and slimming down my icon font, I reduced the weight of my site''s fonts by about 50KB.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1725'
+guid: '/?p=1725'
 permalink: /optimize-self-hosted-web-fonts/
 wp_featherlight_disable:
     - ''
-image: /media/optimizeSelfHostedWebFonts_collinmbarrett.jpg
+image: /assets/img/optimizeSelfHostedWebFonts_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -52,7 +52,7 @@ Certain browsers are only capable of rendering certain font formats. The .woff2 
 
 ## Why Optimize Fonts?
 
-<figure aria-describedby="caption-attachment-1733" class="wp-caption alignright" id="attachment_1733" style="width: 300px">[![Poor Example of Serving Web Fonts](https://collinmbarrett.com/media/2016/02/webFontBadExample_cb-300x84.jpg)](https://collinmbarrett.com/media/2016/02/webFontBadExample_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1733">**Fig. 1.** Poor Example of Serving Web Fonts</figcaption></figure>
+<figure aria-describedby="caption-attachment-1733" class="wp-caption alignright" id="attachment_1733" style="width: 300px">[![Poor Example of Serving Web Fonts](/assets/img/2016/02/webFontBadExample_cb-300x84.jpg)](/assets/img/2016/02/webFontBadExample_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1733">**Fig. 1.** Poor Example of Serving Web Fonts</figcaption></figure>
 
 I ran across a cyber-security blog today which I will not name because I like the blog. However, since I have been working with fonts this weekend, I decided to check and see how they were serving fonts. Figure 1 (click/tap to enlarge) is what I saw in Firefox 44.0.2 on Mac. This blog is using almost 1MB (of the only 1.5MB total, including images) of bandwidth just for serving its fonts! Furthermore, the site is forcing a download of four variants of the same font when they are likely only using one of the variations (not confirmed, though). Lastly, of lesser importance but still easily repaired, the site is serving fonts as content type “octet-stream” rather than “font-ttf” which could have performance/compatibility issues with some browsers. To their benefit, though, they were successfully requesting that the browser cache the fonts, so clicking around on their site did not prompt the 1MB download every time.
 

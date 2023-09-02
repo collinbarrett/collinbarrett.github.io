@@ -5,11 +5,11 @@ date: '2016-01-23T10:25:00-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'A verbose build guide for a modern, high-performance production WordPress VPS. Stack: Ubuntu, NGINX, MariaDB, HHVM, Redis, Let''s Encrypt.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1011'
+guid: '/?p=1011'
 permalink: /wordpress-vps-build-guide/
 wp_featherlight_disable:
     - ''
-image: /media/wordPressVpsBuildGuide_collinmbarrett.jpg
+image: /assets/img/wordPressVpsBuildGuide_collinmbarrett.jpg
 categories:
     - Code
 tags:

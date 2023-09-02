@@ -5,11 +5,11 @@ date: '2018-03-09T03:00:01-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'My product team is evaluating purchasing JetBrains ReSharper or DevExpress CodeRush to assist with improving code quality in our .NET application portfolio. I jotted down some unfair observations of the two products after using ReSharper for a couple of years and CodeRush for a couple of days.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=6305'
+guid: '/?p=6305'
 permalink: /resharper-vs-coderush/
 wp_featherlight_disable:
     - ''
-image: /media/reSharperCodeRush_collinmbarrett.jpg
+image: /assets/img/reSharperCodeRush_collinmbarrett.jpg
 categories:
     - Code
 tags:

@@ -5,11 +5,11 @@ date: '2018-07-03T13:39:15-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-apply StyleCop ordering rules to elements in classes, structs, and interfaces.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=6707'
+guid: '/?p=6707'
 permalink: /stylecop-ordering-resharper/
 wp_featherlight_disable:
     - ''
-image: /media/styleCopResharper_collinmbarrett.png
+image: /assets/img/styleCopResharper_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -309,4 +309,4 @@ Converting the above rules directly into ReSharper C# File Layout XAML results i
 5. Click `Designer` in the top right corner to verify the new TypePattern displays correctly
 6. Save your changes
 
-<figure aria-describedby="caption-attachment-6763" class="wp-caption aligncenter" id="attachment_6763" style="width: 300px">[![StyleCop ReSharper File Layout TypePattern](https://collinmbarrett.com/media/styleCopResharperFileLayout_collinmbarrett-300x226.jpg)](https://collinmbarrett.com/media/styleCopResharperFileLayout_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6763">StyleCop ReSharper File Layout TypePattern</figcaption></figure>
+<figure aria-describedby="caption-attachment-6763" class="wp-caption aligncenter" id="attachment_6763" style="width: 300px">[![StyleCop ReSharper File Layout TypePattern](/assets/img/styleCopResharperFileLayout_collinmbarrett-300x226.jpg)](/assets/img/styleCopResharperFileLayout_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-6763">StyleCop ReSharper File Layout TypePattern</figcaption></figure>

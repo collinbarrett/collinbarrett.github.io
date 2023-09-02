@@ -5,11 +5,11 @@ date: '2017-03-02T07:28:50-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'How to configure a NGINX rewrite rule to always include trailing slashes in WordPress while not breaking the REST API.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=3554'
+guid: '/?p=3554'
 permalink: /nginx-trailing-slashes-wordpress/
 wp_featherlight_disable:
     - ''
-image: /media/nginxTrailingSlashesForWordPress_collinmbarrett.jpg
+image: /assets/img/nginxTrailingSlashesForWordPress_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -25,9 +25,9 @@ Just a quick tip that was not easily discoverable on the inter-webs.
 
 ## Trailing Slash Primer
 
-An URL without a trailing slash looks like: `https://collinmbarrett.com/nginx-trailing-slashes-wordpress`
+An URL without a trailing slash looks like: `/nginx-trailing-slashes-wordpress`
 
-An URL with a trailing slash looks like: `https://collinmbarrett.com/nginx-trailing-slashes-wordpress/`
+An URL with a trailing slash looks like: `/nginx-trailing-slashes-wordpress/`
 
 The decision to include the slash or not for basic web pages seems to be somewhat subjective and up for debate. Certainly, sites should pick one and be consistent for SEO purposes; Google does not like [duplicate content](https://webmasters.googleblog.com/2010/04/to-slash-or-not-to-slash.html). Amongst WordPress circles (including sites like [wordpress.com](https://wordpress.com), [yoast.com](https://yoast.com/), and [tommcfarlin.com](https://tommcfarlin.com/trailing-slash-in-wordpress/)), the consensus seems to be to include the trailing slash for posts and pages. Files and API calls (more on the latter below) should not contain a trailing slash.
 

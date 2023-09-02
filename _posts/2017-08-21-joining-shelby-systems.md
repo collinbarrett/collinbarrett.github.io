@@ -5,11 +5,11 @@ date: '2017-08-21T07:34:09-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'I am excited to join the Financials product development team as a web developer at Shelby Systems today.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4813'
+guid: '/?p=4813'
 permalink: /joining-shelby-systems/
 wp_featherlight_disable:
     - ''
-image: /media/shelbySystems_collinmbarrett.jpg
+image: /assets/img/shelbySystems_collinmbarrett.jpg
 categories:
     - Code
 tags:

@@ -5,11 +5,11 @@ date: '2016-02-26T04:30:30-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I recommend lying properly on website security questions to block hacks by data miners and phishers.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1492'
+guid: '/?p=1492'
 permalink: /good-to-lie/
 wp_featherlight_disable:
     - ''
-image: /media/goodToLie_collinmbarrett.jpg
+image: /assets/img/goodToLie_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:

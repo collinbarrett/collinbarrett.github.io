@@ -5,11 +5,11 @@ date: '2018-07-30T04:00:40-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Migrating CRUD operations of a key-value store with inconsistent serialization formats from the view layer to typed POCOs in the data layer.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=7111'
+guid: '/?p=7111'
 permalink: /type-wrapping-inconsistently-serialized-key-value-store/
 wp_featherlight_disable:
     - ''
-image: /media/typeWrappingFruit_collinmbarrett.gif
+image: /assets/img/typeWrappingFruit_collinmbarrett.gif
 categories:
     - Code
 tags:

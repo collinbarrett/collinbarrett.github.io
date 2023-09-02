@@ -5,11 +5,11 @@ date: '2016-02-17T04:00:52-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I built FilterLists this weekend, the community-driven, independent, and comprehensive directory of all public filter lists for advertisements and trackers.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1514'
+guid: '/?p=1514'
 permalink: /filterlists-blocking-advertisements-trackers/
 wp_featherlight_disable:
     - ''
-image: /media/filterListsBlockingAdvertisementsTrackers_collinmbarrett.png
+image: /assets/img/filterListsBlockingAdvertisementsTrackers_collinmbarrett.png
 categories:
     - InfoSec
 tags:

@@ -5,11 +5,11 @@ date: '2018-01-08T04:00:07-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'An example of how to use Visual Studio regex find and replace with a wildcard to quickly refactor many lines of code.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=5037'
+guid: '/?p=5037'
 permalink: /wildcard-regex-find-replace-visual-studio/
 wp_featherlight_disable:
     - ''
-image: /media/regexFindReplaceGlassesComputer_collinmbarrett.jpg
+image: /assets/img/regexFindReplaceGlassesComputer_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -59,7 +59,7 @@ MyObjectCollection.Add$2
 
 I split the find pattern into three groupings by parentheses. Since parentheses carry regex significance, I encoded `&#40;` and `&#41;`, the existing parenthesis characters. Visual Studio replaces the `$2` variable in the Replace field with the contents of the second parenthetical grouping in the Find field. So, this solution replaces each entire line captured by the find regex pattern with the replace regex pattern (preserving the unique MyObject constructor parameters with the `$2` variable).
 
-<figure aria-describedby="caption-attachment-5773" class="wp-caption aligncenter" id="attachment_5773" style="width: 630px">[![Diagram of Regex Find and Replace Solution](https://collinmbarrett.com/media/regexSolutionExplanation_collinmbarrett.jpg)](https://collinmbarrett.com/media/regexSolutionExplanation_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-5773">Diagram of Regex Find and Replace Solution</figcaption></figure>
+<figure aria-describedby="caption-attachment-5773" class="wp-caption aligncenter" id="attachment_5773" style="width: 630px">[![Diagram of Regex Find and Replace Solution](/assets/img/regexSolutionExplanation_collinmbarrett.jpg)](/assets/img/regexSolutionExplanation_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-5773">Diagram of Regex Find and Replace Solution</figcaption></figure>
 
 Is there a more efficient way to do this? Most likely. But, this method worked.
 

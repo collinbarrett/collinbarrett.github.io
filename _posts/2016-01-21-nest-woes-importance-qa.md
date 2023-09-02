@@ -5,11 +5,11 @@ date: '2016-01-21T07:43:18-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'An outline of our Nest Thermostat and Protect over the past six months explains the need for QA at IoT companies to be top-notch.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=886'
+guid: '/?p=886'
 permalink: /nest-woes-importance-qa/
 wp_featherlight_disable:
     - ''
-image: /media/nestWoesImportanceQa_collinmbarrett.png
+image: /assets/img/nestWoesImportanceQa_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -44,6 +44,6 @@ QA is something I have become quite familiar with over the past year. I have spe
 
 I do not intend for this to be a Nest-bashing post. I love the products when they work, and Tony’s team has made huge waves in the push towards a smarter home. I just think that it is important to note that as our light bulbs, Crock-Pots®, and refrigerators all come online shortly, the software behind them better be rock solid. People can put up with a traditional computer malfunctioning from time to time, but if they are locked out of their home because their door lock is not connecting to Bluetooth correctly, the outrage will undoubtedly ensue.
 
-<sup>1</sup>Comedic Note: To the graphic designer at The New York Times, could you not find an image of the Nest where its current temperature was cold enough for ice? [Referenced Graphic](https://collinmbarrett.com/media/nestNYTGraphic_collinmbarrett.jpg "Graphic - Nest Thermostat Glitch Leaves Users in the Cold - The New York Times").
+<sup>1</sup>Comedic Note: To the graphic designer at The New York Times, could you not find an image of the Nest where its current temperature was cold enough for ice? [Referenced Graphic](/assets/img/nestNYTGraphic_collinmbarrett.jpg "Graphic - Nest Thermostat Glitch Leaves Users in the Cold - The New York Times").
 
 *<small>I am a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for me to earn fees by linking to Amazon.com and affiliated sites.</small>*

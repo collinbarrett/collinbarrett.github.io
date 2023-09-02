@@ -5,11 +5,11 @@ date: '2017-08-07T07:07:11-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Using Firefox instead of Chrome on the desktop, and how I am hardening Firefox to increase security and privacy.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4654'
+guid: '/?p=4654'
 permalink: /hardening-firefox-replacing-chrome/
 wp_featherlight_disable:
     - ''
-image: /media/firefox_collinmbarrett.jpg
+image: /assets/img/firefox_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:
@@ -44,7 +44,7 @@ By default, this user.js file breaks some functionality of many popular sites. I
 To further harden Firefox, I am currently using the following Add-ons:
 
 - [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) – To block canvas fingerprinting.
-- [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) – To block tracking by content delivery networks. [Learn more](https://collinmbarrett.com/decentraleyes-block-cdn-tracking/).
+- [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) – To block tracking by content delivery networks. [Learn more](/decentraleyes-block-cdn-tracking/).
 - [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) – To run the [Anti-Adblock Killer](https://reek.github.io/anti-adblock-killer/) user script.
 - [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) – To prioritize encrypted connections.
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) – In [Hard Mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode). To block advertisements, tracking scripts, and undesirable/unneeded content.

@@ -5,11 +5,11 @@ date: '2016-01-20T08:52:09-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'How to show all tags in the WordPress post editor when clicking the "Choose from the most used tags" link in the sidebar.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=924'
+guid: '/?p=924'
 permalink: /show-all-tags-wordpress-post-editor/
 wp_featherlight_disable:
     - ''
-image: /media/showAllTagsWordPressPostEditor_collinmbarrett.jpg
+image: /assets/img/showAllTagsWordPressPostEditor_collinmbarrett.jpg
 categories:
     - Code
 tags:

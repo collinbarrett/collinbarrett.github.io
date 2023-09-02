@@ -5,11 +5,11 @@ date: '2017-06-13T12:41:00-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A brief overview of the Referrer Policy header and how to send it with NGINX.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4160'
+guid: '/?p=4160'
 permalink: /referrer-policy-header-nginx/
 wp_featherlight_disable:
     - ''
-image: /media/privacyReferrerPolicy_collinmbarrett.jpg
+image: /assets/img/privacyReferrerPolicy_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:
@@ -60,7 +60,7 @@ add_header Referrer-Policy "no-referrer";
 
 We can verify that NGINX is sending the header by inspecting the resource in Chrome. Open the Developer Tools, toggle to the Network tab, and refresh the page. Clicking on the root document of the site shows various request details including this header value.
 
-<figure aria-describedby="caption-attachment-4199" class="wp-caption aligncenter" id="attachment_4199" style="width: 300px">[![Referrer Policy in Chrome Developer Tools](https://collinmbarrett.com/media/referrerPolicyChrome_collinmbarrett-300x159.jpg)](https://collinmbarrett.com/media/referrerPolicyChrome_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4199">Referrer Policy in Chrome Developer Tools</figcaption></figure>
+<figure aria-describedby="caption-attachment-4199" class="wp-caption aligncenter" id="attachment_4199" style="width: 300px">[![Referrer Policy in Chrome Developer Tools](/assets/img/referrerPolicyChrome_collinmbarrett-300x159.jpg)](/assets/img/referrerPolicyChrome_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4199">Referrer Policy in Chrome Developer Tools</figcaption></figure>
 
 ## Blocking as a Visitor
 

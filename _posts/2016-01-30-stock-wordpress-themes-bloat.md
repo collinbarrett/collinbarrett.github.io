@@ -5,11 +5,11 @@ date: '2016-01-30T09:32:01-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'The why and how to removing bloat in stock WordPress themes by deregistering unused scripts and styles.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=1341'
+guid: '/?p=1341'
 permalink: /stock-wordpress-themes-bloat/
 wp_featherlight_disable:
     - ''
-image: /media/stockWordPressThemesBloat_collinmbarrett.jpg
+image: /assets/img/stockWordPressThemesBloat_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -43,6 +43,6 @@ add_action( 'wp_enqueue_scripts', 'remove_scripts', 100 );
 
 After eliminating this batch of CSS and jQuery plugins, I do see some moderate improvements. It does not work magic, but why load that extra ~100kb of data and process an additional seven server requests when they are not needed at all? If you are running a WordPress stock theme and looking to get an extra ounce of performance, I recommend trying this out.
 
-<figure aria-describedby="caption-attachment-1343" class="wp-caption aligncenter" id="attachment_1343" style="width: 248px">[![Pingdom Test Before Removing Bloat](https://collinmbarrett.com/media/2016/01/readmeBefore_cb-248x300.jpg)](https://collinmbarrett.com/media/2016/01/readmeBefore_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1343">**Fig. 1.** Pingdom Test Before Removing Bloat</figcaption></figure>
+<figure aria-describedby="caption-attachment-1343" class="wp-caption aligncenter" id="attachment_1343" style="width: 248px">[![Pingdom Test Before Removing Bloat](/assets/img/2016/01/readmeBefore_cb-248x300.jpg)](/assets/img/2016/01/readmeBefore_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1343">**Fig. 1.** Pingdom Test Before Removing Bloat</figcaption></figure>
 
-<figure aria-describedby="caption-attachment-1342" class="wp-caption aligncenter" id="attachment_1342" style="width: 252px">[![Pingdom Test After Removing Bloat](https://collinmbarrett.com/media/2016/01/readmeAfter_cb-252x300.jpg)](https://collinmbarrett.com/media/2016/01/readmeAfter_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1342">**Fig. 2.** Pingdom Test After Removing Bloat</figcaption></figure>
+<figure aria-describedby="caption-attachment-1342" class="wp-caption aligncenter" id="attachment_1342" style="width: 252px">[![Pingdom Test After Removing Bloat](/assets/img/2016/01/readmeAfter_cb-252x300.jpg)](/assets/img/2016/01/readmeAfter_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1342">**Fig. 2.** Pingdom Test After Removing Bloat</figcaption></figure>

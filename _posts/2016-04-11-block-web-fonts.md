@@ -5,11 +5,11 @@ date: '2016-04-11T04:17:47-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'How to configure your browser to block web fonts to speed up your web browsing and protect your privacy.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=2041'
+guid: '/?p=2041'
 permalink: /block-web-fonts/
 wp_featherlight_disable:
     - ''
-image: /media/blockWebFonts_collinmbarrett.jpg
+image: /assets/img/blockWebFonts_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:
@@ -35,7 +35,7 @@ While a designer can go to great lengths to tweak how a site looks for the visit
 
 ### Bandwidth
 
-As a user of the internet, I want the web, of course, to be visually appealing. However, I also want the web to be fast. If I am trying to load a one-off news article for a quick peruse, I do not necessarily care to wait for my browser to download unnecessary resources such as [advertisements](https://collinmbarrett.com/tag/advertisements/), social media widgets, and web fonts. Furthermore, when using my rated data plan on my mobile device, I do not always care to pay for bandwidth used to download mere aesthetics such as fonts.
+As a user of the internet, I want the web, of course, to be visually appealing. However, I also want the web to be fast. If I am trying to load a one-off news article for a quick peruse, I do not necessarily care to wait for my browser to download unnecessary resources such as [advertisements](/tag/advertisements/), social media widgets, and web fonts. Furthermore, when using my rated data plan on my mobile device, I do not always care to pay for bandwidth used to download mere aesthetics such as fonts.
 
 ### Security
 
@@ -45,13 +45,13 @@ While the risk and frequency of security vulnerabilities are relatively small wi
 
 Additionally, most of the time web fonts are downloaded from a third-party delivery network such as [Google Web Fonts](https://fonts.google.com/) or [Adobe Fonts](https://fonts.adobe.com/). One of the advantages of using these systems is that the likelihood that a visitor’s browser already has a font cached locally from a previous visit to any other site using the same font is relatively high. If browser caches the font, a re-download does not need to be initiated. Whether the font is cached locally or not, however, the client browser still creates an extra HTTP(S) connection to the third-party domain.
 
-There are some privacy concerns when your browser makes the link to the font network’s domain. While they deny the practice, these services have the ability of [profiling](https://collinmbarrett.com/tag/tracking/) your browser (using browser fingerprinting with your IP address and HTTP referer header) to track what sites you visit, building a valuable profile about you that they could sell to marketers. I like to think the best of companies, but since I cannot know for sure what business decisions they make behind closed doors, I choose to take whatever steps I can to protect my privacy.
+There are some privacy concerns when your browser makes the link to the font network’s domain. While they deny the practice, these services have the ability of [profiling](/tag/tracking/) your browser (using browser fingerprinting with your IP address and HTTP referer header) to track what sites you visit, building a valuable profile about you that they could sell to marketers. I like to think the best of companies, but since I cannot know for sure what business decisions they make behind closed doors, I choose to take whatever steps I can to protect my privacy.
 
 ### Censorship
 
 Lastly, as a quick note to developers, it must be mentioned that oppressive governments like China forcefully block many Google services. Different network-related censoring could automatically block Google Web Fonts or its competitors, so their utility does not serve as a perfect global option for styling your web property.
 
-<figure aria-describedby="caption-attachment-2630" class="wp-caption alignright" id="attachment_2630" style="width: 263px">[![uBlock Origin Logo](https://collinmbarrett.com/media/uBlockOrigin_collinmbarrett-263x300.png)](https://collinmbarrett.com/media/uBlockOrigin_collinmbarrett.png)<figcaption class="wp-caption-text" id="caption-attachment-2630">*Fig. 1.* uBlock Origin Logo</figcaption></figure>
+<figure aria-describedby="caption-attachment-2630" class="wp-caption alignright" id="attachment_2630" style="width: 263px">[![uBlock Origin Logo](/assets/img/uBlockOrigin_collinmbarrett-263x300.png)](/assets/img/uBlockOrigin_collinmbarrett.png)<figcaption class="wp-caption-text" id="caption-attachment-2630">*Fig. 1.* uBlock Origin Logo</figcaption></figure>
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ Furthermore, the modern web makes extensive use of icon fonts. These particular 
 
 #### Instructions
 
-<figure aria-describedby="caption-attachment-2644" class="wp-caption alignright" id="attachment_2644" style="width: 300px">[![uBlock Origin Web Fonts Toggle](https://collinmbarrett.com/media/uBlockOriginWebFontsToggle_collinmbarrett-300x174.jpg)](https://collinmbarrett.com/media/uBlockOriginWebFontsToggle_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-2644">*Fig. 2.* uBlock Origin Web Fonts Toggle</figcaption></figure>
+<figure aria-describedby="caption-attachment-2644" class="wp-caption alignright" id="attachment_2644" style="width: 300px">[![uBlock Origin Web Fonts Toggle](/assets/img/uBlockOriginWebFontsToggle_collinmbarrett-300x174.jpg)](/assets/img/uBlockOriginWebFontsToggle_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-2644">*Fig. 2.* uBlock Origin Web Fonts Toggle</figcaption></figure>
 
 To implement this scheme, just click “Block remote fonts” in the “Settings” tab of uBlock Origin. If you want to loosen the restrictions to allow web fonts for your favorite trusted sites or for sites that are unusable without their icon fonts, you can do so on a site-by-site basis. Just toggle the font icon circled in blue in Fig. 2 (resembling a capital “A”) back on in the uBlock Origin GUI while viewing the site to be whitelisted.
 

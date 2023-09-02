@@ -5,11 +5,11 @@ date: '2017-06-15T07:00:19-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A quick and dirty test of HTTP/2 Server Push on WordPress.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4212'
+guid: '/?p=4212'
 permalink: /http2-server-push-wordpress/
 wp_featherlight_disable:
     - ''
-image: /media/http2ServerPush_collinmbarrett.jpg
+image: /assets/img/http2ServerPush_collinmbarrett.jpg
 categories:
     - Code
 tags:
@@ -61,15 +61,15 @@ I was expecting speeds to improve from left to right in that table. Unfortunatel
 
 The waterfall charts (click to enlarge) are where you can really see what this feature is doing. When no assets are pushed, resources are received by the full round-trip request/response lifecycle and not all in parallel.
 
-<figure aria-describedby="caption-attachment-4222" class="wp-caption aligncenter" id="attachment_4222" style="width: 249px">[![No HTTP/2 Server Push Waterfall](https://collinmbarrett.com/media/noServerPush_collinmbarrett-249x300.jpg)](https://collinmbarrett.com/media/noServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4222">No HTTP/2 Server Push Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_1Q_2JV/3/details/#waterfall_view_step1)</figcaption></figure>
+<figure aria-describedby="caption-attachment-4222" class="wp-caption aligncenter" id="attachment_4222" style="width: 249px">[![No HTTP/2 Server Push Waterfall](/assets/img/noServerPush_collinmbarrett-249x300.jpg)](/assets/img/noServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4222">No HTTP/2 Server Push Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_1Q_2JV/3/details/#waterfall_view_step1)</figcaption></figure>
 
 Applying HTTP/2 Server Push to the scripts and stylesheets downloads all of those resources in parallel and they require far less time to acquire. The files are now downloaded from the browser’s perspective on the order of around 10ms on average vs. more like 25ms when not pushed. This disparity would likely be even greater if I were not using a global CDN (Cloudflare) to deliver assets from nodes near the client.
 
-<figure aria-describedby="caption-attachment-4223" class="wp-caption aligncenter" id="attachment_4223" style="width: 249px">[![HTTP/2 Server Push Scripts & Stylesheets Waterfall](https://collinmbarrett.com/media/scriptsStylesheetsServerPush_collinmbarrett-249x300.jpg)](https://collinmbarrett.com/media/scriptsStylesheetsServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4223">HTTP/2 Server Push Scripts &amp; Stylesheets Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_2A_2H5/7/details/#waterfall_view_step1)</figcaption></figure>
+<figure aria-describedby="caption-attachment-4223" class="wp-caption aligncenter" id="attachment_4223" style="width: 249px">[![HTTP/2 Server Push Scripts & Stylesheets Waterfall](/assets/img/scriptsStylesheetsServerPush_collinmbarrett-249x300.jpg)](/assets/img/scriptsStylesheetsServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4223">HTTP/2 Server Push Scripts &amp; Stylesheets Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_2A_2H5/7/details/#waterfall_view_step1)</figcaption></figure>
 
 The true median run when I applied HTTP/2 Server Push to fonts and the logo .png as well produced a bit of an anomaly waterfall. As you can see below, all of these assets were downloaded immediately and in parallel as we’d expect. However, the download times for the assets were much higher than expected. If we look at [all of the other runs in the batch](https://www.webpagetest.org/result/170615_8F_2CP/), though, this seems to be due to a fluke of some kind (such as network congestion).
 
-<figure aria-describedby="caption-attachment-4224" class="wp-caption aligncenter" id="attachment_4224" style="width: 269px">[![HTTP/2 Server Push Scripts, Stylesheets, Fonts, & Logo Waterfall](https://collinmbarrett.com/media/allServerPush_collinmbarrett-269x300.jpg)](https://collinmbarrett.com/media/allServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4224">HTTP/2 Server Push Scripts, Stylesheets, Fonts, &amp; Logo Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_8F_2CP/9/details/#waterfall_view_step1)</figcaption></figure>
+<figure aria-describedby="caption-attachment-4224" class="wp-caption aligncenter" id="attachment_4224" style="width: 269px">[![HTTP/2 Server Push Scripts, Stylesheets, Fonts, & Logo Waterfall](/assets/img/allServerPush_collinmbarrett-269x300.jpg)](/assets/img/allServerPush_collinmbarrett.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4224">HTTP/2 Server Push Scripts, Stylesheets, Fonts, &amp; Logo Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_8F_2CP/9/details/#waterfall_view_step1)</figcaption></figure>
 
 This was a quick unscientific test, to be sure, but it seems to indicate that, at least for this particular page, HTTP/2 Server Push produces a mixed back regarding performance change. I would need to test this on multiple devices and multiple network connections to get a bit better feel as to whether it is a keeper or not.
 
@@ -89,7 +89,7 @@ define('CLOUDFLARE_HTTP2_SERVER_PUSH_ACTIVE', true);
 These plugins can only apply the necessary hints to scripts and stylesheets, however. My understanding is that this is due to the current queueing architecture of WordPress resources. If you are using NGINX as a web server, though, you can add the hints via headers in the server block of your NGINX .conf file. Something like below should do the trick.
 
 ```
-add_header link "</media/logo_collinmbarrett.png>; rel=preload; as=image";
+add_header link "</assets/img/logo_collinmbarrett.png>; rel=preload; as=image";
 add_header link "</wp-content/themes/collinmbarrett/fonts/lato-regular-webfont.woff2>; rel=preload; as=font; crossorigin";
 
 ```

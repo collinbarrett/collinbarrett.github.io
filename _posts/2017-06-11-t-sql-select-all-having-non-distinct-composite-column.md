@@ -5,11 +5,11 @@ date: '2017-06-11T12:50:47-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A T-SQL solution using HAVING and COUNT for selecting all records with a non-distinct composite column.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=4120'
+guid: '/?p=4120'
 permalink: /t-sql-select-all-having-non-distinct-composite-column/
 wp_featherlight_disable:
     - ''
-image: /media/tSqlRank_collinmbarrett.png
+image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
     - Code
 tags:

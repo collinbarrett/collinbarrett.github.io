@@ -5,11 +5,11 @@ date: '2016-01-07T17:59:26-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'A how-to guide to speeding up websites by dynamically caching WordPress on Cloudflare including traditionally non-static content like HTML.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=283'
+guid: '/?p=283'
 permalink: /wordpress-cloudflare-dynamic-caching/
 wp_featherlight_disable:
     - ''
-image: /media/dynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
+image: /assets/img/dynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
     - Code
 tags:
@@ -35,13 +35,13 @@ Before I move on, I want to start by saying that this tactic is probably not ben
 
 The default caching settings in Cloudflare only cache static portions of the site. These are things like images, CSS, etc. The HTML, though, is typically dynamically generated in a CMS like WordPress, so caching the HTML can prevent visitors from seeing recent updates. I have been serving everything including HTML from the CDN cache for a couple of days, though, and the numbers speak for themselves.
 
-<div class="wp-block-image"><figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at three U.S. nodes.](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_cb-300x241.png)](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_cb.png)<figcaption>**Fig. 1.** Before and after enabling full CDN dynamic caching at three U.S. nodes.</figcaption></figure></div>Fig. 1 shows the response times for my site from New Relic’s three U.S. nodes. It is very obvious where I flipped the switch to full page caching, **reducing the response time at both of the West Coast nodes by about 70%**.
+<div class="wp-block-image"><figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at three U.S. nodes.](/assets/img/2016/01/dynamicCachingCDN_cb-300x241.png)](/assets/img/2016/01/dynamicCachingCDN_cb.png)<figcaption>**Fig. 1.** Before and after enabling full CDN dynamic caching at three U.S. nodes.</figcaption></figure></div>Fig. 1 shows the response times for my site from New Relic’s three U.S. nodes. It is very obvious where I flipped the switch to full page caching, **reducing the response time at both of the West Coast nodes by about 70%**.
 
-<div class="wp-block-image"><figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at all global New Relic nodes.](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_01_cb-300x182.png)](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_01_cb.png)<figcaption>**Fig. 2.** Before and after enabling full CDN dynamic caching at all global New Relic nodes.</figcaption></figure></div>Fig. 2 shows the average wait time drop across all New Relic Synthetics nodes. Again, the numbers do not lie; **the wait time is cut globally by about 80%**.
+<div class="wp-block-image"><figure class="aligncenter">[![Before and after enabling full CDN dynamic caching at all global New Relic nodes.](/assets/img/2016/01/dynamicCachingCDN_01_cb-300x182.png)](/assets/img/2016/01/dynamicCachingCDN_01_cb.png)<figcaption>**Fig. 2.** Before and after enabling full CDN dynamic caching at all global New Relic nodes.</figcaption></figure></div>Fig. 2 shows the average wait time drop across all New Relic Synthetics nodes. Again, the numbers do not lie; **the wait time is cut globally by about 80%**.
 
 You can feel that speed by just clicking around my website. Lastly, if your site is insanely popular or if you hit it big on [Product Hunt](https://www.producthunt.com "Product Hunt"), Cloudflare will handle the massive influx of traffic with ease. Fig. 3 below shows 500 clients per second connecting to my homepage over 1 minute without any real problems. This is all served using only a $5 [DigitalOcean](https://www.digitalocean.com/) Droplet.
 
-<div class="wp-block-image"><figure class="alignright">[![Fig. 3. Load Test of 500 Clients per Sec. for 1 Min. Connecting to collinmbarrett.com after Dynamically Caching WordPress on CloudFlare](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_02_cb-1-300x202.jpg)](https://collinmbarrett.com/media/2016/01/dynamicCachingCDN_02_cb-1.jpg)<figcaption>**Fig. 3.** Load test of 500 clients per sec. for 1 min. connecting to collinmbarrett.com.</figcaption></figure></div>## Part 1. Cloudflare Page Rules
+<div class="wp-block-image"><figure class="alignright">[![Fig. 3. Load Test of 500 Clients per Sec. for 1 Min. Connecting to collinmbarrett.com after Dynamically Caching WordPress on CloudFlare](/assets/img/2016/01/dynamicCachingCDN_02_cb-1-300x202.jpg)](/assets/img/2016/01/dynamicCachingCDN_02_cb-1.jpg)<figcaption>**Fig. 3.** Load test of 500 clients per sec. for 1 min. connecting to collinmbarrett.com.</figcaption></figure></div>## Part 1. Cloudflare Page Rules
 
 Implementing full page caching with WordPress requires two key components: Cloudflare Page Rules and the “Sunny” WordPress plugin to purge the CDN cache when the site is updated. Exactly 3 Page Rules are required to get this working properly, so as long as you do not need additional Page Rules, **Cloudflare’s free plan works just fine**. The page rules required are below; make sure to order them in the same way as they are listed.
 

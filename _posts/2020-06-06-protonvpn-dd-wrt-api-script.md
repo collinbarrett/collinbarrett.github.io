@@ -5,11 +5,11 @@ date: '2020-06-06T16:18:48-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'I wrote a shell script triggered by cron on my DD-WRT router to automatically connect to the optimal ProtonVPN server via the OpenVPN Client'
 layout: post
-guid: 'https://collinmbarrett.com/?p=8456'
+guid: '/?p=8456'
 permalink: /protonvpn-dd-wrt-api-script/
 wp_featherlight_disable:
     - ''
-image: /media/serverRack_collinmbarrett.jpg
+image: /assets/img/serverRack_collinmbarrett.jpg
 categories:
     - InfoSec
 tags:
@@ -38,7 +38,7 @@ Updated and simplified the script to continue to support PBR per [this forum pos
 
 - - - - - -
 
-In a [recent post](https://collinmbarrett.com/protonvpn-dd-wrt-dns/), I outlined a solution that I was testing for configuring my DD-WRT router to connect to an optimal ProtonVPN server. In short, I configured a domain name that I own to return a [round-robin](https://www.cloudflare.com/learning/dns/glossary/round-robin-dns/) IP address from a set of generally optimal servers for my location with Cloudflare.
+In a [recent post](/protonvpn-dd-wrt-dns/), I outlined a solution that I was testing for configuring my DD-WRT router to connect to an optimal ProtonVPN server. In short, I configured a domain name that I own to return a [round-robin](https://www.cloudflare.com/learning/dns/glossary/round-robin-dns/) IP address from a set of generally optimal servers for my location with Cloudflare.
 
 This solution partially mimicked ProtonVPN’s country configuration option that allows you to connect to `us.protonvpn.com` which should resolve to the most ideal US IP for your location and the current server load. In my testing, however, this domain often connected me to servers that were physically far from my location with sub-par speed and latency.
 
@@ -134,7 +134,7 @@ fi
 
 I use cron jobs to execute this script automatically. The DD-WRT GUI enables this configuration, which I wired up to refresh the connection twice a day (7:25 am and 5 pm, the beginning and end of my typical workday).
 
-<figure class="wp-block-image size-large">![DD-WRT Cron](https://collinmbarrett.com/media/ddwrtCron_collinmbarrett.jpg)</figure>## Startup
+<figure class="wp-block-image size-large">![DD-WRT Cron](/assets/img/ddwrtCron_collinmbarrett.jpg)</figure>## Startup
 
 Additionally, I have enabled DD-WRT’s watchdog service to ping a large public DNS provider (I use Cloudflare’s 1.1.1.1) every so often to ensure my router still has connection to the WAN. When WAN connection is down, the router will automatically reboot. When DD-WRT starts back up, the OpenVPN connection would use the default server configured
 

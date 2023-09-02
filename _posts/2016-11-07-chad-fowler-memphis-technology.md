@@ -5,11 +5,11 @@ date: '2016-11-07T11:16:38-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'Chad Fowler delivered the keynote at TechCamp Memphis ''16. He challenged attendees to break down walls of false limitations in Memphis technology.'
 layout: post
-guid: 'https://collinmbarrett.com/?p=3508'
+guid: '/?p=3508'
 permalink: /chad-fowler-memphis-technology/
 wp_featherlight_disable:
     - ''
-image: /media/chadFowlerMemphisTechnology_collinmbarrett.jpg
+image: /assets/img/chadFowlerMemphisTechnology_collinmbarrett.jpg
 categories:
     - Code
 tags:
