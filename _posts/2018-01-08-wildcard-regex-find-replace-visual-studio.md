@@ -3,20 +3,19 @@ id: 5037
 title: 'Wildcard Regex Find and Replace in Visual Studio'
 date: '2018-01-08T04:00:07-06:00'
 author: 'Collin M. Barrett'
-excerpt: 'An example of how to use Visual Studio regex find and replace with a wildcard to quickly refactor many lines of code.'
+excerpt: 'An example of how to use Visual Studio regex find and replace with a wildcard to quickly refactor many lines
+of code.'
 layout: post
 guid: '/?p=5037'
 permalink: /wildcard-regex-find-replace-visual-studio/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/regexFindReplaceGlassesComputer_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - Dotnet
-    - Productivity
-    - 'Shelby Systems'
-    - 'Visual Studio'
+- Dotnet
+- Productivity
+- 'Shelby Systems'
+- 'Visual Studio'
 ---
 
 ## Wearing Out the Delete Key

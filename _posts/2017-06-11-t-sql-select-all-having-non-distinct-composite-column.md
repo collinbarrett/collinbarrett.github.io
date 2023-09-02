@@ -7,19 +7,20 @@ excerpt: 'A T-SQL solution using HAVING and COUNT for selecting all records with
 layout: post
 guid: '/?p=4120'
 permalink: /t-sql-select-all-having-non-distinct-composite-column/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
-    - Code
+- Code
 tags:
-    - Database
-    - 'fred''s'
+- Database
+- 'fred''s'
 ---
 
 ## Requirement
 
-This week, the cross-functional team that is testing the application I have been building discovered a data issue where a table that should only contain one record for each (`[Sku]`, `[GroupCode]`) pair had more than one in some cases. This table was not designed to have (`[Sku]`, `[GroupCode]`) as a composite key (there is an `[Id]` identity column as a key), allowing this issue to occur.
+This week, the cross-functional team that is testing the application I have been building discovered a data issue where
+a table that should only contain one record for each (`[Sku]`, `[GroupCode]`) pair had more than one in some cases. This
+table was not designed to have (`[Sku]`, `[GroupCode]`) as a composite key (there is an `[Id]` identity column as a
+key), allowing this issue to occur.
 
 Below is a sample of what the table `[Prices]` could have contained.
 
@@ -32,11 +33,13 @@ Below is a sample of what the table `[Prices]` could have contained.
 | 5 | 2 | 1 | 2.00 |
 | 6 | 2 | 2 | 1.00 |
 
-To diagnose why this issue (such as records where `[Id] IN (1,2)`) was happening, I needed a query to select only the records that contained more than one (`[Sku]`, `[GroupCode]`) composite.
+To diagnose why this issue (such as records where `[Id] IN (1,2)`) was happening, I needed a query to select only the
+records that contained more than one (`[Sku]`, `[GroupCode]`) composite.
 
 ## A Solution
 
-I did not have a lot of time to test my Google-Fu for this one, so I received assistance from a BI developer who sits across the hall from me. She suggested a query like below.
+I did not have a lot of time to test my Google-Fu for this one, so I received assistance from a BI developer who sits
+across the hall from me. She suggested a query like below.
 
 ```
 <pre class="brush: sql; title: ; notranslate" title="">

@@ -3,29 +3,38 @@ id: 6796
 title: 'The Immortality of C# Static Fields'
 date: '2018-07-16T05:00:52-05:00'
 author: 'Collin M. Barrett'
-excerpt: 'A tale of improperly using a static field, preventing a colleague from doing the same, and a primer on why static fields should be avoided.'
+excerpt: 'A tale of improperly using a static field, preventing a colleague from doing the same, and a primer on why
+static fields should be avoided.'
 layout: post
 guid: '/?p=6796'
 permalink: /immortality-static-fields/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/staticSlide_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - Cache
-    - Database
-    - Dotnet
-    - Refactoring
-    - 'Shelby Systems'
-    - 'Visual Studio'
+- Cache
+- Database
+- Dotnet
+- Refactoring
+- 'Shelby Systems'
+- 'Visual Studio'
 ---
 
-Twice in the last two weeks, my team has grappled with using static fields. The first was somewhat inadvertently introduced by yours truly and wreaked a bit of havoc in our latest release. The latter was debating whether or not to make use of one to perform in-memory caching of data. In both cases, and arguably in nearly all possible cases, using static (non-constant) fields is probably a poor choice. I clarify non-constant since [`const` is also inherently static](https://stackoverflow.com/questions/408192/why-cant-i-have-public-static-const-string-s-stuff-in-my-class/408201#408201), but it is generally safer to use since it is compile-time constant and therefore burned into the build artifacts rather than set in-memory.
+Twice in the last two weeks, my team has grappled with using static fields. The first was somewhat inadvertently
+introduced by yours truly and wreaked a bit of havoc in our latest release. The latter was debating whether or not to
+make use of one to perform in-memory caching of data. In both cases, and arguably in nearly all possible cases, using
+static (non-constant) fields is probably a poor choice. I clarify non-constant since [`const` is also inherently
+static](https://stackoverflow.com/questions/408192/why-cant-i-have-public-static-const-string-s-stuff-in-my-class/408201#408201),
+but it is generally safer to use since it is compile-time constant and therefore burned into the build artifacts rather
+than set in-memory.
 
 ## Case 1: Reducing Duplication
 
-As a part of a bug fix in our last release, I moved some business logic from the view layer back into a new service class. The class `new`-ed up five different repositories, each using the same `DataContext` instance. (Five repositories are probably too many for one class, and I could have modularized the service more. However, refactoring is iterative.) The service class had two different constructors, so rather than `new`-ing the context and each repository in both constructors, I tried instantiating them at declaration.
+As a part of a bug fix in our last release, I moved some business logic from the view layer back into a new service
+class. The class `new`-ed up five different repositories, each using the same `DataContext` instance. (Five repositories
+are probably too many for one class, and I could have modularized the service more. However, refactoring is iterative.)
+The service class had two different constructors, so rather than `new`-ing the context and each repository in both
+constructors, I tried instantiating them at declaration.
 
 Mainly, I wanted to replace this:
 

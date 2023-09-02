@@ -3,26 +3,27 @@ id: 7111
 title: 'Type Wrapping an Inconsistently Serialized Key-Value Store'
 date: '2018-07-30T04:00:40-05:00'
 author: 'Collin M. Barrett'
-excerpt: 'Migrating CRUD operations of a key-value store with inconsistent serialization formats from the view layer to typed POCOs in the data layer.'
+excerpt: 'Migrating CRUD operations of a key-value store with inconsistent serialization formats from the view layer to
+typed POCOs in the data layer.'
 layout: post
 guid: '/?p=7111'
 permalink: /type-wrapping-inconsistently-serialized-key-value-store/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/typeWrappingFruit_collinmbarrett.gif
 categories:
-    - Code
+- Code
 tags:
-    - Career
-    - Database
-    - Dotnet
-    - Refactoring
-    - 'Shelby Systems'
+- Career
+- Database
+- Dotnet
+- Refactoring
+- 'Shelby Systems'
 ---
 
 ## Background
 
-The ASP.NET application I support has a table that stores transient data with a custom serializer per primary key (`PrefId` in the example below). The view layer consumes this data primarily for maintaining the user-specific state of controls like filters, pickers, and text boxes. The RDBMS table looks something like this:
+The ASP.NET application I support has a table that stores transient data with a custom serializer per primary key
+(`PrefId` in the example below). The view layer consumes this data primarily for maintaining the user-specific state of
+controls like filters, pickers, and text boxes. The RDBMS table looks something like this:
 
 | `UserId` | `PrefId` | `Pref` |
 |---|---|---|
@@ -30,10 +31,11 @@ The ASP.NET application I support has a table that stores transient data with a 
 | `2` | `1` | `Key1= First Key2= 1,4` |
 | `2` | `2` | `404Key= 12/5/2014 10:01:23 AM` |
 
-As you can see in this small sample, the `Pref` values are a bit of a “garbage bin” (naming credit to my colleague). They are generally (but not always) serialized to a `VARCHAR` looking something like:
+As you can see in this small sample, the `Pref` values are a bit of a “garbage bin” (naming credit to my colleague).
+They are generally (but not always) serialized to a `VARCHAR` looking something like:
 
 <div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: plain; title: ; notranslate" title="">
+    <pre class="brush: plain; title: ; notranslate" title="">
 <Key1>= <Value1> <Key2>= <Value2>
 ```
 

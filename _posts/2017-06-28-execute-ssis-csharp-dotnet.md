@@ -7,23 +7,25 @@ excerpt: 'Two methods for executing an SSIS package installed on a SQL Server in
 layout: post
 guid: '/?p=4392'
 permalink: /execute-ssis-csharp-dotnet/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/ssis_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - Database
-    - Dotnet
-    - 'fred''s'
-    - 'Visual Studio'
+- Database
+- Dotnet
+- 'fred''s'
+- 'Visual Studio'
 ---
 
-The retail pricing application that I have been developing had a requirement to allow the user to trigger a process implemented in SQL Server Integration Services. We added a button in the Kendo UI front-end, but wiring up the button to trigger an SSIS package installed on a SQL Server instance was new for me. Here is how we did it.
+The retail pricing application that I have been developing had a requirement to allow the user to trigger a process
+implemented in SQL Server Integration Services. We added a button in the Kendo UI front-end, but wiring up the button to
+trigger an SSIS package installed on a SQL Server instance was new for me. Here is how we did it.
 
 ## Executing SSIS Package Directly
 
-A colleague and I spent a day or so trying to execute the SSIS package directly. It took so long because there had to be communication with the DBA to get service accounts, access permissions, and package locations/names all configured correctly. However, in the end, we found a working solution with one caveat.
+A colleague and I spent a day or so trying to execute the SSIS package directly. It took so long because there had to be
+communication with the DBA to get service accounts, access permissions, and package locations/names all configured
+correctly. However, in the end, we found a working solution with one caveat.
 
 ### Dependencies
 

@@ -7,28 +7,34 @@ excerpt: 'A brief overview of the Referrer Policy header and how to send it with
 layout: post
 guid: '/?p=4160'
 permalink: /referrer-policy-header-nginx/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/privacyReferrerPolicy_collinmbarrett.jpg
 categories:
-    - InfoSec
+- InfoSec
 tags:
-    - Chrome
-    - HTTPS
-    - NGINX
-    - Tracking
-    - WordPress
+- Chrome
+- HTTPS
+- NGINX
+- Tracking
+- WordPress
 ---
 
-I periodically run the collection of websites that I maintain through a variety of testing tools to monitor their security and performance. One of these tools, [securityheaders.io](https://securityheaders.com/), recently added a check for the [new Referrer Policy header](https://scotthelme.co.uk/a-new-security-header-referrer-policy/). I dug in a little to learn about the header and to begin sending it via NGINX on my sites.
+I periodically run the collection of websites that I maintain through a variety of testing tools to monitor their
+security and performance. One of these tools, [securityheaders.io](https://securityheaders.com/), recently added a check
+for the [new Referrer Policy header](https://scotthelme.co.uk/a-new-security-header-referrer-policy/). I dug in a little
+to learn about the header and to begin sending it via NGINX on my sites.
 
 ## Referrer Header
 
-When we click a link on the internet, part of the HTTP specification is to send a referrer header to the next page you are visiting. This information allows the next page to see where you came from and is quite valuable to sites for optimizing lead funnels, SEO, etc. It is received with some concern, however, by the informed, privacy-minded user who may not want to signal the last page they visited.
+When we click a link on the internet, part of the HTTP specification is to send a referrer header to the next page you
+are visiting. This information allows the next page to see where you came from and is quite valuable to sites for
+optimizing lead funnels, SEO, etc. It is received with some concern, however, by the informed, privacy-minded user who
+may not want to signal the last page they visited.
 
 ## Blocking with noreferrer
 
-There has been an existing mechanism for sites to request that the referrer header not be sent by adding the “noreferrer” keyword to a link. The example below demonstrates the HTML implementation. It is up to the browser to respect that keyword, but most modern versions of mainstream browsers do to my knowledge.
+There has been an existing mechanism for sites to request that the referrer header not be sent by adding the
+“noreferrer” keyword to a link. The example below demonstrates the HTML implementation. It is up to the browser to
+respect that keyword, but most modern versions of mainstream browsers do to my knowledge.
 
 ```
 <pre class="brush: xml; light: true; title: ; notranslate" title="">

@@ -3,63 +3,103 @@ id: 8074
 title: 'Data CI: Entity Framework Core Migrations from Azure Pipelines to GitHub'
 date: '2020-03-15T16:27:00-05:00'
 author: 'Collin M. Barrett'
-excerpt: 'I created an Azure Pipeline that automatically performs an Entity Framework Core migration on a GitHub pull request of modified JSON data files.'
+excerpt: 'I created an Azure Pipeline that automatically performs an Entity Framework Core migration on a GitHub pull
+request of modified JSON data files.'
 layout: post
 guid: '/?p=8074'
 permalink: /entity-framework-migrations-azure-pipelines-github/
 image: /assets/img/azurePipelinesEfCoreMigration_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - Algorithms
-    - Database
-    - Dotnet
-    - FilterLists
-    - HTML
-    - Productivity
-    - Refactoring
-    - 'Source Control'
-    - WordPress
+- Algorithms
+- Database
+- Dotnet
+- FilterLists
+- HTML
+- Productivity
+- Refactoring
+- 'Source Control'
+- WordPress
 ---
 
-[FilterLists](https://filterlists.com/) is a hobby project that I have been hacking on for about five years as a labor of love. It serves as a useful resource for the adblocking community, but I have also used it as a playground to learn new skills.
+[FilterLists](https://filterlists.com/) is a hobby project that I have been hacking on for about five years as a labor
+of love. It serves as a useful resource for the adblocking community, but I have also used it as a playground to learn
+new skills.
 
-I recently improved the continuous integration of the open-sourced data for the application by adding automatic Entity Framework Core data migrations. When a contributor opens a pull request changing any of the [JSON data](https://github.com/collinbarrett/FilterLists/tree/master/services/Directory/data), an [Azure Pipeline](https://dev.azure.com/collinbarrett/FilterLists/_build?definitionId=26) clones the contributor’s fork, adds an EF migration, performs a test seed, and pushes the migration back to the contributor’s fork to update the pull request.
+I recently improved the continuous integration of the open-sourced data for the application by adding automatic Entity
+Framework Core data migrations. When a contributor opens a pull request changing any of the [JSON
+data](https://github.com/collinbarrett/FilterLists/tree/master/services/Directory/data), an [Azure
+Pipeline](https://dev.azure.com/collinbarrett/FilterLists/_build?definitionId=26) clones the contributor’s fork, adds an
+EF migration, performs a test seed, and pushes the migration back to the contributor’s fork to update the pull request.
 
 ## History of FilterLists Data
 
 ### Version 1: HTML Table in WordPress
 
-I launched the [first ](https://web.archive.org/web/20161129125628/https://filterlists.com/)and [second](https://web.archive.org/web/20180215171316/https://filterlists.com/) designs of FilterLists back in 2015 and 2017 as a simple [WordPress](/tag/wordpress/) installation with a table builder plugin. At the time, it only indexed a maximum of about 300 lists, and I managed updates myself through the WordPress back-end.
+I launched the [first ](https://web.archive.org/web/20161129125628/https://filterlists.com/)and
+[second](https://web.archive.org/web/20180215171316/https://filterlists.com/) designs of FilterLists back in 2015 and
+2017 as a simple [WordPress](/tag/wordpress/) installation with a table builder plugin. At the time, it only indexed a
+maximum of about 300 lists, and I managed updates myself through the WordPress back-end.
 
-Community members could submit new lists through a contact form on the site, and I would have to update the table through tedious copy/paste and manually crafted HTML. It was easy to get up and running and served its purpose for a while, but this solution did not scale with a growing dataset now approaching 2,000 lists.
+Community members could submit new lists through a contact form on the site, and I would have to update the table
+through tedious copy/paste and manually crafted HTML. It was easy to get up and running and served its purpose for a
+while, but this solution did not scale with a growing dataset now approaching 2,000 lists.
 
 ### Version 2: ASP.NET API with Entity Framework Core
 
-In 2018, I relaunched the site on React and ASP.NET Core. As a part of this process, I wanted to version control the data so community members could [submit updates via GitHub pull requests](https://github.com/collinbarrett/FilterLists/pulls?q=is%3Apr+label%3Adata+-author%3Acollinbarrett+). The dataset was becoming too large for me to maintain alone. I wanted to focus my limited time on the application itself and welcome community contributions to help keep the data up-to-date.
+In 2018, I relaunched the site on React and ASP.NET Core. As a part of this process, I wanted to version control the
+data so community members could [submit updates via GitHub pull
+requests](https://github.com/collinbarrett/FilterLists/pulls?q=is%3Apr+label%3Adata+-author%3Acollinbarrett+). The
+dataset was becoming too large for me to maintain alone. I wanted to focus my limited time on the application itself and
+welcome community contributions to help keep the data up-to-date.
 
-I chose Entity Framework Core and MariaDB for the data layer. I used EF code first for schema changes, but the data itself was stored in JSON flat files and merged into the production database at API startup.
+I chose Entity Framework Core and MariaDB for the data layer. I used EF code first for schema changes, but the data
+itself was stored in JSON flat files and merged into the production database at API startup.
 
-At the time, EF Core 2.1 was at least six months away from release, so EF Core did not yet have native data seeding functionality. I managed to patch together a [gnarly extension method](https://github.com/collinbarrett/FilterLists/blob/09adeb22d92244e2c426418ed9b6ed967853dac9/server/src/FilterLists.Data/Seed/Extensions/SeedFilterListsDbContext.cs) to update the database from the JSON files. As I recall, it took me several weeks and many StackOverflow questions (e.g. [1](https://stackoverflow.com/q/52263081/2343739), [2](https://stackoverflow.com/q/51540318/2343739)) to get this solution working correctly. The final product worked, but undoubtedly had security concerns and was impossible to comprehend or change later. For the next couple of years, I avoided making any schema changes as I feared to have to change my seeding algorithm.
+At the time, EF Core 2.1 was at least six months away from release, so EF Core did not yet have native data seeding
+functionality. I managed to patch together a [gnarly extension
+method](https://github.com/collinbarrett/FilterLists/blob/09adeb22d92244e2c426418ed9b6ed967853dac9/server/src/FilterLists.Data/Seed/Extensions/SeedFilterListsDbContext.cs)
+to update the database from the JSON files. As I recall, it took me several weeks and many StackOverflow questions (e.g.
+[1](https://stackoverflow.com/q/52263081/2343739), [2](https://stackoverflow.com/q/51540318/2343739)) to get this
+solution working correctly. The final product worked, but undoubtedly had security concerns and was impossible to
+comprehend or change later. For the next couple of years, I avoided making any schema changes as I feared to have to
+change my seeding algorithm.
 
 ## Migrating the Data with Entity Framework Core
 
 ### Deleting and Re-Inserting the Same Data
 
-When EF Core 2.1 launched, I now had a [native option for seeding](https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding) the database. I could rely on EF Core to construct and order the required inserts/updates/deletes to keep the database in sync with the JSON data files. My initial attempt at converting to EF Core seeding discovered a [bug in EF Core](https://github.com/dotnet/efcore/issues/13154), however. The migration engine was deleting and re-inserting *unchanged* entities, adding a tremendous amount of no-ops to each migration script.
+When EF Core 2.1 launched, I now had a [native option for
+seeding](https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding) the database. I could rely on EF Core to
+construct and order the required inserts/updates/deletes to keep the database in sync with the JSON data files. My
+initial attempt at converting to EF Core seeding discovered a [bug in EF
+Core](https://github.com/dotnet/efcore/issues/13154), however. The migration engine was deleting and re-inserting
+*unchanged* entities, adding a tremendous amount of no-ops to each migration script.
 
 ### Stack Overflow Exceptions
 
-The bug was fixed in EF Core 2.2, but it took me until a few months ago to prioritize moving to EF Core seeding again. The dataset had grown so large that my integration testing on the Azure Pipelines hosted agents started throwing stack overflow exceptions. (Sidebar: It is impossibly hard to Google for help on stack overflow exceptions when the primary repository of such information overloads the name “StackOverflow”.)
+The bug was fixed in EF Core 2.2, but it took me until a few months ago to prioritize moving to EF Core seeding again.
+The dataset had grown so large that my integration testing on the Azure Pipelines hosted agents started throwing stack
+overflow exceptions. (Sidebar: It is impossibly hard to Google for help on stack overflow exceptions when the primary
+repository of such information overloads the name “StackOverflow”.)
 
-The free agent that Microsoft provides was running out of memory with my custom and inefficient seeding algorithm. My integration test spins up a new instance of the containerized database and tests seeding the latest JSON data. Since I relied on this testing to ensure that community-contributed data changes were valid (syntactically correct, foreign key relationships were correct, etc.), this was the trigger I needed to revisit EF Core’s native seeding.
+The free agent that Microsoft provides was running out of memory with my custom and inefficient seeding algorithm. My
+integration test spins up a new instance of the containerized database and tests seeding the latest JSON data. Since I
+relied on this testing to ensure that community-contributed data changes were valid (syntactically correct, foreign key
+relationships were correct, etc.), this was the trigger I needed to revisit EF Core’s native seeding.
 
 ### Configuring JSON Seed Data with EF Core
 
-My entities extend a `BaseEntity`. So, to instruct EF Core to seed the JSON data, I added a call to a new extension method on `Configure()` of the `BaseEntity`. This method deserializes the JSON files into .NET objects using the new `<a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview">System.Text.Json</a>` library and adds them to the `DbContext` model by passing them into a call to `HasData()`.
+My entities extend a `BaseEntity`. So, to instruct EF Core to seed the JSON data, I added a call to a new extension
+method on `Configure()` of the `BaseEntity`. This method deserializes the JSON files into .NET objects using the new `<a
+  href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview">System.Text.Json</a>`
+library and adds them to the `DbContext` model by passing them into a call to `HasData()`.
 
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: csharp; title: ; notranslate" title="">
+<div class="wp-block-group">
+  <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+    <div class="wp-block-syntaxhighlighter-code ">```
+      <pre class="brush: csharp; title: ; notranslate" title="">
 public class BaseEntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
 {
     public virtual void Configure(EntityTypeBuilder<TEntity> builder)

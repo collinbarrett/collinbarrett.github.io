@@ -3,52 +3,71 @@ id: 8456
 title: 'DD-WRT: Connecting to the Optimal ProtonVPN Server with OpenVPN'
 date: '2020-06-06T16:18:48-05:00'
 author: 'Collin M. Barrett'
-excerpt: 'I wrote a shell script triggered by cron on my DD-WRT router to automatically connect to the optimal ProtonVPN server via the OpenVPN Client'
+excerpt: 'I wrote a shell script triggered by cron on my DD-WRT router to automatically connect to the optimal ProtonVPN
+server via the OpenVPN Client'
 layout: post
 guid: '/?p=8456'
 permalink: /protonvpn-dd-wrt-api-script/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/serverRack_collinmbarrett.jpg
 categories:
-    - InfoSec
+- InfoSec
 tags:
-    - Cloudflare
-    - DNS
-    - Encryption
-    - Hardware
-    - ISP
-    - Linux
-    - Performance
-    - Router
-    - Tracking
-    - VPN
-    - Wi-Fi
+- Cloudflare
+- DNS
+- Encryption
+- Hardware
+- ISP
+- Linux
+- Performance
+- Router
+- Tracking
+- VPN
+- Wi-Fi
 ---
 
 **Update 6.27.2022:**
 
-Added most recent script to GitHub rather than updating this post. ProtonVPN now supports customized OpenVPN username suffixes to specify exit node and additional features. See latest script [here](https://github.com/collinbarrett/dd-wrt/blob/main/vpn-refresh.sh).
+Added most recent script to GitHub rather than updating this post. ProtonVPN now supports customized OpenVPN username
+suffixes to specify exit node and additional features. See latest script
+[here](https://github.com/collinbarrett/dd-wrt/blob/main/vpn-refresh.sh).
 
 - - - - - -
 
 **Update 7.28.2021:**
 
-Updated and simplified the script to continue to support PBR per [this forum post](https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=1242050).
+Updated and simplified the script to continue to support PBR per [this forum
+post](https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=1242050).
 
 - - - - - -
 
-In a [recent post](/protonvpn-dd-wrt-dns/), I outlined a solution that I was testing for configuring my DD-WRT router to connect to an optimal ProtonVPN server. In short, I configured a domain name that I own to return a [round-robin](https://www.cloudflare.com/learning/dns/glossary/round-robin-dns/) IP address from a set of generally optimal servers for my location with Cloudflare.
+In a [recent post](/protonvpn-dd-wrt-dns/), I outlined a solution that I was testing for configuring my DD-WRT router to
+connect to an optimal ProtonVPN server. In short, I configured a domain name that I own to return a
+[round-robin](https://www.cloudflare.com/learning/dns/glossary/round-robin-dns/) IP address from a set of generally
+optimal servers for my location with Cloudflare.
 
-This solution partially mimicked ProtonVPN’s country configuration option that allows you to connect to `us.protonvpn.com` which should resolve to the most ideal US IP for your location and the current server load. In my testing, however, this domain often connected me to servers that were physically far from my location with sub-par speed and latency.
+This solution partially mimicked ProtonVPN’s country configuration option that allows you to connect to
+`us.protonvpn.com` which should resolve to the most ideal US IP for your location and the current server load. In my
+testing, however, this domain often connected me to servers that were physically far from my location with sub-par speed
+and latency.
 
-My custom domain solution worked alright but did not take into account the servers’ current loads. Server loads seem to be fluctuating more wildly during the pandemic, and performance degradation can be quite noticeable during peak loads. ProtonVPN exposes an API endpoint [here](https://api.protonmail.ch/vpn/logicals) that provides up-to-date `Load` and `Score` metrics for each server. In this post, I outline how I automated selecting a more optimal server IP via a shell script on DD-WRT. This solution assumes that you already have the DD-WRT OpenVPN Client enabled and connected to ProtonVPN ([ProtonVPN docs](https://protonvpn.com/support/vpn-router-ddwrt/)).
+My custom domain solution worked alright but did not take into account the servers’ current loads. Server loads seem to
+be fluctuating more wildly during the pandemic, and performance degradation can be quite noticeable during peak loads.
+ProtonVPN exposes an API endpoint [here](https://api.protonmail.ch/vpn/logicals) that provides up-to-date `Load` and
+`Score` metrics for each server. In this post, I outline how I automated selecting a more optimal server IP via a shell
+script on DD-WRT. This solution assumes that you already have the DD-WRT OpenVPN Client enabled and connected to
+ProtonVPN ([ProtonVPN docs](https://protonvpn.com/support/vpn-router-ddwrt/)).
 
 ## Entware
 
-To parse the JSON results from the ProtonVPN API, I wanted to use the popular `<a href="https://stedolan.github.io/jq/">jq</a>` command-line tool. DD-WRT does not ship with this tool out of the box, however, so I first had to install the Entware package manager.
+To parse the JSON results from the ProtonVPN API, I wanted to use the popular `<a
+  href="https://stedolan.github.io/jq/">jq</a>` command-line tool. DD-WRT does not ship with this tool out of the box,
+however, so I first had to install the Entware package manager.
 
-The [DD-WRT wiki page](https://wiki.dd-wrt.com/wiki/index.php/Installing_Entware) provides fairly straightforward instructions on how to format a USB flash drive and install the package manager. I connected to my router via [telnet](https://wiki.dd-wrt.com/wiki/index.php/Telnet/SSH_and_the_Command_Line). The installation went smoothly for me following that guide, but there could certainly be room for errors or hiccups, especially amongst various routers, chipsets, and DD-WRT builds.
+The [DD-WRT wiki page](https://wiki.dd-wrt.com/wiki/index.php/Installing_Entware) provides fairly straightforward
+instructions on how to format a USB flash drive and install the package manager. I connected to my router via
+[telnet](https://wiki.dd-wrt.com/wiki/index.php/Telnet/SSH_and_the_Command_Line). The installation went smoothly for me
+following that guide, but there could certainly be room for errors or hiccups, especially amongst various routers,
+chipsets, and DD-WRT builds.
 
 Once Entware was installed, I installed `jq` with:
 

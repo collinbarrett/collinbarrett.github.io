@@ -3,24 +3,26 @@ id: 7829
 title: 'The New Windows Terminal &#8211; Exploring CLIs, Shells, &#038; Terminals'
 date: '2020-02-24T07:31:28-06:00'
 author: 'Collin M. Barrett'
-excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss my current CLIs, terminal configuration, and preferred shells.'
+excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss my current CLIs, terminal configuration,
+and preferred shells.'
 layout: post
 guid: '/?p=7829'
 permalink: /new-windows-terminal/
 image: /assets/img/windowsTerminal_collinmbarrett.png
 categories:
-    - Code
+- Code
 tags:
-    - Dotnet
-    - Linux
-    - Productivity
-    - 'Source Control'
-    - 'Visual Studio'
+- Dotnet
+- Linux
+- Productivity
+- 'Source Control'
+- 'Visual Studio'
 ---
 
 ## Focus on CLIs
 
-The new Windows Terminal has been an invaluable tool as I have been focusing on developing my CLI skills recently. For me, this has included:
+The new Windows Terminal has been an invaluable tool as I have been focusing on developing my CLI skills recently. For
+me, this has included:
 
 - [choco](https://docs.chocolatey.org/docs/commands-reference)
 - [git](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
@@ -33,9 +35,12 @@ The new Windows Terminal has been an invaluable tool as I have been focusing on 
 - [ansible](https://docs.ansible.com/ansible/2.4/command_line_tools.html)
 - \*nix and Windows file systems
 
-As a [.NET developer](/tag/dotnet/), Windows is my ideal platform due to first-class tooling ([Visual Studio](/tag/visual-studio/)). That could be changing; but, for now, Windows makes sense as a primary environment.
+As a [.NET developer](/tag/dotnet/), Windows is my ideal platform due to first-class tooling ([Visual
+Studio](/tag/visual-studio/)). That could be changing; but, for now, Windows makes sense as a primary environment.
 
-Despite using Windows, I began learning CLIs when I first started managing [Ubuntu](/tag/linux/) instances for hosting various applications. When trying to navigate around my Windows file system, I often struggle remembering to type `dir` instead of `ls` (for listing files), `;` instead of `&&` (for chaining operations), etc.
+Despite using Windows, I began learning CLIs when I first started managing [Ubuntu](/tag/linux/) instances for hosting
+various applications. When trying to navigate around my Windows file system, I often struggle remembering to type `dir`
+instead of `ls` (for listing files), `;` instead of `&&` (for chaining operations), etc.
 
 For this reason, I like to reach for \*nix-ish solutions on Windows.
 
@@ -45,11 +50,13 @@ Let us define some terms.
 
 ### Terminal
 
-Technically, a terminal was a physical device (think text-only monitor) that collects input and displays output on an early computer.
+Technically, a terminal was a physical device (think text-only monitor) that collects input and displays output on an
+early computer.
 
 ### Terminal Emulator
 
-A terminal emulator is a software application that runs inside a GUI environment emulating an old terminal. We typically refer to these as terminals or consoles today.
+A terminal emulator is a software application that runs inside a GUI environment emulating an old terminal. We typically
+refer to these as terminals or consoles today.
 
 Examples:
 
@@ -62,7 +69,8 @@ Examples:
 
 ### Shell
 
-A shell is a text-based program that we execute from a terminal emulator. On Windows, these applications seem to be called “command interpreters”, but they are analogous in concept to a \*nix shell.
+A shell is a text-based program that we execute from a terminal emulator. On Windows, these applications seem to be
+called “command interpreters”, but they are analogous in concept to a \*nix shell.
 
 Examples:
 
@@ -75,9 +83,13 @@ Examples:
 
 ## The New Windows Terminal
 
-For the past year or two, I have used [Cmder](https://cmder.net/) with its default ConEmu emulator. It provides a virtual \*nix abstraction on top of the Windows API. It is a solid tool, but I have experienced it to be a bit sluggish at times.
+For the past year or two, I have used [Cmder](https://cmder.net/) with its default ConEmu emulator. It provides a
+virtual \*nix abstraction on top of the Windows API. It is a solid tool, but I have experienced it to be a bit sluggish
+at times.
 
-When the first preview of the new Windows Terminal launched, I played with it a bit and I was impressed by its design and performance. Over the last couple of weeks, I have done some more research and configuration and have fallen in love with this new app.
+When the first preview of the new Windows Terminal launched, I played with it a bit and I was impressed by its design
+and performance. Over the last couple of weeks, I have done some more research and configuration and have fallen in love
+with this new app.
 
 ### Installation
 

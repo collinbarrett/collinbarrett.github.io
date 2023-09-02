@@ -3,38 +3,50 @@ id: 6707
 title: 'Applying StyleCop Ordering with ReSharper File Layout'
 date: '2018-07-03T13:39:15-05:00'
 author: 'Collin M. Barrett'
-excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-apply StyleCop ordering rules to elements in classes, structs, and interfaces.'
+excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-apply StyleCop ordering rules to elements
+in classes, structs, and interfaces.'
 layout: post
 guid: '/?p=6707'
 permalink: /stylecop-ordering-resharper/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/styleCopResharper_collinmbarrett.png
 categories:
-    - Code
+- Code
 tags:
-    - Dotnet
-    - Productivity
-    - Refactoring
-    - 'Static Analysis'
-    - 'Visual Studio'
+- Dotnet
+- Productivity
+- Refactoring
+- 'Static Analysis'
+- 'Visual Studio'
 ---
 
-I have been wrestling a bit with the ideal ordering of members in my C# classes. Ordering members is obviously a cleanliness/maintainability factor and not a functional one, but I do want to create consistency in my classes.
+I have been wrestling a bit with the ideal ordering of members in my C# classes. Ordering members is obviously a
+cleanliness/maintainability factor and not a functional one, but I do want to create consistency in my classes.
 
-As a heavy user of ReSharper (R#), I often apply their default C# [File Layout](https://www.jetbrains.com/help/resharper/File_and_Type_Layout.html) via [Code Cleanup](https://www.jetbrains.com/help/resharper/Code_Cleanup__Index.html) to automatically re-arrange members. R#’s default File Layout is fairly good, but I would prefer to use Microsoft’s [StyleCop](https://en.wikipedia.org/wiki/StyleCop) ordering guidelines instead. R#, for example, does not default to ordering properties by access level, which I find valuable for consistency.
+As a heavy user of ReSharper (R#), I often apply their default C# [File
+Layout](https://www.jetbrains.com/help/resharper/File_and_Type_Layout.html) via [Code
+Cleanup](https://www.jetbrains.com/help/resharper/Code_Cleanup__Index.html) to automatically re-arrange members. R#’s
+default File Layout is fairly good, but I would prefer to use Microsoft’s
+[StyleCop](https://en.wikipedia.org/wiki/StyleCop) ordering guidelines instead. R#, for example, does not default to
+ordering properties by access level, which I find valuable for consistency.
 
-I found a handful of blog posts and resources around the web doing something similar, but none seemed to be recent and exactly compliant. Additionally, JetBrains does publish a [StyleCop extension](https://plugins.jetbrains.com/plugin/11619-stylecop-by-jetbrains) for R#, but its scope does not seem to be directly applicable to applying a File Layout alone.
+I found a handful of blog posts and resources around the web doing something similar, but none seemed to be recent and
+exactly compliant. Additionally, JetBrains does publish a [StyleCop
+extension](https://plugins.jetbrains.com/plugin/11619-stylecop-by-jetbrains) for R#, but its scope does not seem to be
+directly applicable to applying a File Layout alone.
 
 ## StyleCop’s Ordering Rules
 
-The [StyleCopAnalyzer project](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) has a subset of rules that I have converted for use in R# File Layout. This handful of rules were cherry-picked only in the sense that they meet the following requirements:
+The [StyleCopAnalyzer project](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) has a subset of rules that I have
+converted for use in R# File Layout. This handful of rules were cherry-picked only in the sense that they meet the
+following requirements:
 
 - are applicable inside of a class, struct, or interface
 - are supported by R#’s File Layout feature
-- are not [deprecated by StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/KnownChanges.md)
+- are not [deprecated by
+StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/KnownChanges.md)
 
-### [SA1124](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1124.md): Do Not Use Regions
+### [SA1124](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1124.md): Do Not Use
+Regions
 
 In R# XAML, this is implemented by adding the `RemoveRegions` flag in the `TypePattern` node.
 

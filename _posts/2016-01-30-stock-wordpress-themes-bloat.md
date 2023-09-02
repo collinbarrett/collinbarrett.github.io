@@ -7,29 +7,39 @@ excerpt: 'The why and how to removing bloat in stock WordPress themes by deregis
 layout: post
 guid: '/?p=1341'
 permalink: /stock-wordpress-themes-bloat/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/stockWordPressThemesBloat_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - CSS
-    - JavaScript
-    - Performance
-    - PHP
-    - SEO
-    - WordPress
+- CSS
+- JavaScript
+- Performance
+- PHP
+- SEO
+- WordPress
 ---
 
 ## Theme Bloat
 
-When spinning up a cheap budget WordPress site, it is common and far more affordable to purchase a stock premium WordPress theme from a marketplace like Themeforest than to build a custom theme. The quality of these themes vary widely; but, with adequate research, I have been able to find pretty solid themes for not a lot of money over the years. The theme this site used to run, [Readme](https://themeforest.net/item/readme-a-readable-wordpress-theme/9167043?ref=collinbarrett&clickthrough_id=1029644360&redirect_back=true "Themeforest Affiliate Link"), is a phenomenal, lightweight theme that still packs a good number of features. Furthermore, their ongoing support has been excellent.
+When spinning up a cheap budget WordPress site, it is common and far more affordable to purchase a stock premium
+WordPress theme from a marketplace like Themeforest than to build a custom theme. The quality of these themes vary
+widely; but, with adequate research, I have been able to find pretty solid themes for not a lot of money over the years.
+The theme this site used to run,
+[Readme](https://themeforest.net/item/readme-a-readable-wordpress-theme/9167043?ref=collinbarrett&clickthrough_id=1029644360&redirect_back=true
+"Themeforest Affiliate Link"), is a phenomenal, lightweight theme that still packs a good number of features.
+Furthermore, their ongoing support has been excellent.
 
-Any theme made for the broad market has features that not everyone will use. Readme, for example, includes a lot of jQuery and CSS files for interesting features; however, I am choosing not to use many of them at this time. Even though a theme does not use the features, is still instructs WordPress to load up all these extra files to my clients increasing page load time and wasting bandwidth.
+Any theme made for the broad market has features that not everyone will use. Readme, for example, includes a lot of
+jQuery and CSS files for interesting features; however, I am choosing not to use many of them at this time. Even though
+a theme does not use the features, is still instructs WordPress to load up all these extra files to my clients
+increasing page load time and wasting bandwidth.
 
 ## Eliminating the Bloat
 
-So, by stepping through each .js and .css file loaded, I determined which files I needed for the current feature set that I am using and eliminated the rest. Deregistering unneeded scripts and styles is relatively simple, assuming you have a child theme setup already. For example, in the snippet below I remove the share button feature by deregistering its script and style in my child theme’s functions.php.
+So, by stepping through each .js and .css file loaded, I determined which files I needed for the current feature set
+that I am using and eliminated the rest. Deregistering unneeded scripts and styles is relatively simple, assuming you
+have a child theme setup already. For example, in the snippet below I remove the share button feature by deregistering
+its script and style in my child theme’s functions.php.
 
 ```
 <pre class="brush: php; title: ; notranslate" title="">

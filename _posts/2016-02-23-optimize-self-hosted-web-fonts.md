@@ -3,36 +3,39 @@ id: 1725
 title: 'Optimizing Self-Hosted Web Fonts'
 date: '2016-02-23T04:00:16-06:00'
 author: 'Collin M. Barrett'
-excerpt: 'By implementing .woff2 and slimming down my icon font, I reduced the weight of my site''s fonts by about 50KB.'
+excerpt: 'By implementing .woff2 and slimming down my icon font, I reduced the weight of my site''s fonts by about
+50KB.'
 layout: post
 guid: '/?p=1725'
 permalink: /optimize-self-hosted-web-fonts/
-wp_featherlight_disable:
-    - ''
 image: /assets/img/optimizeSelfHostedWebFonts_collinmbarrett.jpg
 categories:
-    - Code
+- Code
 tags:
-    - Advertisements
-    - Apple
-    - Cache
-    - CDN
-    - Cloudflare
-    - Compression
-    - CSS
-    - DNS
-    - Family
-    - Firefox
-    - Google
-    - Linux
-    - NGINX
-    - Performance
-    - Tracking
-    - 'uBlock Origin'
-    - WordPress
+- Advertisements
+- Apple
+- Cache
+- CDN
+- Cloudflare
+- Compression
+- CSS
+- DNS
+- Family
+- Firefox
+- Google
+- Linux
+- NGINX
+- Performance
+- Tracking
+- 'uBlock Origin'
+- WordPress
 ---
 
-For anyone who has been here before, you may have noticed my recent font swap-a-roo to Open Sans. I know, designers, it is trendy and probably overused, but I think it brings a much crisper feel to the text than the old serif font I had before. In this transition, I did some font optimization on my WordPress site via recommendations by the [DareBoost](https://www.dareboost.com/en) analyzer. With just an hour or two of tweaking, I was able meaningfully to trim the payload of my site’s first page load. If you are reading this on a mobile data plan, you are welcome.
+For anyone who has been here before, you may have noticed my recent font swap-a-roo to Open Sans. I know, designers, it
+is trendy and probably overused, but I think it brings a much crisper feel to the text than the old serif font I had
+before. In this transition, I did some font optimization on my WordPress site via recommendations by the
+[DareBoost](https://www.dareboost.com/en) analyzer. With just an hour or two of tweaking, I was able meaningfully to
+trim the payload of my site’s first page load. If you are reading this on a mobile data plan, you are welcome.
 
 ## TL;DR
 
@@ -48,23 +51,56 @@ Fonts are stored in various file formats.
 - .woff
 - .woff2
 
-Certain browsers are only capable of rendering certain font formats. The .woff2 type is newest, smallest, and therefore optimal; however only the most modern browsers can support it. The latest release of my web server, NGINX, did not have the .woff2 mime type configured by default.
+Certain browsers are only capable of rendering certain font formats. The .woff2 type is newest, smallest, and therefore
+optimal; however only the most modern browsers can support it. The latest release of my web server, NGINX, did not have
+the .woff2 mime type configured by default.
 
 ## Why Optimize Fonts?
 
-<figure aria-describedby="caption-attachment-1733" class="wp-caption alignright" id="attachment_1733" style="width: 300px">[![Poor Example of Serving Web Fonts](/assets/img/2016/02/webFontBadExample_cb-300x84.jpg)](/assets/img/2016/02/webFontBadExample_cb.jpg)<figcaption class="wp-caption-text" id="caption-attachment-1733">**Fig. 1.** Poor Example of Serving Web Fonts</figcaption></figure>
+<figure aria-describedby="caption-attachment-1733" class="wp-caption alignright" id="attachment_1733"
+    style="width: 300px">[![Poor Example of Serving Web
+    Fonts](/assets/img/2016/02/webFontBadExample_cb-300x84.jpg)](/assets/img/2016/02/webFontBadExample_cb.jpg)
+    <figcaption class="wp-caption-text" id="caption-attachment-1733">**Fig. 1.** Poor Example of Serving Web Fonts
+    </figcaption>
+</figure>
 
-I ran across a cyber-security blog today which I will not name because I like the blog. However, since I have been working with fonts this weekend, I decided to check and see how they were serving fonts. Figure 1 (click/tap to enlarge) is what I saw in Firefox 44.0.2 on Mac. This blog is using almost 1MB (of the only 1.5MB total, including images) of bandwidth just for serving its fonts! Furthermore, the site is forcing a download of four variants of the same font when they are likely only using one of the variations (not confirmed, though). Lastly, of lesser importance but still easily repaired, the site is serving fonts as content type “octet-stream” rather than “font-ttf” which could have performance/compatibility issues with some browsers. To their benefit, though, they were successfully requesting that the browser cache the fonts, so clicking around on their site did not prompt the 1MB download every time.
+I ran across a cyber-security blog today which I will not name because I like the blog. However, since I have been
+working with fonts this weekend, I decided to check and see how they were serving fonts. Figure 1 (click/tap to enlarge)
+is what I saw in Firefox 44.0.2 on Mac. This blog is using almost 1MB (of the only 1.5MB total, including images) of
+bandwidth just for serving its fonts! Furthermore, the site is forcing a download of four variants of the same font when
+they are likely only using one of the variations (not confirmed, though). Lastly, of lesser importance but still easily
+repaired, the site is serving fonts as content type “octet-stream” rather than “font-ttf” which could have
+performance/compatibility issues with some browsers. To their benefit, though, they were successfully requesting that
+the browser cache the fonts, so clicking around on their site did not prompt the 1MB download every time.
 
-Optimizing web fonts is necessary for compatibility; but, once that is straightened out, I primarily think it is an important process for performance. Sites that have been online for awhile could use an audit of their fonts now and then make sure they are using the most performant implementation. While trimming 100s or even 10s of KBs from the payload may seem small, in the mobile-first age of the Internet, you are doing your visitors a thankless favor by reducing the data (cents) they are charged when they view your site.
+Optimizing web fonts is necessary for compatibility; but, once that is straightened out, I primarily think it is an
+important process for performance. Sites that have been online for awhile could use an audit of their fonts now and then
+make sure they are using the most performant implementation. While trimming 100s or even 10s of KBs from the payload may
+seem small, in the mobile-first age of the Internet, you are doing your visitors a thankless favor by reducing the data
+(cents) they are charged when they view your site.
 
 ## My Situation
 
-The parent theme (WordPress term for the base theme, which I have heavily modified via a “child” theme) I use on this site was configured to use [Google Fonts](https://fonts.google.com/ "Google Fonts") by default for regular text. This service, and others like it, are extremely popular for their simplicity, selection, and compatibility characteristics. By using a service like this, however, I could be violating the privacy of my visitors by allowing the font provider to collect analytics about what sites my visitors frequent, etc transparently. Additionally, depending on a site’s CDN configuration, there might be a slight performance hit due to the extra DNS lookup and (ideally) TLS handshake that is not required if I serve the font from my domain. For these privacy and performance reasons, I and many other tinfoil hat types have [uBlock Origin](https://github.com/gorhill/uBlock "uBlock Origin - GitHub") reject all connections to web font providers for using a basic, local alternative for sites that do not serve a font from their first-party domain. I did not want viewers of my blog to be subject to reading something as bland as Arial, so I am serving you a font from my first-party domain.
+The parent theme (WordPress term for the base theme, which I have heavily modified via a “child” theme) I use on this
+site was configured to use [Google Fonts](https://fonts.google.com/ "Google Fonts") by default for regular text. This
+service, and others like it, are extremely popular for their simplicity, selection, and compatibility characteristics.
+By using a service like this, however, I could be violating the privacy of my visitors by allowing the font provider to
+collect analytics about what sites my visitors frequent, etc transparently. Additionally, depending on a site’s CDN
+configuration, there might be a slight performance hit due to the extra DNS lookup and (ideally) TLS handshake that is
+not required if I serve the font from my domain. For these privacy and performance reasons, I and many other tinfoil hat
+types have [uBlock Origin](https://github.com/gorhill/uBlock "uBlock Origin - GitHub") reject all connections to web
+font providers for using a basic, local alternative for sites that do not serve a font from their first-party domain. I
+did not want viewers of my blog to be subject to reading something as bland as Arial, so I am serving you a font from my
+first-party domain.
 
 ## Serving a Font from My Domain
 
-I acquired the Open Sans font kit from [Font Squirrel](https://www.fontsquirrel.com/fonts/open-sans "Open Sans - Font Squirrel"). By default, Font Squirrel did not include the .woff2 format for Open Sans, which is a little annoying because they do offer the capability. I used their [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator "Webfont Generator - Font Squirrel") with the original .ttf to acquire the full kit including .woff2 for Open Sans. Font Squirrel is an excellent service providing you with a CSS sheet that looks something like below for cross-browser compatibility of the various font formats.
+I acquired the Open Sans font kit from [Font Squirrel](https://www.fontsquirrel.com/fonts/open-sans "Open Sans - Font
+Squirrel"). By default, Font Squirrel did not include the .woff2 format for Open Sans, which is a little annoying
+because they do offer the capability. I used their [Webfont
+Generator](https://www.fontsquirrel.com/tools/webfont-generator "Webfont Generator - Font Squirrel") with the original
+.ttf to acquire the full kit including .woff2 for Open Sans. Font Squirrel is an excellent service providing you with a
+CSS sheet that looks something like below for cross-browser compatibility of the various font formats.
 
 ```
 <pre class="brush: css; title: ; notranslate" title="">
