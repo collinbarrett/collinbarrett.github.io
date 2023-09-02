@@ -25,12 +25,9 @@ household member is Bailey, a black lab/pit. When we are not working or travelin
 community](https://christcity.org/), our [Binghampton](https://en.wikipedia.org/wiki/Binghampton,_Memphis,_Tennessee)
 neighbors, trying new restaurants, re-re-watching The Office, and drinking good coffee.
 
-<div class="wp-block-image">
-    <figure class="aligncenter">[![Collin & Jenny
-        Barrett](https://collinmbarrett.com/media/startHereCollinJenny_collinmbarrett.jpg)](https://collinmbarrett.com/media/startHereCollinJenny_collinmbarrett.jpg)
-        <figcaption class="wp-element-caption">Collin &amp; Jenny Barrett in Juneau, AK</figcaption>
-    </figure>
-</div>## Professional Experience
+![Collin & Jenny Barrett](/assets/img/startHereCollinJenny_collinmbarrett.jpg)
+
+## Professional Experience
 
 During my undergraduate program, I acquired a security clearance and worked for two years as a co-op software engineer
 for a contractor at Wright-Patterson A.F.B. After college, I founded the computer science and robotics department at a
