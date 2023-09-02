@@ -34,13 +34,13 @@ for a contractor at Wright-Patterson A.F.B. After college, I founded the compute
 private, urban school in Memphis.
 
 Since then, I have been rapidly growing my software engineering skills and business knowledge in a variety of domains
-and teams. Currently, I primarily work with .NET. See [Resume](https://collinmbarrett.com/resume/).
+and teams. Currently, I primarily work with .NET. See [Resume](/assets/resume_collinmbarrett.pdf).
 
 Internet privacy is important, so I built the first version of
-[FilterLists](https://collinmbarrett.com/resume/projects/#filterlists) in 2015 to scratch my own itch. It has been
+[FilterLists](https://filterlists.com) in 2015 to scratch my own itch. It has been
 iterated upon as a labor of love and served as a playground for me to learn, practice, and demonstrate new skills.
 
 ## Copyright
 
-<small>*The work on this site by [Collin M. Barrett](https://collinmbarrett.com) is licensed under a [Creative Commons
-    Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).*</small>
+<small>*The work on this site by [Collin M. Barrett](/) is licensed under a [Creative Commons Attribution-ShareAlike 4.0
+    International License](https://creativecommons.org/licenses/by-sa/4.0/).*</small>
