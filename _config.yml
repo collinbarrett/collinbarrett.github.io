@@ -10,7 +10,6 @@ description: Collin Barrett is a senior software engineer in Memphis, TN special
 author:
   twitter: collinbarrett
 feed:
-  path: /feed/
   posts_limit: 9999
   categories:
   - Code
