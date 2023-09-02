@@ -5,7 +5,7 @@ date: '2017-08-07T07:07:11-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Using Firefox instead of Chrome on the desktop, and how I am hardening Firefox to increase security and
 privacy.'
-layout: post
+layout: post-wp-import
 guid: '/?p=4654'
 permalink: /hardening-firefox-replacing-chrome/
 image: /assets/img/firefox_collinmbarrett.jpg

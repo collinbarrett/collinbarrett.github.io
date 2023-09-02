@@ -5,7 +5,7 @@ date: '2020-02-24T07:31:28-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss my current CLIs, terminal configuration,
 and preferred shells.'
-layout: post
+layout: post-wp-import
 guid: '/?p=7829'
 permalink: /new-windows-terminal/
 image: /assets/img/windowsTerminal_collinmbarrett.png

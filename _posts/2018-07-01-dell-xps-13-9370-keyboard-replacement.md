@@ -4,7 +4,7 @@ title: 'Dell XPS 13 9370 Keyboard Replacement'
 date: '2018-07-01T19:50:17-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A quick overview of how I replaced the keyboard in my Dell XPS 13 9370 after it took a bath in hot tea.'
-layout: post
+layout: post-wp-import
 guid: '/?p=6614'
 permalink: /dell-xps-13-9370-keyboard-replacement/
 image: /assets/img/keyboardDellXps9370_collinmbarrett.jpg

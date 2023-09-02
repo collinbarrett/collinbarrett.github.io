@@ -5,7 +5,7 @@ date: '2017-08-11T02:55:59-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Today is my last day as a software developer with Fred''s. I am very thankful for the experience and
 opportunities that this role has provided.'
-layout: post
+layout: post-wp-import
 guid: '/?p=4765'
 permalink: /departing-freds/
 image: /assets/img/fredsInc_collinmbarrett.jpg

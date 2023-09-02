@@ -5,7 +5,7 @@ date: '2016-01-21T07:43:18-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'An outline of our Nest Thermostat and Protect over the past six months explains the need for QA at IoT
 companies to be top-notch.'
-layout: post
+layout: post-wp-import
 guid: '/?p=886'
 permalink: /nest-woes-importance-qa/
 image: /assets/img/nestWoesImportanceQa_collinmbarrett.png

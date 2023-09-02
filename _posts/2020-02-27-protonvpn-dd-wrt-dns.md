@@ -5,7 +5,7 @@ date: '2020-02-27T06:55:12-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'I created a custom URL to connect to ProtonVPN from DD-WRT that selects from a pool of premium servers in the
 nearest city.'
-layout: post
+layout: post-wp-import
 guid: '/?p=7858'
 permalink: /protonvpn-dd-wrt-dns/
 image: /assets/img/tunnel_collinmbarrett.jpg

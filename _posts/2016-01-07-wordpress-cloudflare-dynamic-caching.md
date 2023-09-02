@@ -5,7 +5,7 @@ date: '2016-01-07T17:59:26-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'A how-to guide to speeding up websites by dynamically caching WordPress on Cloudflare including traditionally
 non-static content like HTML.'
-layout: post
+layout: post-wp-import
 guid: '/?p=283'
 permalink: /wordpress-cloudflare-dynamic-caching/
 image: /assets/img/dynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png

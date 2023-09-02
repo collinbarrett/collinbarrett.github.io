@@ -5,7 +5,7 @@ date: '2018-07-18T04:00:46-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'How to edit a previous version of a file in a TFVC local workspace in Visual Studio rather than automatically
 getting latest on check-out.'
-layout: post
+layout: post-wp-import
 guid: '/?p=6812'
 permalink: /editing-previous-version-tfvc/
 image: /assets/img/visualStudio_collinmbarrett.jpg

@@ -5,7 +5,7 @@ date: '2017-09-13T07:30:26-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'Reflections on the first few weeks of implementing regular code reviews in our team''s development
 methodology.'
-layout: post
+layout: post-wp-import
 guid: '/?p=4885'
 permalink: /code-reviews/
 image: /assets/img/legoCoder_collinmbarrett.jpg

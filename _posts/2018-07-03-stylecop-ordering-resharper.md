@@ -5,7 +5,7 @@ date: '2018-07-03T13:39:15-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-apply StyleCop ordering rules to elements
 in classes, structs, and interfaces.'
-layout: post
+layout: post-wp-import
 guid: '/?p=6707'
 permalink: /stylecop-ordering-resharper/
 image: /assets/img/styleCopResharper_collinmbarrett.png

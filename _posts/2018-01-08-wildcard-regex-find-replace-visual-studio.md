@@ -5,7 +5,7 @@ date: '2018-01-08T04:00:07-06:00'
 author: 'Collin M. Barrett'
 excerpt: 'An example of how to use Visual Studio regex find and replace with a wildcard to quickly refactor many lines
 of code.'
-layout: post
+layout: post-wp-import
 guid: '/?p=5037'
 permalink: /wildcard-regex-find-replace-visual-studio/
 image: /assets/img/regexFindReplaceGlassesComputer_collinmbarrett.jpg

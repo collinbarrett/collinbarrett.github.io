@@ -4,7 +4,7 @@ title: 'Activating HTTP/2 Server Push with WordPress'
 date: '2017-06-15T07:00:19-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A quick and dirty test of HTTP/2 Server Push on WordPress.'
-layout: post
+layout: post-wp-import
 guid: '/?p=4212'
 permalink: /http2-server-push-wordpress/
 image: /assets/img/http2ServerPush_collinmbarrett.jpg

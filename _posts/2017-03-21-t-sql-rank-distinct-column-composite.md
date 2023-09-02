@@ -5,7 +5,7 @@ date: '2017-03-21T20:35:22-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A T-SQL solution using the RANK() function for selecting the most recent record for each distinct composite of
 multiple columns.'
-layout: post
+layout: post-wp-import
 guid: '/?p=3808'
 permalink: /t-sql-rank-distinct-column-composite/
 image: /assets/img/tSqlRank_collinmbarrett.png
