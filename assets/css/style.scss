@@ -1,7 +1,9 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import 'jekyll-theme-minimal';
+@import "latolatinfonts";
+@import "latostyle";
 
 .logo {
     height: auto;
