@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="800px" version="1.1" viewBox="0 -2.5 20 20" xmlns="http://www.w3.org/2000/svg">
-<title>email [#1573]</title>
-<desc>Created with Sketch.</desc>
-<g fill="none" fill-rule="evenodd">
-<g transform="translate(-300 -922)" fill="#000">
-<g transform="translate(56 160)">
-<path d="m262 764.29-8 7.027-8-7.037v-0.281h16v0.291zm-16 10.709v-8.055l8 7.035 8-7.027v8.047h-16zm-2 2h20v-15h-20v15z"></path>
-</g>
-</g>
-</g>
-</svg>
+<svg height="800" viewBox="0 -2.5 20 20" width="800" xmlns="http://www.w3.org/2000/svg"><path d="m262 764.29-8 7.027-8-7.037v-.281h16zm-16 10.709v-8.055l8 7.035 8-7.027v8.047zm-2 2h20v-15h-20z" fill-rule="evenodd" transform="translate(-244 -762)"/></svg>
