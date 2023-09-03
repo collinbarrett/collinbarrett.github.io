@@ -1,5 +1,4 @@
 ---
-id: 4150
 title: 'UNPIVOTing Data with T-SQL'
 date: '2017-06-12T12:26:36-05:00'
 author: 'Collin M. Barrett'

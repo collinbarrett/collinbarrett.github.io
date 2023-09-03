@@ -1,5 +1,4 @@
 ---
-id: 3554
 title: 'NGINX Trailing Slashes for WordPress'
 date: '2017-03-02T07:28:50-06:00'
 author: 'Collin M. Barrett'

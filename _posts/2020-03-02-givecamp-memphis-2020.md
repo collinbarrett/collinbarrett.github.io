@@ -1,5 +1,4 @@
 ---
-id: 8084
 title: 'GiveCamp Memphis 2020'
 date: '2020-03-02T07:30:00-06:00'
 author: 'Collin M. Barrett'

@@ -1,5 +1,4 @@
 ---
-id: 1341
 title: 'Beware the Bloat of Stock WordPress Themes'
 date: '2016-01-30T09:32:01-06:00'
 author: 'Collin M. Barrett'

@@ -1,5 +1,4 @@
 ---
-id: 1437
 title: 'Decentraleyes: Block CDN Tracking'
 date: '2016-02-03T04:00:19-06:00'
 author: 'Collin M. Barrett'

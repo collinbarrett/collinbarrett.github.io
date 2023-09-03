@@ -1,5 +1,4 @@
 ---
-id: 6614
 title: 'Dell XPS 13 9370 Keyboard Replacement'
 date: '2018-07-01T19:50:17-05:00'
 author: 'Collin M. Barrett'

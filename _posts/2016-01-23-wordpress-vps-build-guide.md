@@ -1,5 +1,4 @@
 ---
-id: 1011
 title: 'DIY VPS Build Guide for Fast and Cheap WordPress Hosting'
 date: '2016-01-23T10:25:00-06:00'
 author: 'Collin M. Barrett'

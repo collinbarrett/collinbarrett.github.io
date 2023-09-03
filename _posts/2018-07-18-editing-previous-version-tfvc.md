@@ -1,5 +1,4 @@
 ---
-id: 6812
 title: 'Editing a File&#8217;s Previous Version in TFVC'
 date: '2018-07-18T04:00:46-05:00'
 author: 'Collin M. Barrett'

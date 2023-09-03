@@ -1,5 +1,4 @@
 ---
-id: 4160
 title: 'Sending the Referrer Policy Header with NGINX'
 date: '2017-06-13T12:41:00-05:00'
 author: 'Collin M. Barrett'

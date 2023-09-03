@@ -1,5 +1,4 @@
 ---
-id: 5037
 title: 'Wildcard Regex Find and Replace in Visual Studio'
 date: '2018-01-08T04:00:07-06:00'
 author: 'Collin M. Barrett'

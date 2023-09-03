@@ -1,5 +1,4 @@
 ---
-id: 780
 title: 'Front-End Development Sample'
 date: '2016-01-19T09:36:48-06:00'
 author: 'Collin M. Barrett'

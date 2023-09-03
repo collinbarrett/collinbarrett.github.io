@@ -1,5 +1,4 @@
 ---
-id: 4654
 title: 'Hardening Firefox. Replacing Chrome.'
 date: '2017-08-07T07:07:11-05:00'
 author: 'Collin M. Barrett'

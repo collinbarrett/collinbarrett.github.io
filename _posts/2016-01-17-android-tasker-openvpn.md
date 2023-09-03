@@ -1,5 +1,4 @@
 ---
-id: 744
 title: 'Automatic VPN on Android with Tasker and OpenVPN'
 date: '2016-01-17T16:24:31-06:00'
 author: 'Collin M. Barrett'

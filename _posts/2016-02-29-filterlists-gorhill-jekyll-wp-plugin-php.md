@@ -1,5 +1,4 @@
 ---
-id: 2004
 title: 'FilterLists, Gorhill, Jekyll, WordPress Plugin, and PHP'
 date: '2016-02-29T08:11:48-06:00'
 author: 'Collin M. Barrett'

@@ -1,5 +1,4 @@
 ---
-id: 924
 title: 'Showing All Tags in the WordPress Post Editor'
 date: '2016-01-20T08:52:09-06:00'
 author: 'Collin M. Barrett'

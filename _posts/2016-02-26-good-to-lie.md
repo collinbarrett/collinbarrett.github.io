@@ -1,5 +1,4 @@
 ---
-id: 1492
 title: '1 Time When It Is Good to Lie'
 date: '2016-02-26T04:30:30-06:00'
 author: 'Collin M. Barrett'

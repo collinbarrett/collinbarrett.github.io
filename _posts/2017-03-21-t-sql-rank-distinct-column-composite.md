@@ -1,5 +1,4 @@
 ---
-id: 3808
 title: 'SELECT Most Recent for Each Distinct Column Composite with T-SQL RANK()'
 date: '2017-03-21T20:35:22-05:00'
 author: 'Collin M. Barrett'

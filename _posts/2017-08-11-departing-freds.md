@@ -1,5 +1,4 @@
 ---
-id: 4765
 title: 'Departing Fred&#8217;s'
 date: '2017-08-11T02:55:59-05:00'
 author: 'Collin M. Barrett'

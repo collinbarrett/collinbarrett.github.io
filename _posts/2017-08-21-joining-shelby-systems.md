@@ -1,5 +1,4 @@
 ---
-id: 4813
 title: 'Joining Shelby Systems'
 date: '2017-08-21T07:34:09-05:00'
 author: 'Collin M. Barrett'

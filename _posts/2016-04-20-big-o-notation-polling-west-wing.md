@@ -1,5 +1,4 @@
 ---
-id: 2857
 title: 'Example of Big-O Notation Inspired by <em>The West Wing</em>'
 date: '2016-04-20T22:27:04-05:00'
 author: 'Collin M. Barrett'

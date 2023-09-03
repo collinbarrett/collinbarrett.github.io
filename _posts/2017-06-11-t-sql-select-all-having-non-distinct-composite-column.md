@@ -1,5 +1,4 @@
 ---
-id: 4120
 title: 'SELECT All HAVING Non-Distinct Composite Column with T-SQL'
 date: '2017-06-11T12:50:47-05:00'
 author: 'Collin M. Barrett'

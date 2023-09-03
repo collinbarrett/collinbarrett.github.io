@@ -1,5 +1,4 @@
 ---
-id: 1725
 title: 'Optimizing Self-Hosted Web Fonts'
 date: '2016-02-23T04:00:16-06:00'
 author: 'Collin M. Barrett'

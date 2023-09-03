@@ -1,5 +1,4 @@
 ---
-id: 3840
 title: 'First Impressions of a Standing Desk'
 date: '2017-03-24T07:30:38-05:00'
 author: 'Collin M. Barrett'

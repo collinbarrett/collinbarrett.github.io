@@ -1,5 +1,4 @@
 ---
-id: 7111
 title: 'Type Wrapping an Inconsistently Serialized Key-Value Store'
 date: '2018-07-30T04:00:40-05:00'
 author: 'Collin M. Barrett'

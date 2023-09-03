@@ -1,5 +1,4 @@
 ---
-id: 2041
 title: 'Blocking Web Fonts for Speed and Privacy'
 date: '2016-04-11T04:17:47-05:00'
 author: 'Collin M. Barrett'

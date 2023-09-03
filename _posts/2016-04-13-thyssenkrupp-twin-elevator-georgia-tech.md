@@ -1,5 +1,4 @@
 ---
-id: 2700
 title: 'First thyssenkrupp TWIN® Elevator in U.S. at Georgia Tech'
 date: '2016-04-13T04:17:19-05:00'
 author: 'Collin M. Barrett'

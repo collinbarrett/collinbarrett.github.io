@@ -1,5 +1,4 @@
 ---
-id: 4392
 title: 'Executing an SSIS Package from .NET'
 date: '2017-06-28T06:41:32-05:00'
 author: 'Collin M. Barrett'

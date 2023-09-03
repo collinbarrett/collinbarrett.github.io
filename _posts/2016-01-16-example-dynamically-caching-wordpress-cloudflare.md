@@ -1,5 +1,4 @@
 ---
-id: 677
 title: 'Example of Dynamically Caching WordPress on Cloudflare'
 date: '2016-01-16T10:45:41-06:00'
 author: 'Collin M. Barrett'

@@ -1,5 +1,4 @@
 ---
-id: 5058
 title: 'HttpContext.Cache Multi-tenant Leak'
 date: '2018-01-06T04:00:17-06:00'
 author: 'Collin M. Barrett'

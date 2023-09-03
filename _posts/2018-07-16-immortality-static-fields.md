@@ -1,5 +1,4 @@
 ---
-id: 6796
 title: 'The Immortality of C# Static Fields'
 date: '2018-07-16T05:00:52-05:00'
 author: 'Collin M. Barrett'

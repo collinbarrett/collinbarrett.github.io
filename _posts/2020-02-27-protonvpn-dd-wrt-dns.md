@@ -1,5 +1,4 @@
 ---
-id: 7858
 title: 'Optimizing ProtonVPN Server Selection by DD-WRT with DNS'
 date: '2020-02-27T06:55:12-06:00'
 author: 'Collin M. Barrett'

@@ -1,5 +1,4 @@
 ---
-id: 3508
 title: 'Chad Fowler on the Memphis Technology Landscape'
 date: '2016-11-07T11:16:38-06:00'
 author: 'Collin M. Barrett'

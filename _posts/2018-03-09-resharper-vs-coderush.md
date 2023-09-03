@@ -1,5 +1,4 @@
 ---
-id: 6305
 title: 'ReSharper vs. CodeRush: A Quick &#8216;n Dirty, Unfair Comparison'
 date: '2018-03-09T03:00:01-06:00'
 author: 'Collin M. Barrett'

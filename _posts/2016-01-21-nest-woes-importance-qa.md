@@ -1,5 +1,4 @@
 ---
-id: 886
 title: 'Nest Woes and the Importance of QA'
 date: '2016-01-21T07:43:18-06:00'
 author: 'Collin M. Barrett'

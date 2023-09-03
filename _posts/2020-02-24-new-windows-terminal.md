@@ -1,5 +1,4 @@
 ---
-id: 7829
 title: 'The New Windows Terminal &#8211; Exploring CLIs, Shells, &#038; Terminals'
 date: '2020-02-24T07:31:28-06:00'
 author: 'Collin M. Barrett'

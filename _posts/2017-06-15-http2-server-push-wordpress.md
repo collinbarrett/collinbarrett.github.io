@@ -1,5 +1,4 @@
 ---
-id: 4212
 title: 'Activating HTTP/2 Server Push with WordPress'
 date: '2017-06-15T07:00:19-05:00'
 author: 'Collin M. Barrett'

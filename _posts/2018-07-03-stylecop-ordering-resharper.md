@@ -1,5 +1,4 @@
 ---
-id: 6707
 title: 'Applying StyleCop Ordering with ReSharper File Layout'
 date: '2018-07-03T13:39:15-05:00'
 author: 'Collin M. Barrett'
