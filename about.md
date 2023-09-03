@@ -5,7 +5,7 @@ date: '2016-01-05T20:30:07-06:00'
 author: 'Collin M. Barrett'
 layout: default
 guid: '/?page_id=200'
-image: /assets/img/startHereCollinJenny_collinmbarrett.jpg
+image: /assets/img/startHereCollinJenny_collinmbarrett-500x281.jpg
 permalink: /about
 redirect_from:
 - /start/
@@ -25,7 +25,7 @@ household member is Bailey, a black lab/pit. When we are not working or travelin
 community](https://christcity.org/), our [Binghampton](https://en.wikipedia.org/wiki/Binghampton,_Memphis,_Tennessee)
 neighbors, trying new restaurants, re-re-watching The Office, and drinking good coffee.
 
-![Collin & Jenny Barrett](/assets/img/startHereCollinJenny_collinmbarrett.jpg)
+![Collin & Jenny Barrett](/assets/img/startHereCollinJenny_collinmbarrett-500x281.jpg)
 
 ## Professional Experience
 
