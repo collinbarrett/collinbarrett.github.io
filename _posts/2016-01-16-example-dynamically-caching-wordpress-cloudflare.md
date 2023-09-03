@@ -8,7 +8,7 @@ CloudFlare from a traditional shared hosting server.'
 layout: post-wp-import
 guid: '/?p=677'
 permalink: /example-dynamically-caching-wordpress-cloudflare
-redirect-from: /example-dynamically-caching-wordpress-cloudflare/
+redirect_from: /example-dynamically-caching-wordpress-cloudflare/
 image: /assets/img/exampleDynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
 - Code

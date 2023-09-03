@@ -8,7 +8,7 @@ mental effects.'
 layout: post-wp-import
 guid: '/?p=3840'
 permalink: /standing-desk-first-impressions
-redirect-from: /standing-desk-first-impressions/
+redirect_from: /standing-desk-first-impressions/
 image: /assets/img/ergotronStandingDesk2_collinmbarrett.png
 categories:
 - Code

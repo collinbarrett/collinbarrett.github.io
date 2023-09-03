@@ -8,7 +8,7 @@ render using HTML and CSS.'
 layout: post-wp-import
 guid: '/?p=780'
 permalink: /front-end-development-sample
-redirect-from: /front-end-development-sample/
+redirect_from: /front-end-development-sample/
 image: /assets/img/frontEndDevelopmentSampleQuanto_collinmbarrett.jpg
 categories:
 - Code

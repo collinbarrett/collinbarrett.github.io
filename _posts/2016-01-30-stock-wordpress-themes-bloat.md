@@ -7,7 +7,7 @@ excerpt: 'The why and how to removing bloat in stock WordPress themes by deregis
 layout: post-wp-import
 guid: '/?p=1341'
 permalink: /stock-wordpress-themes-bloat
-redirect-from: /stock-wordpress-themes-bloat/
+redirect_from: /stock-wordpress-themes-bloat/
 image: /assets/img/stockWordPressThemesBloat_collinmbarrett.jpg
 categories:
 - Code

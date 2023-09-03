@@ -8,7 +8,7 @@ request of modified JSON data files.'
 layout: post-wp-import
 guid: '/?p=8074'
 permalink: /entity-framework-migrations-azure-pipelines-github
-redirect-from: /entity-framework-migrations-azure-pipelines-github/
+redirect_from: /entity-framework-migrations-azure-pipelines-github/
 image: /assets/img/azurePipelinesEfCoreMigration_collinmbarrett.jpg
 categories:
 - Code

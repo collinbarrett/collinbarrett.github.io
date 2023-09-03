@@ -7,7 +7,7 @@ excerpt: 'A quick and dirty test of HTTP/2 Server Push on WordPress.'
 layout: post-wp-import
 guid: '/?p=4212'
 permalink: /http2-server-push-wordpress
-redirect-from: /http2-server-push-wordpress/
+redirect_from: /http2-server-push-wordpress/
 image: /assets/img/http2ServerPush_collinmbarrett.jpg
 categories:
 - Code

@@ -7,7 +7,7 @@ excerpt: 'How to configure your browser to block web fonts to speed up your web 
 layout: post-wp-import
 guid: '/?p=2041'
 permalink: /block-web-fonts
-redirect-from: /block-web-fonts/
+redirect_from: /block-web-fonts/
 image: /assets/img/blockWebFonts_collinmbarrett.jpg
 categories:
 - InfoSec

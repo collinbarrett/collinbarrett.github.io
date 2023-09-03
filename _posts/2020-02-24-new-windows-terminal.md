@@ -8,7 +8,7 @@ and preferred shells.'
 layout: post-wp-import
 guid: '/?p=7829'
 permalink: /new-windows-terminal
-redirect-from: /new-windows-terminal/
+redirect_from: /new-windows-terminal/
 image: /assets/img/windowsTerminal_collinmbarrett.png
 categories:
 - Code

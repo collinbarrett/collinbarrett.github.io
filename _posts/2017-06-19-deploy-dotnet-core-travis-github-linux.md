@@ -8,7 +8,7 @@ from GitHub to a Linux (Ubuntu) server.'
 layout: post-wp-import
 guid: '/?p=4162'
 permalink: /deploy-dotnet-core-travis-github-linux
-redirect-from: /deploy-dotnet-core-travis-github-linux/
+redirect_from: /deploy-dotnet-core-travis-github-linux/
 image: /assets/img/dotNetCoreTravisCi_collinmbarrett.jpg
 categories:
 - Code

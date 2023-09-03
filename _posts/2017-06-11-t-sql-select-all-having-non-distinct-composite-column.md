@@ -7,7 +7,7 @@ excerpt: 'A T-SQL solution using HAVING and COUNT for selecting all records with
 layout: post-wp-import
 guid: '/?p=4120'
 permalink: /t-sql-select-all-having-non-distinct-composite-column
-redirect-from: /t-sql-select-all-having-non-distinct-composite-column/
+redirect_from: /t-sql-select-all-having-non-distinct-composite-column/
 image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
 - Code

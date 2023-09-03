@@ -7,7 +7,7 @@ excerpt: 'Two methods for executing an SSIS package installed on a SQL Server in
 layout: post-wp-import
 guid: '/?p=4392'
 permalink: /execute-ssis-csharp-dotnet
-redirect-from: /execute-ssis-csharp-dotnet/
+redirect_from: /execute-ssis-csharp-dotnet/
 image: /assets/img/ssis_collinmbarrett.jpg
 categories:
 - Code

@@ -8,7 +8,7 @@ Wing.'
 layout: post-wp-import
 guid: '/?p=2857'
 permalink: /big-o-notation-polling-west-wing
-redirect-from: /big-o-notation-polling-west-wing/
+redirect_from: /big-o-notation-polling-west-wing/
 image: /assets/img/bigONotationPollingWestWing_collinmbarrett.jpg
 categories:
 - Code

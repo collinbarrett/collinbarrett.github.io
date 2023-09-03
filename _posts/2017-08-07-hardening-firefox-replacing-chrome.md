@@ -8,7 +8,7 @@ privacy.'
 layout: post-wp-import
 guid: '/?p=4654'
 permalink: /hardening-firefox-replacing-chrome
-redirect-from: /hardening-firefox-replacing-chrome/
+redirect_from: /hardening-firefox-replacing-chrome/
 image: /assets/img/firefox_collinmbarrett.jpg
 categories:
 - InfoSec

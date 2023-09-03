@@ -8,7 +8,7 @@ opportunities that this role has provided.'
 layout: post-wp-import
 guid: '/?p=4765'
 permalink: /departing-freds
-redirect-from: /departing-freds/
+redirect_from: /departing-freds/
 image: /assets/img/fredsInc_collinmbarrett.jpg
 categories:
 - Code

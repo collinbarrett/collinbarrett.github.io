@@ -8,7 +8,7 @@ you are connected.'
 layout: post-wp-import
 guid: '/?p=744'
 permalink: /android-tasker-openvpn
-redirect-from: /android-tasker-openvpn/
+redirect_from: /android-tasker-openvpn/
 image: /assets/img/androidTaskerOpenVpn_collinmbarrett.jpg
 categories:
 - InfoSec

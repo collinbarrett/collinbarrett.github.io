@@ -8,7 +8,7 @@ the sidebar.'
 layout: post-wp-import
 guid: '/?p=924'
 permalink: /show-all-tags-wordpress-post-editor
-redirect-from: /show-all-tags-wordpress-post-editor/
+redirect_from: /show-all-tags-wordpress-post-editor/
 image: /assets/img/showAllTagsWordPressPostEditor_collinmbarrett.jpg
 categories:
 - Code

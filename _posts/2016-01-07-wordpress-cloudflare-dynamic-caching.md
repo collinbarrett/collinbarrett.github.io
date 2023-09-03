@@ -8,7 +8,7 @@ non-static content like HTML.'
 layout: post-wp-import
 guid: '/?p=283'
 permalink: /wordpress-cloudflare-dynamic-caching
-redirect-from: /wordpress-cloudflare-dynamic-caching/
+redirect_from: /wordpress-cloudflare-dynamic-caching/
 image: /assets/img/dynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
 - Code

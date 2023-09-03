@@ -8,7 +8,7 @@ methodology.'
 layout: post-wp-import
 guid: '/?p=4885'
 permalink: /code-reviews
-redirect-from: /code-reviews/
+redirect_from: /code-reviews/
 image: /assets/img/legoCoder_collinmbarrett.jpg
 categories:
 - Code

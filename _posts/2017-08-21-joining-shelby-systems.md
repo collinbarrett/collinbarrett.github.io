@@ -7,7 +7,7 @@ excerpt: 'I am excited to join the Financials product development team as a web 
 layout: post-wp-import
 guid: '/?p=4813'
 permalink: /joining-shelby-systems
-redirect-from: /joining-shelby-systems/
+redirect_from: /joining-shelby-systems/
 image: /assets/img/shelbySystems_collinmbarrett.jpg
 categories:
 - Code

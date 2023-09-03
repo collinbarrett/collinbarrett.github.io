@@ -7,7 +7,7 @@ excerpt: 'An example of how to use the T-SQL UNPIVOT operator to transform colum
 layout: post-wp-import
 guid: '/?p=4150'
 permalink: /t-sql-unpivoting-data
-redirect-from: /t-sql-unpivoting-data/
+redirect_from: /t-sql-unpivoting-data/
 image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
 - Code

@@ -8,7 +8,7 @@ REST API.'
 layout: post-wp-import
 guid: '/?p=3554'
 permalink: /nginx-trailing-slashes-wordpress
-redirect-from: /nginx-trailing-slashes-wordpress/
+redirect_from: /nginx-trailing-slashes-wordpress/
 image: /assets/img/nginxTrailingSlashesForWordPress_collinmbarrett.jpg
 categories:
 - Code

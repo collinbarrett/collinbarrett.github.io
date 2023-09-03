@@ -8,7 +8,7 @@ companies to be top-notch.'
 layout: post-wp-import
 guid: '/?p=886'
 permalink: /nest-woes-importance-qa
-redirect-from: /nest-woes-importance-qa/
+redirect_from: /nest-woes-importance-qa/
 image: /assets/img/nestWoesImportanceQa_collinmbarrett.png
 categories:
 - Code
