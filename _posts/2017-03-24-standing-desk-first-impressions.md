@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'After my first week using a standing desk, here are some quick first impressions on the resulting physical and
 mental effects.'
 layout: post-wp-import
-guid: '/?p=3840'
 permalink: /standing-desk-first-impressions
 redirect_from: /standing-desk-first-impressions/
 image: /assets/img/ergotronStandingDesk2_collinmbarrett.png

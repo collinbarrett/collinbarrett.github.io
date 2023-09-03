@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'By implementing .woff2 and slimming down my icon font, I reduced the weight of my site''s fonts by about
 50KB.'
 layout: post-wp-import
-guid: '/?p=1725'
 permalink: /optimize-self-hosted-web-fonts
 redirect_from: /optimize-self-hosted-web-fonts/
 image: /assets/img/optimizeSelfHostedWebFonts_collinmbarrett.jpg

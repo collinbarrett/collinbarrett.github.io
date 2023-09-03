@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'Reflections on the first few weeks of implementing regular code reviews in our team''s development
 methodology.'
 layout: post-wp-import
-guid: '/?p=4885'
 permalink: /code-reviews
 redirect_from: /code-reviews/
 image: /assets/img/legoCoder_collinmbarrett.jpg

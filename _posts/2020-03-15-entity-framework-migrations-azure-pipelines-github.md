@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'I created an Azure Pipeline that automatically performs an Entity Framework Core migration on a GitHub pull
 request of modified JSON data files.'
 layout: post-wp-import
-guid: '/?p=8074'
 permalink: /entity-framework-migrations-azure-pipelines-github
 redirect_from: /entity-framework-migrations-azure-pipelines-github/
 image: /assets/img/azurePipelinesEfCoreMigration_collinmbarrett.jpg

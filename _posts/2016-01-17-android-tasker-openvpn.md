@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'How to automatically connect to VPN on Android using Tasker and OpenVPN Connect based on the network to which
 you are connected.'
 layout: post-wp-import
-guid: '/?p=744'
 permalink: /android-tasker-openvpn
 redirect_from: /android-tasker-openvpn/
 image: /assets/img/androidTaskerOpenVpn_collinmbarrett.jpg

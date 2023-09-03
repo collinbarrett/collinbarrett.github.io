@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'A practical, real-world example of Big-O Notation inspired by Joey Lucas and Josh Lyman''s polling in The West
 Wing.'
 layout: post-wp-import
-guid: '/?p=2857'
 permalink: /big-o-notation-polling-west-wing
 redirect_from: /big-o-notation-polling-west-wing/
 image: /assets/img/bigONotationPollingWestWing_collinmbarrett.jpg

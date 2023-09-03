@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'How to show all tags in the WordPress post editor when clicking the "Choose from the most used tags" link in
 the sidebar.'
 layout: post-wp-import
-guid: '/?p=924'
 permalink: /show-all-tags-wordpress-post-editor
 redirect_from: /show-all-tags-wordpress-post-editor/
 image: /assets/img/showAllTagsWordPressPostEditor_collinmbarrett.jpg

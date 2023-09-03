@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'I built FilterLists this weekend, the community-driven, independent, and comprehensive directory of all public
 filter lists for advertisements and trackers.'
 layout: post-wp-import
-guid: '/?p=1514'
 permalink: /filterlists-blocking-advertisements-trackers
 redirect_from: /filterlists-blocking-advertisements-trackers/
 image: /assets/img/filterListsBlockingAdvertisementsTrackers_collinmbarrett.png

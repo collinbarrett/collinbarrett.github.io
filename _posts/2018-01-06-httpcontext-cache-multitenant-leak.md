@@ -6,7 +6,6 @@ excerpt: 'Our team misunderstood the scope of ASP.NET''s HttpContext.Cache. This
 leakage in our hosting environment. Keys must always have enough unique information to identify their respective cache
 value.'
 layout: post-wp-import
-guid: '/?p=5058'
 permalink: /httpcontext-cache-multitenant-leak
 redirect_from: /httpcontext-cache-multitenant-leak/
 image: /assets/img/cpu_multitenantCacheLeak_collinmbarrett.jpg

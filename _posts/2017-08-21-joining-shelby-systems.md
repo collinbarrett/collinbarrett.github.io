@@ -4,7 +4,6 @@ date: '2017-08-21T07:34:09-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'I am excited to join the Financials product development team as a web developer at Shelby Systems today.'
 layout: post-wp-import
-guid: '/?p=4813'
 permalink: /joining-shelby-systems
 redirect_from: /joining-shelby-systems/
 image: /assets/img/shelbySystems_collinmbarrett.jpg

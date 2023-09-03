@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'How to configure a NGINX rewrite rule to always include trailing slashes in WordPress while not breaking the
 REST API.'
 layout: post-wp-import
-guid: '/?p=3554'
 permalink: /nginx-trailing-slashes-wordpress
 redirect_from: /nginx-trailing-slashes-wordpress/
 image: /assets/img/nginxTrailingSlashesForWordPress_collinmbarrett.jpg

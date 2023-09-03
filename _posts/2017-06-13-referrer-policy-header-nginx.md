@@ -4,7 +4,6 @@ date: '2017-06-13T12:41:00-05:00'
 author: 'Collin M. Barrett'
 excerpt: 'A brief overview of the Referrer Policy header and how to send it with NGINX.'
 layout: post-wp-import
-guid: '/?p=4160'
 permalink: /referrer-policy-header-nginx
 redirect_from: /referrer-policy-header-nginx/
 image: /assets/img/privacyReferrerPolicy_collinmbarrett.jpg
