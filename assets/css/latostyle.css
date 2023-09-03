@@ -2,13 +2,13 @@
 
 body {
 	font-family: "LatoLatinWeb";
-	font-size: 9pt;
+	/* font-size: 9pt;
 	font-style: normal;
 	margin: 0 0 0 0;
-	padding: 0 0 0 0;
+	padding: 0 0 0 0; */
 }
 
-#menu {
+/* #menu {
 	position: fixed;
 	top: 0.50em;
 	left: 0;
@@ -123,4 +123,4 @@ body {
 
 .size90 {
 	font-size: 90px;
-}
+} */
