@@ -1,3 +1,9 @@
-<footer>
-  <p><small>Collin M. Barrett © {{ 'now' | date: "%Y" }}</small></p>
-</footer>
+<footer><small>
+    <p xmlns:cc="http://creativecommons.org/ns#">© {{ "now" | date: "%Y" }} <a rel="cc:attributionURL dct:creator"
+        property="cc:attributionName" href="{{ '/' | absolute_url }}">{{ site.title }}</a> | <a
+        href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer">CC BY-SA
+        4.0<img src="/assets/img/icons/cc.svg" height="11" width="11" loading="lazy" alt="Creative Commons"><img
+          src="/assets/img/icons/by.svg" height="11" width="11" loading="lazy" alt="Creative Commons Attribution"><img
+          src="/assets/img/icons/sa.svg" height="11" width="11" loading="lazy" alt="Creative Commons ShareAlike"></a>
+    </p>
+  </small></footer>
