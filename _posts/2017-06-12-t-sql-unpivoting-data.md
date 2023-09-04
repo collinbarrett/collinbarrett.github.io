@@ -51,7 +51,6 @@ are currently under the columns being rotated. The column that will contain the 
 operator (`[State]`).
 
 ```
-<pre class="brush: sql; title: ; notranslate" title="">
 INSERT INTO [Prices]
 ([Sku],
 [State],

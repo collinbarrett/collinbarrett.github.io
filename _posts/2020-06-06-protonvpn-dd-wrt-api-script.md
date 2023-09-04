@@ -71,7 +71,7 @@ chipsets, and DD-WRT builds.
 Once Entware was installed, I installed `jq` with:
 
 ```
-<pre class="wp-block-preformatted">opkg install jq
+opkg install jq
 ```
 
 ## curl
@@ -81,7 +81,7 @@ The next step of the process was `curl`ing the ProtonVPN API and piping the resu
 I am not sure if their API respects the `no-cache` header, but I decided to pass it along regardless in the hopes of always receiving the freshest results. The API returns JSON by default, but I prefer to be explicit and request a response of `application/json`.
 
 ```
-<pre class="wp-block-preformatted">curl -s -H "Cache-Control: no-cache" -H "Accept: application/json" https://api.protonmail.ch/vpn/logicals
+curl -s -H "Cache-Control: no-cache" -H "Accept: application/json" https://api.protonmail.ch/vpn/logicals
 ```
 
 I have noticed that sometimes the ssl negotiation fails when calling the API with curl on DD-WRT. I suspect this to be an issue with my DD-WRT configuration. The workaround, although undoubtedly a bit insecure, is passing the `-k` (`--insecure`) flag to curl.
@@ -93,7 +93,7 @@ Below, I filter the JSON response with `jq`. I select a `Status` of `1` which me
 With that subset of servers selected, I applied a sort by Score and then by Load. Lastly, I selected the top IP address from the list.
 
 ```
-<pre class="wp-block-preformatted">echo "$LOGICALS" | jq '.LogicalServers | map(select(.Status == 1 and .Tier == 2 and .Features == 8 and (.City | (contains("Atlanta") or contains("Dallas") or contains("Chicago"))))) | [sort_by(.Score, .Load)[]][0] | .Servers[0].EntryIP'
+echo "$LOGICALS" | jq '.LogicalServers | map(select(.Status == 1 and .Tier == 2 and .Features == 8 and (.City | (contains("Atlanta") or contains("Dallas") or contains("Chicago"))))) | [sort_by(.Score, .Load)[]][0] | .Servers[0].EntryIP'
 ```
 
 ## Shell Script
@@ -103,7 +103,7 @@ Here is the final script I am using (also available as a [gist](https://gist.git
 After fetching and filtering to the optimal server IP, I update the remote in nvram and then restart the `openvpn` service.
 
 ```
-<pre class="wp-block-preformatted">#!/bin/sh
+#!/bin/sh
 
 # specify PATH to run from cron
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:/jffs/sbin:/jffs/bin:/jffs/usr/sbin:/jffs/usr/bin:/mmc/sbin:/mmc/bin:/mmc/usr/sbin:/mmc/usr/bin:/opt/sbin:/opt/bin:/opt/usr/sbin:/opt/usr/bin
@@ -152,7 +152,9 @@ fi
 
 I use cron jobs to execute this script automatically. The DD-WRT GUI enables this configuration, which I wired up to refresh the connection twice a day (7:25 am and 5 pm, the beginning and end of my typical workday).
 
-<figure class="wp-block-image size-large">![DD-WRT Cron](/assets/img/ddwrtCron_collinmbarrett.jpg)</figure>## Startup
+<figure class="wp-block-image size-large">![DD-WRT Cron](/assets/img/ddwrtCron_collinmbarrett.jpg)</figure>
+
+## Startup
 
 Additionally, I have enabled DD-WRT’s watchdog service to ping a large public DNS provider (I use Cloudflare’s 1.1.1.1) every so often to ensure my router still has connection to the WAN. When WAN connection is down, the router will automatically reboot. When DD-WRT starts back up, the OpenVPN connection would use the default server configured
 

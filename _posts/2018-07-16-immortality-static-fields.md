@@ -38,7 +38,6 @@ constructors, I tried instantiating them at declaration.
 Mainly, I wanted to replace this:
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public class MyServiceClass
 {
 private readonly DataContext _context;
@@ -75,7 +74,6 @@ _myRepo5 = new Lazy&lt;MyRepo5&gt;(() =&gt; new MyRepo5(context));
 With this:
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public class MyServiceClass
 {
 private readonly DataContext _context = new DataContext();
@@ -104,7 +102,6 @@ Initializing the repositories at declaration, however, throws a compiler error o
 I was moving a little bit too quickly, and this seemed like a simple fix. Just stuff a `static` keyword on the `DataContext` declaration, watch the red squiggles fade away, and call it done.
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public class MyServiceClass
 {
 private static readonly DataContext context = new DataContext();
@@ -121,7 +118,6 @@ Thankfully, the service class threw all kinds of errors on a repository retrieva
 **Update 7.18.18**: [DEV Community member Asti](https://dev.to/asti) pointed out that I could have also changed my second constructor to something like below to reduce the duplication:
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public MyServiceClass(MyParamClass myParamClass) : this()
 {
 _myParamClass = myParamClass;

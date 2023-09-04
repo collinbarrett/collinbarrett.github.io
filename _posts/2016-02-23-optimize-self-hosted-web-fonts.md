@@ -102,7 +102,6 @@ Generator](https://www.fontsquirrel.com/tools/webfont-generator "Webfont Generat
 CSS sheet that looks something like below for cross-browser compatibility of the various font formats.
 
 ```
-<pre class="brush: css; title: ; notranslate" title="">
 @font-face {
 font-family: 'open_sanslight';
 src: url('opensans-light-webfont.eot');

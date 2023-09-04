@@ -95,10 +95,7 @@ method on `Configure()` of the `BaseEntity`. This method deserializes the JSON f
   href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview">System.Text.Json</a>`
 library and adds them to the `DbContext` model by passing them into a call to `HasData()`.
 
-<div class="wp-block-group">
-  <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
-    <div class="wp-block-syntaxhighlighter-code ">```
-      <pre class="brush: csharp; title: ; notranslate" title="">
+```
 public class BaseEntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
 {
     public virtual void Configure(EntityTypeBuilder<TEntity> builder)
@@ -111,8 +108,6 @@ public class BaseEntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEn
 
 </div>-BaseEntityTypeConfiguration.cs
 
-</div></div><div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: csharp; title: ; notranslate" title="">
 ...
 using System.Text.Json;
 
@@ -164,7 +159,6 @@ I could not find any simple/native task for pushing to somebody else’s git rep
 The most difficult part of getting this working using custom bash tasks was [getting the URI of the forked git repository](https://stackoverflow.com/q/60188806/2343739) used to create the pull request. Azure Pipelines provides many [predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml), but unfortunately, the PR source repository URI is not a variable they offer ([yet](https://developercommunity.visualstudio.com/idea/916468/add-predefined-variable-for-github-pull-request-co.html)). I ended up `curl`-ing the GitHub API and piping the result into `<a href="https://stedolan.github.io/jq/">jq</a>` to capture the fork URI.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: yaml; title: ; notranslate" title="">
 - task: Bash@3
   displayName: checkout source branch
   inputs:
@@ -191,7 +185,6 @@ If you are following along, the next few steps in the Pipeline are some preparat
 Since I only want each PR to include a single new EF migration, the next step is to check if a migration has already been added for the current PR and revert it. I used the EF CLI to query the existing migrations list and check for the existence of the current PR number.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: yaml; title: ; notranslate" title="">
 - task: Bash@3
   displayName: revert existing PR migration
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -217,7 +210,6 @@ Since I only want each PR to include a single new EF migration, the next step is
 Before adding a new migration, I then wanted to ensure that the contributor’s fork branch had all of the latest data changes from the FilterLists master branch. To do that, I added the primary FilterLists repository as a remote and merged its master down to the local PR branch. If there are any merge conflicts, I just fail the Pipeline so that the contributor or myself can address those manually.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: yaml; title: ; notranslate" title="">
 - task: Bash@3
   displayName: sync with upstream
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -241,7 +233,6 @@ Before adding a new migration, I then wanted to ensure that the contributor’s 
 Adding a new migration is a simple one-liner to the EF CLI. I decided on using the GitHub PR number as the name of the automatic migration by convention.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: bash; gutter: false; title: ; notranslate" title="">
 dotnet ef migrations add $(System.PullRequest.PullRequestNumber) -p FilterLists.Data.Migrations -s FilterLists.Api
 ```
 
@@ -250,7 +241,6 @@ dotnet ef migrations add $(System.PullRequest.PullRequestNumber) -p FilterLists.
 </div></div>Before committing the new migration, I wanted to test to ensure that the migration applies a change of some kind. If the migration does apply a change, I then proceed with committing to the branch.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: yaml; title: ; notranslate" title="">
 - task: Bash@3
   displayName: commit or abandon no-op migration
   name: commitOrAbandon
@@ -281,7 +271,6 @@ Before I push the new migration, I [run the aforementioned integration test](htt
 The last step is to push the changes back to the contributor’s PR branch. I am certain there is a better and more secure way of doing this, but for now, I am using the credential helper to push by injecting my GitHub PAT into the URL itself.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: yaml; title: ; notranslate" title="">
 - task: Bash@3
   displayName: push
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -302,7 +291,6 @@ The last step is to push the changes back to the contributor’s PR branch. I am
 Now that I have migrations automatically added to pull requests which change data, I just need to ensure that the new migrations are applied on every deploy to production. To do that, I make a call to the `Migrate<TContext>()` extension method below before `Run()`-ing the `IWebHost` on API startup.
 
 <div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public static void Main(string[] args)
 {
     CreateWebHostBuilder(args)
@@ -315,7 +303,6 @@ public static void Main(string[] args)
 </div>–[Program.cs](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/FilterLists.Directory.Api/Program.cs)
 
 </div></div><div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
-<pre class="brush: csharp; title: ; notranslate" title="">
 public static class IWebHostExtensions
 {
     public static IWebHost Migrate<TContext>(this IWebHost webHost) where TContext : DbContext

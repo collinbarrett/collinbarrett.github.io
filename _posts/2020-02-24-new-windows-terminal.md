@@ -93,7 +93,7 @@ with this new app.
 ### Installation
 
 ```
-<pre class="wp-block-preformatted">choco install microsoft-windows-terminal
+choco install microsoft-windows-terminal
 ```
 
 ### Configuration

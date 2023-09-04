@@ -130,7 +130,6 @@ you would like to purge.
 *via [GitHub](https://github.com/TypistTech/sunny/issues/2 "Purge RSS Feeds - Sunny")*
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: php; title: ; notranslate" title="">
 // purge RSS feed from Cloudflare via Sunny
 function purge_rss_cloudflare() {
   Sunny_Purger::purge_cloudflare_cache_by_url( 'https://example.com/feed/' );

@@ -31,7 +31,6 @@ correctly. However, in the end, we found a working solution with one caveat.
 We needed first to ensure that we included a couple of dependencies.
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 using System.Data.SqlClient;
 using Microsoft.SqlServer.Management.IntegrationServices;
 ```
@@ -41,7 +40,6 @@ using Microsoft.SqlServer.Management.IntegrationServices;
 The following snippet shows the final working solution we came up with that triggers a package with a single parameter. The value of ObjectType in the parameter configuration refers to which of the following types of parameters it is: system (50), package (30), or project (20). The connection string we used was a new SQL Server service account created just for this purpose.
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 private void ExecuteSsisPackage()
 {
 using (var ssisSqlConnection = new SqlConnection(ConfigurationManager
@@ -80,7 +78,6 @@ Oh, the new SQL Server service account we had created could not trigger the pack
 SQL jobs, unlike SSIS packages, can, in fact, be triggered by SQL Server user accounts. So, we configured a SQL Job to perform the execution for us. SQL Server ships with a system stored procedure designed for just this purpose. So, the snippet below is fairly straight-forward and worked like a champ once we ensured that the job had the proper parameter value configured and that the SQL Server service account had permissions to execute this system stored procedure.
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 private void ExecuteSsisPackage()
 {
 using (var ssisSqlConnection = new SqlConnection(ConfigurationManager
@@ -101,7 +98,6 @@ execSsisStoredProcedure.ExecuteNonQuery();
 Note that for this method to work, we needed to properly set the catalog where the system stored procedure was located (MSDB). We did this in the connection string in the web.config like below, but there may also be a way to set this in the code snippet above.
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &lt;connectionStrings&gt;
 &lt;add name="SsisConn" connectionString="Data Source=myserver;Initial Catalog=MSDB;MultipleActiveResultSets=True;Persist Security Info=True;User ID=MySsisUser;Password=MySsisPassword" providerName="System.Data.SqlClient" /&gt;
 &lt;/connectionStrings&gt;

@@ -34,7 +34,7 @@ As you can see in this small sample, the `Pref` values are a bit of a “garbage
 They are generally (but not always) serialized to a `VARCHAR` looking something like:
 
 <div class="wp-block-syntaxhighlighter-code ">```
-    <pre class="brush: plain; title: ; notranslate" title="">
+    
 <Key1>= <Value1> <Key2>= <Value2>
 ```
 
@@ -43,12 +43,12 @@ They are generally (but not always) serialized to a `VARCHAR` looking something 
 The view layer is unfortunately also the owner of which types each value represents. Actually, in many cases, the type is never explicitly stated at all; it is just inferred based on the branching or binding logic that consumes it. We found the following patterns throughout the view layer just before the data is needed or to save:
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; light: true; title: ; notranslate" title="">
+
 value = Prefs.UserPrefGet(Key)
 ```
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; light: true; title: ; notranslate" title="">
+
 Prefs.UserPrefUpdate(Key, value)
 ```
 
@@ -63,7 +63,7 @@ To move towards a more flexible and expressive architecture, we wanted to treat 
 The solution we landed on was creating a set of base and derived classes to model the data in the data layer. The base class only contains the `PrefId`, while the derived classes implement the keys and their value types. Eventually, we will derive a `DerivedPrefX` (certainly with better, domain-specific names) for every `PrefId`.
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; title: ; notranslate" title="">
+
 public abstract class Pref {
 PrefId { get; set; }
 }
@@ -95,7 +95,6 @@ Some of the keys in the `Pref` values start with an integer value. If you notice
 We solved this by creating a new C# custom attribute:
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; title: ; notranslate" title="">
 public class PrefAttribute : Attribute
 {
 public string Key { get; set; }
@@ -105,7 +104,6 @@ public string Key { get; set; }
 `DerivedPref2` now looks like:
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; title: ; notranslate" title="">
 public class DerivedPref2 : Pref {
 public DerivedPref2() { ... }
 
@@ -121,7 +119,6 @@ This attribute gives us the flexibility to rename any keys in the application in
 Using reflection and generics, we came up with the routine below to deserialize into the new derivations of `Pref`. This set of methods is a work in progress still and only captures the most common serialization formats.
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; title: ; notranslate" title="">
 public T GetPreferences&amp;lt;T&amp;gt;() where T : Pref, new()
 {
 var t = new T();
@@ -207,14 +204,12 @@ While the idea is to refactor all of the `Pref` CRUD operations to use these new
 However, rather than continuing to use hard-coded strings for `Key` in the calls to `UserPrefUpdate(Key, Value)`, we did want to at least make use of the new POCOs to get the `Key`s. This promotes better maintainability (such as through IDE tools) than using string literals.
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; light: true; title: ; notranslate" title="">
 Prefs.UserPrefUpdate(nameof(DerivedPref1.Key1), value)
 ```
 
 Using `nameof()` works great for all of the properties that we have not renamed, but handling the keys that were renamed with the custom attributes required a bit more work. With a bit of [StackOverflow](https://stackoverflow.com/questions/51540318/get-attribute-on-or-name-of-derived-classs-property) assistance, I came up with the method below to get the key of any property (whether it used the property name directly or the custom attribute). Note that `GetCustomAttributeValue<T>()` is a custom helper method that returns the value of an attribute in the type of `T`, but its implementation is out of scope for this article.
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; title: ; notranslate" title="">
 public static class PrefKeychain
 {
 public static string GetKey&amp;lt;TPref&amp;gt;(Expression&amp;lt;Func&amp;lt;TPref, object&amp;gt;&amp;gt; property) where TPref : Prefs =&amp;gt;
@@ -233,7 +228,6 @@ member.GetCustomAttributeValue&amp;lt;string&amp;gt;(typeof(UserPrefAttribute), 
 This can be called like:
 
 ```
-<pre class="wp-block-preformatted"><pre class="brush: csharp; light: true; title: ; notranslate" title="">
 Prefs.UserPrefUpdate(PrefKeychain.GetKey&amp;lt;DerivedPref2&amp;gt;(p =&amp;gt; p.Key404), Value)
 ```
 

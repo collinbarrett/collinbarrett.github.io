@@ -47,7 +47,6 @@ return the most recent EffectiveDate that is not in the future. I handled this w
 ## The View Query
 
 ```
-<pre class="brush: sql; title: ; notranslate" title="">
 SELECT Id,
 Group,
 Store,

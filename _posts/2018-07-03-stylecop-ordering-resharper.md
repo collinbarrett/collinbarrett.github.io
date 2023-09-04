@@ -50,7 +50,6 @@ Regions
 In R# XAML, this is implemented by adding the `RemoveRegions` flag in the `TypePattern` node.
 
 ```
-<pre class="brush: xml; light: true; title: ; notranslate" title="">
 &amp;lt;TypePattern DisplayName="StyleCop Classes, Interfaces, &amp;amp;amp; Structs" RemoveRegions="All"&amp;gt;
 ```
 
@@ -74,7 +73,6 @@ Sort elements by type in the following order:
 In R# XAML, this is implemented by the order of `Entry` nodes. For example, to put fields before constructors:
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;Entry DisplayName="Fields"&amp;gt;
 &amp;lt;Entry.Match&amp;gt;
 &amp;lt;Kind Is="Field" /&amp;gt;
@@ -100,7 +98,6 @@ Sort adjacent elements of the same type in the following order of access level:
 In R# XAML, this is implemented via the `Access` node under `Entry.SortBy` like below for fields:
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;Entry DisplayName="Fields"&amp;gt;
 &amp;lt;Entry.Match&amp;gt;
 &amp;lt;Kind Is="Field" /&amp;gt;
@@ -116,7 +113,6 @@ In R# XAML, this is implemented via the `Access` node under `Entry.SortBy` like 
 In R# XAML, this is implemented by the order of the constant and field `Entry` nodes.
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;Entry DisplayName="Constants"&amp;gt;
 &amp;lt;Entry.Match&amp;gt;
 &amp;lt;Kind Is="Constant" /&amp;gt;
@@ -134,7 +130,6 @@ In R# XAML, this is implemented by the order of the constant and field `Entry` n
 In R# XAML, this is implemented via the `Static` node under `Entry.SortBy` like below for fields:
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;Entry DisplayName="Fields"&amp;gt;
 &amp;lt;Entry.Match&amp;gt;
 &amp;lt;Kind Is="Field" /&amp;gt;
@@ -151,7 +146,6 @@ In R# XAML, this is implemented via the `Static` node under `Entry.SortBy` like 
 In R# XAML, this is implemented via the `Readonly` node under `Entry.SortBy` like below for fields:
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;Entry DisplayName="Fields"&amp;gt;
 &amp;lt;Entry.Match&amp;gt;
 &amp;lt;Kind Is="Field" /&amp;gt;
@@ -169,7 +163,6 @@ In R# XAML, this is implemented via the `Readonly` node under `Entry.SortBy` lik
 Converting the above rules directly into ReSharper C# File Layout XAML results in the following TypePattern (also available as a [Gist](https://gist.github.com/collinbarrett/fcc004c386867135c06e26e449f73ba2)):
 
 ```
-<pre class="brush: xml; title: ; notranslate" title="">
 &amp;lt;TypePattern DisplayName="StyleCop Classes, Interfaces, &amp;amp;amp; Structs" RemoveRegions="All"&amp;gt;
 &amp;lt;TypePattern.Match&amp;gt;
 &amp;lt;Or&amp;gt;

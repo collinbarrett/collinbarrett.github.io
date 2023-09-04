@@ -41,7 +41,6 @@ have a child theme setup already. For example, in the snippet below I remove the
 its script and style in my child theme’s functions.php.
 
 ```
-<pre class="brush: php; title: ; notranslate" title="">
 function remove_scripts()
 {
 wp_deregister_script( 'selection-sharer' );

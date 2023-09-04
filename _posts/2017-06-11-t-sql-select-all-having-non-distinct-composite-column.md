@@ -41,7 +41,6 @@ I did not have a lot of time to test my Google-Fu for this one, so I received as
 across the hall from me. She suggested a query like below.
 
 ```
-<pre class="brush: sql; title: ; notranslate" title="">
 SELECT COUNT([Sku] + [GroupCode]) AS 'Count',
 [Sku],
 [GroupCode]
@@ -55,7 +54,6 @@ I had used the `HAVING` keyword before, but I had not used it extensively enough
 Furthermore, I was interested in treating `[Sku]` and `[GroupCode]` like a single composite column. So, concatenating the two columns fulfills this requirement. The query above, however, adds the two columns rather than concatenates because the columns are `INT`s. So, I cast the `INT`s to `VARCHAR`s below.
 
 ```
-<pre class="brush: sql; title: ; notranslate" title="">
 SELECT COUNT(CAST([Sku] AS VARCHAR(20)) + CAST([GroupCode] AS VARCHAR(20))) AS 'Count',
 [Sku],
 [GroupCode]

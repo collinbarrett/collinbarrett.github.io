@@ -29,7 +29,6 @@ continue to read “Choose from the most used tags,” but WordPress will displa
 popular.
 
 ```
-<pre class="brush: php; title: ; notranslate" title="">
 function wp_showAllTagsEditor ( $args ) {
 if ( defined( 'DOING_AJAX' ) &amp;&amp; DOING_AJAX &amp;&amp; isset( $_POST['action'] ) &amp;&amp; $_POST['action'] === 'get-tagcloud' ) {
 unset( $args['number'] );

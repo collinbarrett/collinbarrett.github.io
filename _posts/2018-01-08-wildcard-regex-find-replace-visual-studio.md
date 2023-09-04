@@ -22,7 +22,6 @@ tags:
 When fixing a bug recently, there was a pattern in scope of where I was working that looked something like this:
 
 ```
-<pre class="brush: csharp; title: ; notranslate" title="">
 MyObjectCollection.Add(new MyObject(0, "0100", "Name"))
 MyObjectCollection.Add(new MyObject(0, "0200", "Address"))
 ```

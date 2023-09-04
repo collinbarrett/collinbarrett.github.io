@@ -36,7 +36,6 @@ There has been an existing mechanism for sites to request that the referrer head
 respect that keyword, but most modern versions of mainstream browsers do to my knowledge.
 
 ```
-<pre class="brush: xml; light: true; title: ; notranslate" title="">
 &lt;a rel="noreferrer" href="https://collinmbarrett.com"&gt;
 ```
 
