@@ -29,8 +29,8 @@ new skills.
 I recently improved the continuous integration of the open-sourced data for the application by adding automatic Entity
 Framework Core data migrations. When a contributor opens a pull request changing any of the [JSON
 data](https://github.com/collinbarrett/FilterLists/tree/master/services/Directory/data), an [Azure
-Pipeline](https://dev.azure.com/collinbarrett/FilterLists/_build?definitionId=26) clones the contributor’s fork, adds an
-EF migration, performs a test seed, and pushes the migration back to the contributor’s fork to update the pull request.
+Pipeline](https://dev.azure.com/collinbarrett/FilterLists/_build?definitionId=26) clones the contributor's fork, adds an
+EF migration, performs a test seed, and pushes the migration back to the contributor's fork to update the pull request.
 
 ## History of FilterLists Data
 
@@ -86,7 +86,7 @@ repository of such information overloads the name “StackOverflow”.)
 The free agent that Microsoft provides was running out of memory with my custom and inefficient seeding algorithm. My
 integration test spins up a new instance of the containerized database and tests seeding the latest JSON data. Since I
 relied on this testing to ensure that community-contributed data changes were valid (syntactically correct, foreign key
-relationships were correct, etc.), this was the trigger I needed to revisit EF Core’s native seeding.
+relationships were correct, etc.), this was the trigger I needed to revisit EF Core's native seeding.
 
 ### Configuring JSON Seed Data with EF Core
 
@@ -95,7 +95,7 @@ method on `Configure()` of the `BaseEntity`. This method deserializes the JSON f
   href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview">System.Text.Json</a>`
 library and adds them to the `DbContext` model by passing them into a call to `HasData()`.
 
-```
+```csharp
 public class BaseEntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity
 {
     public virtual void Configure(EntityTypeBuilder<TEntity> builder)
@@ -106,9 +106,9 @@ public class BaseEntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEn
 }
 ```
 
-</div>-BaseEntityTypeConfiguration.cs
+BaseEntityTypeConfiguration.cs
 
-...
+```csharp
 using System.Text.Json;
 
 public static class SeedExtension
@@ -129,36 +129,70 @@ public static class SeedExtension
     }
 }
 ```
+[SeedExtensions.cs](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/FilterLists.Directory.Infrastructure/Persistence/SeedExtensions.cs)
 
-</div>–[SeedExtensions.cs](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/FilterLists.Directory.Infrastructure/Persistence/SeedExtensions.cs)
+Now, when I add a new EF Core migration, the script captures not only schema changes but JSON data changes as well.
 
-</div></div>Now, when I add a new EF Core migration, the script captures not only schema changes but JSON data changes as well.
+The odd cast to `IEnumerable<object>` in the call to `HasData()` is to ensure that the correct overload of `HasData()`
+  is being called. Ivan, “a legend amongst men,” explains it in further detail
+  [here](https://stackoverflow.com/a/53867085/2343739).
 
-The odd cast to `IEnumerable<object>` in the call to `HasData()` is to ensure that the correct overload of `HasData()` is being called. Ivan, “a legend amongst men,” explains it in further detail [here](https://stackoverflow.com/a/53867085/2343739).
+  ### Data Migration Limitations
 
-### Data Migration Limitations
+  It is important to note that EF Core's seed functionality does not connect to a live database when adding a migration.
+  This results in some key
+  [limitations](https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding#limitations-of-model-seed-data) that must
+  be considered.
 
-It is important to note that EF Core’s seed functionality does not connect to a live database when adding a migration. This results in some key [limitations](https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding#limitations-of-model-seed-data) that must be considered.
+  For FilterLists, I discovered quickly that foreign key constraints are not considered when adding a migration. In
+  [this pull request](https://github.com/collinbarrett/FilterLists/pull/1428#pullrequestreview-368958803), a contributor
+  removed some records from a primary entities collection but did not remove the corresponding records in a related
+  many-to-many collection. Adding a migration seemed to [work just
+  fine](https://dev.azure.com/collinbarrett/FilterLists/_build/results?buildId=3054&view=logs&j=12f1170f-54f2-53f3-20dd-22fc7dff55f9&t=5caf77c8-9b10-50ef-b5c7-ca89c63e1c86),
+  but applying the added migration to an instance of a real database [flagged the
+  issue](https://dev.azure.com/collinbarrett/FilterLists/_build/results?buildId=3054&view=logs&j=12f1170f-54f2-53f3-20dd-22fc7dff55f9&t=ebf69b98-7e9b-5a4b-1523-fc9437d68b9b)
+  before it made its way to production.
 
-For FilterLists, I discovered quickly that foreign key constraints are not considered when adding a migration. In [this pull request](https://github.com/collinbarrett/FilterLists/pull/1428#pullrequestreview-368958803), a contributor removed some records from a primary entities collection but did not remove the corresponding records in a related many-to-many collection. Adding a migration seemed to [work just fine](https://dev.azure.com/collinbarrett/FilterLists/_build/results?buildId=3054&view=logs&j=12f1170f-54f2-53f3-20dd-22fc7dff55f9&t=5caf77c8-9b10-50ef-b5c7-ca89c63e1c86), but applying the added migration to an instance of a real database [flagged the issue](https://dev.azure.com/collinbarrett/FilterLists/_build/results?buildId=3054&view=logs&j=12f1170f-54f2-53f3-20dd-22fc7dff55f9&t=ebf69b98-7e9b-5a4b-1523-fc9437d68b9b) before it made its way to production.
+  ## Automatic Migrations with Azure Pipelines
 
-## Automatic Migrations with Azure Pipelines
+  This article is growing quite long. If you have glazed over thus far, *this is the interesting part of this
+  adventure*, in my opinion.
 
-This article is growing quite long. If you have glazed over thus far, *this is the interesting part of this adventure*, in my opinion.
+  The handful of community members who help me maintain the FilterLists dataset should not need to know anything about
+  [.NET](/tag/dotnet/), EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand
+  the [foreign key relationships in the JSON
+  files](https://github.com/collinbarrett/FilterLists/wiki/Data-Model_sidebar), but I wanted to keep it as easy as
+  possible for folks to contribute.
 
-The handful of community members who help me maintain the FilterLists dataset should not need to know anything about [.NET](/tag/dotnet/), EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand the [foreign key relationships in the JSON files](https://github.com/collinbarrett/FilterLists/wiki/Data-Model_sidebar), but I wanted to keep it as easy as possible for folks to contribute.
+  The goal of this endeavor was to build a CI Pipeline to automatically add data migrations and push them back to the
+  pull request on the contributor's behalf. I will explain how this works in a bit more detail, but [**here is the
+  resulting Pipeline
+  definition**](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/azure-pipelines.migrate.yaml).
 
-The goal of this endeavor was to build a CI Pipeline to automatically add data migrations and push them back to the pull request on the contributor’s behalf. I will explain how this works in a bit more detail, but [**here is the resulting Pipeline definition**](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/azure-pipelines.migrate.yaml).
+  ### Pushing to a Contributor's Pull Request
 
-### Pushing to a Contributor’s Pull Request
+  On GitHub, when a pull request is created, the branch used for the PR is part of the forked repository (owned by
+  another user). For my Migrate Pipeline to push the new migration back to the pull request, I had to check out the
+  branch from the contributor's fork, commit the new migration to that branch, and then push the change back to their
+  repository (via [GitHub
+  Docs](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/committing-changes-to-a-pull-request-branch-created-from-a-fork)).
+  The contributor must [grant me
+  permission](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)
+  when opening their PR for me to do so.
 
-On GitHub, when a pull request is created, the branch used for the PR is part of the forked repository (owned by another user). For my Migrate Pipeline to push the new migration back to the pull request, I had to check out the branch from the contributor’s fork, commit the new migration to that branch, and then push the change back to their repository (via [GitHub Docs](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/committing-changes-to-a-pull-request-branch-created-from-a-fork)). The contributor must [grant me permission](https://docs.github.com/en/github/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) when opening their PR for me to do so.
+  I could not find any simple/native task for pushing to somebody else's git repository in Azure Pipelines. It is
+  certainly possible that I missed something, however; and I did all of this custom work for nothing but my education.
 
-I could not find any simple/native task for pushing to somebody else’s git repository in Azure Pipelines. It is certainly possible that I missed something, however; and I did all of this custom work for nothing but my education.
+  The most difficult part of getting this working using custom bash tasks was [getting the URI of the forked git
+  repository](https://stackoverflow.com/q/60188806/2343739) used to create the pull request. Azure Pipelines provides
+  many [predefined
+  variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml), but
+  unfortunately, the PR source repository URI is not a variable they offer
+  ([yet](https://developercommunity.visualstudio.com/idea/916468/add-predefined-variable-for-github-pull-request-co.html)).
+  I ended up `curl`-ing the GitHub API and piping the result into `<a href="https://stedolan.github.io/jq/">jq</a>` to
+  capture the fork URI.
 
-The most difficult part of getting this working using custom bash tasks was [getting the URI of the forked git repository](https://stackoverflow.com/q/60188806/2343739) used to create the pull request. Azure Pipelines provides many [predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml), but unfortunately, the PR source repository URI is not a variable they offer ([yet](https://developercommunity.visualstudio.com/idea/916468/add-predefined-variable-for-github-pull-request-co.html)). I ended up `curl`-ing the GitHub API and piping the result into `<a href="https://stedolan.github.io/jq/">jq</a>` to capture the fork URI.
-
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```yaml
 - task: Bash@3
   displayName: checkout source branch
   inputs:
@@ -167,24 +201,36 @@ The most difficult part of getting this working using custom bash tasks was [get
       FORKURI=$(curl -X GET "https://api.github.com/repos/$BUILD_REPOSITORY_NAME/pulls/$SYSTEM_PULLREQUEST_PULLREQUESTNUMBER" | jq -r '.head.repo.clone_url')
       git clone --single-branch -b "$SYSTEM_PULLREQUEST_SOURCEBRANCH" "$FORKURI" .
 ```
+[azure-pipelines.migrate.yaml#L21](https://github.com/collinbarrett/FilterLists/blob/47b1c264eac5e30b3b6ca4e1f6c04ffda3842313/server/azure-pipelines.migrate.yaml#L21)
 
-</div>–[azure-pipelines.migrate.yaml#L21](https://github.com/collinbarrett/FilterLists/blob/47b1c264eac5e30b3b6ca4e1f6c04ffda3842313/server/azure-pipelines.migrate.yaml#L21)
-
-</div></div>### Installation and Configuration
+### Installation and Configuration
 
 If you are following along, the next few steps in the Pipeline are some preparation for adding the migration.
 
-`<a href="https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L30">abort if just migrated</a>` bails out of the Pipeline if the last commit to the branch was from itself. I could not figure out a way to avoid triggering the Migrate Pipeline again after pushing the new migration to the PR, so I just bail early here instead to avoid an infinite loop. To abort but still report a successful Pipeline run, it outputs an ` aborted` variable that all future steps check in their `condition`.
+[`abort if just
+migrated`](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L30)
+bails out of the Pipeline if the last commit to the branch was from itself. I could not figure out a way to avoid
+triggering the Migrate Pipeline again after pushing the new migration to the PR, so I just bail early here instead to
+avoid an infinite loop. To abort but still report a successful Pipeline run, it outputs an `aborted` variable that all
+future steps check in their `condition`.
 
-`<a href="https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L46">use latest dotnet sdk</a>` and `<a href="https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L52">install ef dotnet tool</a>` ensure that the correct tools are installed in the hosted agent to add the EF core migration.
+[`use latest dotnet
+sdk`](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L46)
+and [`install ef dotnet
+tool`](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L52)
+ensure that the correct tools are installed in the hosted agent to add the EF core migration.
 
-`<a href="https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L58">git config</a>` configures the username and email address of the Pipeline’s git committer.
+[`git
+config`](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L58)
+configures the username and email address of the Pipeline's git committer.
 
 ### Revert Existing PR Migration
 
-Since I only want each PR to include a single new EF migration, the next step is to check if a migration has already been added for the current PR and revert it. I used the EF CLI to query the existing migrations list and check for the existence of the current PR number.
+Since I only want each PR to include a single new EF migration, the next step is to check if a migration has already
+been added for the current PR and revert it. I used the EF CLI to query the existing migrations list and check for the
+existence of the current PR number.
 
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```yaml
 - task: Bash@3
   displayName: revert existing PR migration
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -202,14 +248,16 @@ Since I only want each PR to include a single new EF migration, the next step is
         git revert --no-edit "$REVERTHASH"
       fi
 ```
+[azure-pipelines.migrate.yaml#L70](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L70)
 
-</div>–[azure-pipelines.migrate.yaml#L70](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L70)
+### Sync with Upstream
 
-</div></div>### Sync with Upstream
+Before adding a new migration, I then wanted to ensure that the contributor's fork branch had all of the latest data
+changes from the FilterLists master branch. To do that, I added the primary FilterLists repository as a remote and
+merged its master down to the local PR branch. If there are any merge conflicts, I just fail the Pipeline so that the
+contributor or myself can address those manually.
 
-Before adding a new migration, I then wanted to ensure that the contributor’s fork branch had all of the latest data changes from the FilterLists master branch. To do that, I added the primary FilterLists repository as a remote and merged its master down to the local PR branch. If there are any merge conflicts, I just fail the Pipeline so that the contributor or myself can address those manually.
-
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```yaml
 - task: Bash@3
   displayName: sync with upstream
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -225,22 +273,22 @@ Before adding a new migration, I then wanted to ensure that the contributor’s 
         exit 1
       fi
 ```
+[azure-pipelines.migrate.yaml#L87](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L87)
 
-</div>–[azure-pipelines.migrate.yaml#L87](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L87)
+### Add and Commit Migration
 
-</div></div>### Add and Commit Migration
+Adding a new migration is a simple one-liner to the EF CLI. I decided on using the GitHub PR number as the name of the
+automatic migration by convention.
 
-Adding a new migration is a simple one-liner to the EF CLI. I decided on using the GitHub PR number as the name of the automatic migration by convention.
-
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```bash
 dotnet ef migrations add $(System.PullRequest.PullRequestNumber) -p FilterLists.Data.Migrations -s FilterLists.Api
 ```
+[azure-pipelines.migrate.yaml#L107](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L107)
 
-</div>–[azure-pipelines.migrate.yaml#L107](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L107)
+Before committing the new migration, I wanted to test to ensure that the migration applies a change of some kind. If the
+migration does apply a change, I then proceed with committing to the branch.
 
-</div></div>Before committing the new migration, I wanted to test to ensure that the migration applies a change of some kind. If the migration does apply a change, I then proceed with committing to the branch.
-
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```yaml
 - task: Bash@3
   displayName: commit or abandon no-op migration
   name: commitOrAbandon
@@ -259,18 +307,23 @@ dotnet ef migrations add $(System.PullRequest.PullRequestNumber) -p FilterLists.
         echo "##vso[task.setvariable variable=committed;isOutput=true]true"
       fi
 ```
+[azure-pipelines.migrate.yaml#L109](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L107)
 
-</div>–[azure-pipelines.migrate.yaml#L109](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L107)
+### Test Migration
 
-</div></div>### Test Migration
+Before I push the new migration, I [run the aforementioned integration
+test](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L127)
+which uses Docker Compose to create a new instance of the API and the database. The test passes if data is seeded to the
+database without exception.
 
-Before I push the new migration, I [run the aforementioned integration test](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L127) which uses Docker Compose to create a new instance of the API and the database. The test passes if data is seeded to the database without exception.
+![EF Core Add Migration xUnit Test Result in Azure Pipelines](/assets/img/addMigrationTest_collinmbarrett.jpg)
 
-<figure class="wp-block-image size-large">[![EF Core Add Migration xUnit Test Result in Azure Pipelines](/assets/img/addMigrationTest_collinmbarrett.jpg)](/assets/img/addMigrationTest_collinmbarrett.jpg)</figure>### Push Migration
+### Push Migration
 
-The last step is to push the changes back to the contributor’s PR branch. I am certain there is a better and more secure way of doing this, but for now, I am using the credential helper to push by injecting my GitHub PAT into the URL itself.
+The last step is to push the changes back to the contributor's PR branch. I am certain there is a better and more secure
+way of doing this, but for now, I am using the credential helper to push by injecting my GitHub PAT into the URL itself.
 
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```yaml
 - task: Bash@3
   displayName: push
   condition: and(eq(variables['abortJustMigrated.aborted'], 'false'), succeeded())
@@ -283,14 +336,15 @@ The last step is to push the changes back to the contributor’s PR branch. I am
       echo "https://$GITHUBPAT:x-oauth-basic@github.com" >> ~/.git-credentials
       git push origin "$SYSTEM_PULLREQUEST_SOURCEBRANCH"
 ```
+[azure-pipelines.migrate.yaml#L176](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L176)
 
-</div>–[azure-pipelines.migrate.yaml#L176](https://github.com/collinbarrett/FilterLists/blob/fdf7e5f97c10a4c888340696467a2a0407cd4871/server/azure-pipelines.migrate.yaml#L176)
+## Applying Migrations on Startup
 
-</div></div>## Applying Migrations on Startup
+Now that I have migrations automatically added to pull requests which change data, I just need to ensure that the new
+migrations are applied on every deploy to production. To do that, I make a call to the `Migrate<TContext>()` extension
+  method below before `Run()`-ing the `IWebHost` on API startup.
 
-Now that I have migrations automatically added to pull requests which change data, I just need to ensure that the new migrations are applied on every deploy to production. To do that, I make a call to the `Migrate<TContext>()` extension method below before `Run()`-ing the `IWebHost` on API startup.
-
-<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```csharp
 public static void Main(string[] args)
 {
     CreateWebHostBuilder(args)
@@ -299,10 +353,9 @@ public static void Main(string[] args)
         .Run();
 }
 ```
+[Program.cs](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/FilterLists.Directory.Api/Program.cs)
 
-</div>–[Program.cs](https://github.com/collinbarrett/FilterLists/blob/master/services/Directory/FilterLists.Directory.Api/Program.cs)
-
-</div></div><div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-syntaxhighlighter-code ">```
+```csharp
 public static class IWebHostExtensions
 {
     public static IWebHost Migrate<TContext>(this IWebHost webHost) where TContext : DbContext
@@ -318,18 +371,31 @@ public static class IWebHostExtensions
     }
 }
 ```
+-IWebHostExtensions.cs
 
-</div>-IWebHostExtensions.cs
-
-</div></div>## Next Steps
+## Next Steps
 
 While I am quite happy with this new solution, there are still some further improvements that I would like to make.
 
-- Evaluate if using an Azure Pipelines [Repository Resource](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/resources?view=azure-devops&tabs=schema#resources-repositories) with a GitHub service connection to push to the forked repository is possible and better than using a personal access token. I have the PAT stored in a secret, but technically it grants access to all of my public repositories. I have a hunch that using a Resource is a more secure method.
-- I have some API endpoints designed to serve a sorted version of the data as JSON to make it easier to apply sorting and linting conventions. To my knowledge, I am the only one who uses these currently, and I only clean up the JSON on occasion when I take the time to do so manually. As a part of this Migrate Pipeline, I would like to automatically sort and lint the JSON files and push them back to the pull request alongside the new migration.
-- My top data contributor has for some time [requested a UI for data change submissions](https://github.com/collinbarrett/FilterLists/issues/372). This would certainly be far more user-friendly than manipulating a database in JSON; I just have not carved out the time to build it yet. Maybe there is an off-the-shelf tool that could support this without building something custom?
-- I have read some rumors lately that Microsoft’s long-term plan is to consolidate around the GitHub platform. Therefore, it might make sense to evaluate migrating my Azure Pipelines to GitHub Actions at some point.
+- Evaluate if using an Azure Pipelines [Repository
+Resource](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/resources?view=azure-devops&tabs=schema#resources-repositories)
+with a GitHub service connection to push to the forked repository is possible and better than using a personal access
+token. I have the PAT stored in a secret, but technically it grants access to all of my public repositories. I have a
+hunch that using a Resource is a more secure method.
+- I have some API endpoints designed to serve a sorted version of the data as JSON to make it easier to apply sorting
+and linting conventions. To my knowledge, I am the only one who uses these currently, and I only clean up the JSON on
+occasion when I take the time to do so manually. As a part of this Migrate Pipeline, I would like to automatically sort
+and lint the JSON files and push them back to the pull request alongside the new migration.
+- My top data contributor has for some time [requested a UI for data change
+submissions](https://github.com/collinbarrett/FilterLists/issues/372). This would certainly be far more user-friendly
+than manipulating a database in JSON; I just have not carved out the time to build it yet. Maybe there is an
+off-the-shelf tool that could support this without building something custom?
+- I have read some rumors lately that Microsoft's long-term plan is to consolidate around the GitHub platform.
+Therefore, it might make sense to evaluate migrating my Azure Pipelines to GitHub Actions at some point.
 
 ## Further Exploration
 
-Just before publishing, I watched [this new talk by Jimmy Bogard on CI/CD for databases](https://www.youtube.com/watch?v=HdXDSjWe2Q8). [RoundhousE](https://github.com/chucknorris/roundhouse) looks like a great tool to decouple migrations from EF, should that be needed. I probably will not try it with FilterLists in the near future, but I look forward to trying it in a future project.
+Just before publishing, I watched [this new talk by Jimmy Bogard on CI/CD for
+databases](https://www.youtube.com/watch?v=HdXDSjWe2Q8). [RoundhousE](https://github.com/chucknorris/roundhouse) looks
+like a great tool to decouple migrations from EF, should that be needed. I probably will not try it with FilterLists in
+the near future, but I look forward to trying it in a future project.

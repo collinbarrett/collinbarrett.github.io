@@ -26,7 +26,7 @@ MyObjectCollection.Add(new MyObject(0, "0100", "Name"))
 MyObjectCollection.Add(new MyObject(0, "0200", "Address"))
 ```
 
-The method’s developer used this pattern about one hundred times in the same method! To iteratively refactor, I created an extension overload method for Add() which hid and de-duplicated the repetitive MyObject instantiations.
+The method's developer used this pattern about one hundred times in the same method! To iteratively refactor, I created an extension overload method for Add() which hid and de-duplicated the repetitive MyObject instantiations.
 
 Refactoring the original method, however, then required much manual selecting and deleting. I would have to delete each instance of `new MyObject(` and `)`. I could use standard find and replace for all instances of `new MyObject(`, but how would I remove their corresponding closing parenthesis?
 
@@ -38,7 +38,7 @@ Regex is powerful, but I use it so rarely that it is not a skill in which I have
 
 ## TL;DR Solution
 
-In Visual Studio’s “Find” field:
+In Visual Studio's “Find” field:
 
 ```
 (MyObjectCollection.Add&#40;new MyObject)(&#40;[^)]*&#41;)(&#41;)

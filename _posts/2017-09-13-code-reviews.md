@@ -61,7 +61,7 @@ reviewing peer code.
 In addition to the amount of time, we have to balance the tradeoff between context switching and timely completion. When
 I submit a code review request, I desire a somewhat tight feedback loop from my colleagues (preferably within 4-6
 hours). However, on the receiving end, if I am neck-deep in a complicated bug or feature of my own, I hate to switch out
-of my mental space to provide timely comments on my peer’s issue.
+of my mental space to provide timely comments on my peer's issue.
 
 We have not discussed a target turnaround time as a team yet. We have not needed to, as everyone has been providing
 feedback in half a day, a full day at the most. The time could come, though, when the process is no longer new and at

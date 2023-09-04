@@ -23,16 +23,16 @@ tags:
 My wife and I are making our way through *The West Wing*. I have seen it before (…twice), but it is a classic and
 definitely worth watching. One of my favorite [scenes from Season 1](https://youtu.be/pj4PwyfDNuI) predicted some of the
 most controversial issues surrounding privacy that we are discussing now, 15 years later. Anyway, last night we watched
-Season 2, Episode 13: “Bartlet’s Third State of the Union.”
+Season 2, Episode 13: “Bartlet's Third State of the Union.”
 
 I have been refreshing my memory on Big-O Notation, so I wanted to attempt a quick mashup with a practical example from
-the show. Here is a loose application of Big-O complexity analysis to the scale of sample results from Josh and Joey’s
+the show. Here is a loose application of Big-O complexity analysis to the scale of sample results from Josh and Joey's
 actual and hypothetical political polling.
 
 ## O(n)
 
-Joey’s polling team, watched annoyingly close by Josh, was tasked with collecting survey data immediately following
-President Bartlet’s address. To do so, they called a sampling of homes in shifting time zones as the evening progressed.
+Joey's polling team, watched annoyingly close by Josh, was tasked with collecting survey data immediately following
+President Bartlet's address. To do so, they called a sampling of homes in shifting time zones as the evening progressed.
 In this scenario, to achieve a result size of `x`, they had to call `n` homes and receive a response rate of `r`.
 
 ```
@@ -46,7 +46,7 @@ say that the algorithm generating the result size is O(n) in complexity.
 
 ## O(1)
 
-Before the initial results started to roll in, however, Josh’s growing impatience was pushed over the edge when the call
+Before the initial results started to roll in, however, Josh's growing impatience was pushed over the edge when the call
 center was struck with a power outage. Now, no matter how many numbers they might attempt to dial, the new response rate
 `r'` would remain a constant 0.
 
@@ -76,7 +76,7 @@ complexity.
 
 ## O(n!)
 
-What if the polling was instead set up as a sort of phone tree (again, unrealistic, but bear with me). Joey’s primary
+What if the polling was instead set up as a sort of phone tree (again, unrealistic, but bear with me). Joey's primary
 team would be responsible for calling `n` homes to collect sample data. Each of those participants would then be
 required to call `n-1` new participants. This chain would continue until a participant in the tree was only required to
 call one final participant in their branch. In this example, the maximum number of polling results that would need to be

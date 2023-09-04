@@ -36,7 +36,7 @@ development, accounting, in addition to soft skills), and even half my commute t
 - Designs, develops and implements business applications using the .NET Framework and SQL Server technologies.
 - Independently or as a team member performs programming and analysis work to automate/improve operating processes,
 capture and report needed information, automate modeling/forecasting routines, etc. using appropriate technology.
-Specific programming/analysis work in Shelby’s financial software (GL, AR/AP, PR, FA, PO).
+Specific programming/analysis work in Shelby's financial software (GL, AR/AP, PR, FA, PO).
 - Recognizes probable interactions of other related programs with the assigned program(s); appropriately adjusts system
 design/configuration to accommodate existing software and operating environments. May modify and adapt existing systems
 to meet new system requests.

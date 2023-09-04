@@ -111,7 +111,7 @@ Microsoft is [working on a settings UI](https://twitter.com/cinnamon_msft/status
 
 In the future, I look forward to…
 
-- replacing PUTTY (for server SSH access) with Windows Terminal and [Windows 10’s native OpenSSH support](https://www.hanselman.com/blog/how-to-use-windows-10s-builtin-openssh-to-automatically-ssh-into-a-remote-linux-machine).
+- replacing PUTTY (for server SSH access) with Windows Terminal and [Windows 10's native OpenSSH support](https://www.hanselman.com/blog/how-to-use-windows-10s-builtin-openssh-to-automatically-ssh-into-a-remote-linux-machine).
 - using native Linux on Windows via WSL 2 more frequently.
 - exploring other shell options.
 - using [Powerline](https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh) for enhanced readability and cool factor.

@@ -27,9 +27,9 @@ transparency or a new business model, we must continue to take the protection of
 
 Typical adblockers run as an extension in modern web browsers. As we browse the Internet, they compare the requests
 being made by the sites we visit their list of hosts and filters to block advertisements, trackers, and general
-annoyances selectively. This measure helps protect the surfer’s privacy, prevents [malvertising
+annoyances selectively. This measure helps protect the surfer's privacy, prevents [malvertising
 attacks](https://www.wired.com/insights/2014/11/malvertising-is-cybercriminals-latest-sweet-spot/ "Why Malvertising Is
-Cybercriminals’ Latest Sweet Spot - Wired"), and [reduces bandwidth
+Cybercriminals' Latest Sweet Spot - Wired"), and [reduces bandwidth
 requirements](https://venturebeat.com/2015/07/08/blocking-ads-can-cut-network-traffic-25-to-40-study-shows/ "Blocking
 ads can cut network traffic 25% to 40%, study shows - VentureBeat"). Many individuals and organizations work hard to
 maintain these filter lists for anyone to use. Locating and selecting these filter lists, however, is not a necessarily

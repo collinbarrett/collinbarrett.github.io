@@ -75,7 +75,7 @@ params, access level, etc. CodeRush seems to assume you always want to follow th
 
 ### Debug Visualizer \[`ReSharper++`\]
 
-This feature is fairly new to ReSharper but seems pretty similar in both products. I prefer the interface of ReSharper’s
+This feature is fairly new to ReSharper but seems pretty similar in both products. I prefer the interface of ReSharper's
 implementation a bit more, but that may very well be personal preference.
 
 ### Team Sharing \[`ReSharper++`\]
@@ -83,7 +83,7 @@ implementation a bit more, but that may very well be personal preference.
 Anytime you change an option in ReSharper, you can save the setting to your local computer, to a personal
 project-specific config file, or to a team-shared config file (to check into source control). This is quite important
 for enforcing team style guide policies and would allow changes to team settings to be code reviewed just like any other
-code change. CodeRush’s support for this kind of thing seems much less fleshed out. ([see
+code change. CodeRush's support for this kind of thing seems much less fleshed out. ([see
 here](https://supportcenter.devexpress.com/Ticket/Details/T368775/coderush-enforcing-same-code-analysis-rule-set-across-team-and-integrating-with-tfs-ci))
 
 ### Test Runner

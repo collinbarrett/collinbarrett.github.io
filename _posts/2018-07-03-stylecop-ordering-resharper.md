@@ -23,8 +23,8 @@ cleanliness/maintainability factor and not a functional one, but I do want to cr
 
 As a heavy user of ReSharper (R#), I often apply their default C# [File
 Layout](https://www.jetbrains.com/help/resharper/File_and_Type_Layout.html) via [Code
-Cleanup](https://www.jetbrains.com/help/resharper/Code_Cleanup__Index.html) to automatically re-arrange members. R#’s
-default File Layout is fairly good, but I would prefer to use Microsoft’s
+Cleanup](https://www.jetbrains.com/help/resharper/Code_Cleanup__Index.html) to automatically re-arrange members. R#'s
+default File Layout is fairly good, but I would prefer to use Microsoft's
 [StyleCop](https://en.wikipedia.org/wiki/StyleCop) ordering guidelines instead. R#, for example, does not default to
 ordering properties by access level, which I find valuable for consistency.
 
@@ -33,14 +33,14 @@ exactly compliant. Additionally, JetBrains does publish a [StyleCop
 extension](https://plugins.jetbrains.com/plugin/11619-stylecop-by-jetbrains) for R#, but its scope does not seem to be
 directly applicable to applying a File Layout alone.
 
-## StyleCop’s Ordering Rules
+## StyleCop's Ordering Rules
 
 The [StyleCopAnalyzer project](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) has a subset of rules that I have
 converted for use in R# File Layout. This handful of rules were cherry-picked only in the sense that they meet the
 following requirements:
 
 - are applicable inside of a class, struct, or interface
-- are supported by R#’s File Layout feature
+- are supported by R#'s File Layout feature
 - are not [deprecated by
 StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/KnownChanges.md)
 

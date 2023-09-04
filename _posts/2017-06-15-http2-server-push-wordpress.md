@@ -82,7 +82,7 @@ pushed, resources are received by the full round-trip request/response lifecycle
 </figure>
 
 Applying HTTP/2 Server Push to the scripts and stylesheets downloads all of those resources in parallel and they require
-far less time to acquire. The files are now downloaded from the browser’s perspective on the order of around 10ms on
+far less time to acquire. The files are now downloaded from the browser's perspective on the order of around 10ms on
 average vs. more like 25ms when not pushed. This disparity would likely be even greater if I were not using a global CDN
 (Cloudflare) to deliver assets from nodes near the client.
 
@@ -95,7 +95,7 @@ average vs. more like 25ms when not pushed. This disparity would likely be even 
 </figure>
 
 The true median run when I applied HTTP/2 Server Push to fonts and the logo .png as well produced a bit of an anomaly
-waterfall. As you can see below, all of these assets were downloaded immediately and in parallel as we’d expect.
+waterfall. As you can see below, all of these assets were downloaded immediately and in parallel as we'd expect.
 However, the download times for the assets were much higher than expected. If we look at [all of the other runs in the
 batch](https://www.webpagetest.org/result/170615_8F_2CP/), though, this seems to be due to a fluke of some kind (such as
 network congestion).

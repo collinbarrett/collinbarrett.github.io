@@ -17,7 +17,7 @@ tags:
 ## Requirement
 
 I had a data set (pricing by state) delivered last week from a business application user that I needed to import into
-the application’s database. The user provided an Excel worksheet in the format below:
+the application's database. The user provided an Excel worksheet in the format below:
 
 | SKU | TN | MS | AR |
 |---|---|---|---|
@@ -36,7 +36,7 @@ My database table, however, was designed as follows:
 | 5 | AR | 1.09 |
 | 5 | MS | .99 |
 
-I needed a plan to transform the worksheet data to match my table’s structure.
+I needed a plan to transform the worksheet data to match my table's structure.
 
 ## A Solution
 

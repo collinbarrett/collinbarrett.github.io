@@ -82,7 +82,7 @@ nominally and provides HTML, CSS, and JS minification, both of which do help as 
 | 5.616s | 3.087s | 2.963MB |
 
 We were able to shave off more than 3.5s from the first view load time for a reduction of 40%. By serving the entire
-page content from Cloudflare’s closest CDN node to the client, shared hosting server response time and potentially
+page content from Cloudflare's closest CDN node to the client, shared hosting server response time and potentially
 longer round trip time has been almost entirely eliminated. While 5.6s is still not great, it is substantially better
 for visitor experience and SEO than the prior 9.2s. Furthermore, since Cloudflare also applied further browser caching
 headers to all content served from the primary domain, hopping around the site after the first-page load does feel
@@ -93,7 +93,7 @@ significantly more snappy than before since the browser maintains a local cache 
 I prepared for Suzanne a collection of optimizations that would require more manual adjustments on a post-by-post basis.
 By inserting a WordPress-generated smaller version of each image into her posts (and then potentially linking to the
 full-resolution copy), the amount of data required for image downloads could be significantly reduced. I also wanted to
-convert her site over to, at a minimum, Cloudflare’s “Flexible SSL” so that we could realize the concurrency and other
+convert her site over to, at a minimum, Cloudflare's “Flexible SSL” so that we could realize the concurrency and other
 improvements of HTTP/2. This, however, requires fixing a lot of hard-coded “HTTP” references which is beyond the scope
 of what I was able to do.
 

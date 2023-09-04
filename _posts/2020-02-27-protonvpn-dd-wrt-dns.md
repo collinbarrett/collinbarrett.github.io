@@ -50,7 +50,7 @@ automatic failover.
         Configs](/assets/img/protonVpnConfigs_collinmbarrett-300x239.jpg)](/assets/img/protonVpnConfigs_collinmbarrett.jpg)
         <figcaption>The ProtonVPN configuration download portal</figcaption>
     </figure>
-</div>ProtonVPN has hundreds of servers classified by type (Secure Core, Tor, regular), class (basic or premium), and
+ProtonVPN has hundreds of servers classified by type (Secure Core, Tor, regular), class (basic or premium), and
 location. For users who connect to the VPN through applications on their devices, selecting which server to connect to
 is simple and easy to change through the polished UI. We can even see an estimate of the current load on each server so
 we can select one likely to be more performant.
@@ -58,7 +58,7 @@ we can select one likely to be more performant.
 [DD-WRT](https://dd-wrt.com/)‘s OpenVPN client requires either an IP address or a URL to which it will connect. For
 example, we can specify the IP address of their server named “US-TX#3” to connect to a specific premium server in Texas,
 or we can specify “`us.protonvpn.com`” to connect to any server based in the U.S. Whichever server or URL we select is
-sticky because it applies to our entire household and logging on to the router’s admin panel to change it is not
+sticky because it applies to our entire household and logging on to the router's admin panel to change it is not
 frictionless.
 
 Unfortunately, I have found that setting a single static server to connect to from our router does not hold up long-term
@@ -82,7 +82,7 @@ or server-specific IP addresses.
         ProtonVPN](/assets/img/protonVpnCloudflareDns_collinmbarrett-300x98.jpg)](/assets/img/protonVpnCloudflareDns_collinmbarrett.jpg)
         <figcaption>Cloudflare DNS records</figcaption>
     </figure>
-</div>Since I live in Memphis, the geographically closest city with ProtonVPN servers is Atlanta. So, I collected the IP
+Since I live in Memphis, the geographically closest city with ProtonVPN servers is Atlanta. So, I collected the IP
 addresses of all of the premium servers in Atlanta (9 at the time of publishing) and created DNS A records for the same
 subdomain on a domain I own at my DNS provider (Cloudflare). In DD-WRT, I have then configured the OpenVPN client
 connection to this new custom URL. Every time the client connects, Cloudflare DNS serves it a different IP address via

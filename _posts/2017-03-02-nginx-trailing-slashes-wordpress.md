@@ -55,7 +55,7 @@ However, with the inclusion of the new WordPress [REST API](http://v2.wp-api.org
 above breaks things. I discovered this when trying to enable the [Markdown](https://jetpack.com/support/markdown/)
 feature of [Jetpack](https://jetpack.com/). I watched API calls in the Chrome console get redirected to include a
 trailing slash and then fail. I was unable to discover a solution with Google-fu, but with some help from the local
-Slack community, I pieced together the ‘if()’ below. It seems to do the trick.
+Slack community, I pieced together the ‘if()' below. It seems to do the trick.
 
 ```
 ##

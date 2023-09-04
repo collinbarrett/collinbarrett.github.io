@@ -17,7 +17,7 @@ tags:
 ---
 
 When editing a post in the WordPress post editor, there is a link in the sidebar “tags” section that reads “Choose from
-the most used tags.” To improve my blog’s navigability and SEO, I want to use a significant amount (within reason) of
+the most used tags.” To improve my blog's navigability and SEO, I want to use a significant amount (within reason) of
 tags, and I want to do my best to ensure that I apply them to all possible posts. I was finding this difficult to do
 without being able to show all of the existing tags in the WordPress post editor.
 

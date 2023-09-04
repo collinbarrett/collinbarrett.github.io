@@ -24,9 +24,9 @@ tags:
 
 ## A Primer on Web Fonts
 
-The developer of a website has two options for selecting a font in which he or she would prefer you to read the site’s
+The developer of a website has two options for selecting a font in which he or she would prefer you to read the site's
 text. They can choose from a set of “[web safe fonts](https://www.cssfontstack.com/ "CSS Font Stack")” that are assumed
-to be locally installed on most of their visitors’ devices, or they can direct the visitor’s browser to download a
+to be locally installed on most of their visitors' devices, or they can direct the visitor's browser to download a
 custom web font before rendering the page. Since the selection of fonts that are available by default on substantially
 all devices is so narrow, most developers with any desire for consistent and quality design will opt to use a web font.
 
@@ -58,12 +58,12 @@ wrong time when a yet unknown vulnerability could occur.
 
 Additionally, most of the time web fonts are downloaded from a third-party delivery network such as [Google Web
 Fonts](https://fonts.google.com/) or [Adobe Fonts](https://fonts.adobe.com/). One of the advantages of using these
-systems is that the likelihood that a visitor’s browser already has a font cached locally from a previous visit to any
+systems is that the likelihood that a visitor's browser already has a font cached locally from a previous visit to any
 other site using the same font is relatively high. If browser caches the font, a re-download does not need to be
 initiated. Whether the font is cached locally or not, however, the client browser still creates an extra HTTP(S)
 connection to the third-party domain.
 
-There are some privacy concerns when your browser makes the link to the font network’s domain. While they deny the
+There are some privacy concerns when your browser makes the link to the font network's domain. While they deny the
 practice, these services have the ability of [profiling](/tag/tracking/) your browser (using browser fingerprinting with
 your IP address and HTTP referer header) to track what sites you visit, building a valuable profile about you that they
 could sell to marketers. I like to think the best of companies, but since I cannot know for sure what business decisions
@@ -169,7 +169,7 @@ starting here if you consider yourself a beginner.
 If you already have uBlock Origin installed on the browser that you are currently reading this article in, just click
 the “Add” link below to subscribe automatically to this list.
 
-Fanboy’s Anti Third-Party Fonts – [View](https://fanboy.co.nz/fanboy-antifonts.txt "View Fanboy's Anti Third-Party
+Fanboy's Anti Third-Party Fonts – [View](https://fanboy.co.nz/fanboy-antifonts.txt "View Fanboy's Anti Third-Party
 Fonts") | [Add](abp:subscribe?location=https://fanboy.co.nz/fanboy-antifonts.txt&title=Fanboy%20Third-Party%20Fonts "Add
 Fanboy's Anti Third-Party Fonts to uBlock Origin or Adblock Plus")
 

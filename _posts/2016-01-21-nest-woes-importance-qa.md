@@ -29,7 +29,7 @@ the “smart home” revolution is to come finally to fruition.
 Let me start by acknowledging that we used the Nest Thermostat and Protect for over a year with no major issues. This
 tenured success is both an affirmation of decent hardware and software, but also a confirmation the Nest team did not
 perform proper testing before their major software release in December. I will also say that my personal evaluation of
-Nest’s customer service is a 4 out of 5. That is a pretty solid rating, but they are not among the elite few companies
+Nest's customer service is a 4 out of 5. That is a pretty solid rating, but they are not among the elite few companies
 nailing it (i.e., Buffer). Find below a timeline of our Nest experience.
 
 ## The Bugs
@@ -71,7 +71,7 @@ am just before we would wake up, and then to drop back down to 59°F at 6:30 am 
 this morning, when I rolled out of bed at 5:45 am, the thermostat was set to 59°F when it should have been 69°F.
 Needless to say, my wife was not happy.
 
-> If it ain’t broke, don’t fix it.
+> If it ain't broke, don't fix it.
 > — <cite>T. Bert Lance</cite>
 
 ## Wrapping Up
@@ -82,7 +82,7 @@ quantities of variables and life or death repercussions, creating unit tests can
 a device as important as even a thermostat, and the current version of the software works, you better be real sure the
 hot new update you are about to push is rock solid.
 
-I do not intend for this to be a Nest-bashing post. I love the products when they work, and Tony’s team has made huge
+I do not intend for this to be a Nest-bashing post. I love the products when they work, and Tony's team has made huge
 waves in the push towards a smarter home. I just think that it is important to note that as our light bulbs,
 Crock-Pots®, and refrigerators all come online shortly, the software behind them better be rock solid. People can put up
 with a traditional computer malfunctioning from time to time, but if they are locked out of their home because their

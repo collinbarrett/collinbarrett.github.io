@@ -138,7 +138,7 @@ Learning what we did very recently in “Case 1”, we had to shoot this down qu
 
 ## Consequences of Using Static Fields
 
-- It permanently allocates memory for only that field’s use.
+- It permanently allocates memory for only that field's use.
 - Its value lives on immortally beyond the lifetime of any given instance of its containing class.
 - It is not accessible across nodes in a load-balanced environment.
 - It persists across all tenants in the AppDomain of a multi-tenant environment.

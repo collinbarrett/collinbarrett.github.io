@@ -27,7 +27,7 @@ The product is especially beneficial in large buildings with a significant amoun
 occupies floors 30-35, for example, employees of that tenant can quickly travel between their occupied floors at the
 same time another cabin in the same shaft might be taking a passenger from floor 10 to the lobby.
 
-Phase II of Georgia Tech’s “Technology Square” in Midtown Atlanta will break ground on April 20th, and the new building
+Phase II of Georgia Tech's “Technology Square” in Midtown Atlanta will break ground on April 20th, and the new building
 will feature TWIN for the first time in the U.S.
 
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

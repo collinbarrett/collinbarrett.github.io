@@ -31,7 +31,7 @@ each distinct Group/Store/Vendor/SKU combination in the processed table.
 
 ## A Solution
 
-Transact-SQL’s RANK() function…
+Transact-SQL's RANK() function…
 
 > Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks
 that come before the row in question.

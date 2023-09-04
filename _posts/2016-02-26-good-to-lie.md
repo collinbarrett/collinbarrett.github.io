@@ -20,7 +20,7 @@ I try not to lie. It is disrespectful to my neighbor and against the nature of G
 problem being dishonest, however. When a service prompts me to provide the answers to a set of security questions, I
 make up random, often unintelligible answers to their devious collection of information. Granted, the majority of
 services have migrated away from this old security feature, but implementations are still commonplace. Why does eBay
-need to know my mother’s maiden name or Progressive Insurance need to know my pet’s name? It is a sorry attempt at
+need to know my mother's maiden name or Progressive Insurance need to know my pet's name? It is a sorry attempt at
 security which is likely more harmful than good.
 
 ## Two Reasons for Lying

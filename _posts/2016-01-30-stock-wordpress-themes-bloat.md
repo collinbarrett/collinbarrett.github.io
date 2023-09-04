@@ -38,7 +38,7 @@ increasing page load time and wasting bandwidth.
 So, by stepping through each .js and .css file loaded, I determined which files I needed for the current feature set
 that I am using and eliminated the rest. Deregistering unneeded scripts and styles is relatively simple, assuming you
 have a child theme setup already. For example, in the snippet below I remove the share button feature by deregistering
-its script and style in my child theme’s functions.php.
+its script and style in my child theme's functions.php.
 
 ```
 function remove_scripts()

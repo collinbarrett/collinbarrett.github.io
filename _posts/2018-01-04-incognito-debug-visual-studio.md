@@ -38,7 +38,7 @@ session is then fresh as if a user was visiting my application for the first tim
 
 To configure browsers to debug in this mode:
 
-1. Click the Debug Target control’s right-side chevron to view the list of installed browsers.
+1. Click the Debug Target control's right-side chevron to view the list of installed browsers.
 2. Click “Browse With…”.
 3. Click “Add…”.
 4. Configure the new target browser using the private/incognito command line argument. See the examples below.

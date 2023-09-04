@@ -20,7 +20,7 @@ tags:
 <figure aria-describedby="caption-attachment-3847" class="wp-caption alignright" id="attachment_3847"
     style="width: 278px">[![My Standing Desk at fred's,
     Inc.](/assets/img/standingDesk_collinmbarrett-278x300.jpg)](/assets/img/standingDesk_collinmbarrett.jpg)<figcaption
-        class="wp-caption-text" id="caption-attachment-3847">My Standing Desk at fred’s, Inc.</figcaption>
+        class="wp-caption-text" id="caption-attachment-3847">My Standing Desk at fred's, Inc.</figcaption>
 </figure>
 
 Despite being way behind the curve on this one, I wanted to jot down some first impressions after one week with a

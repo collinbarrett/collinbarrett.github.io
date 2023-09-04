@@ -19,13 +19,13 @@ tags:
 - 'Visual Studio'
 ---
 
-Today is my last day with Fred’s.
+Today is my last day with Fred's.
 
 I joined the pharmacy IT group last year to replace their outgoing application developer. After a couple of weeks, IT
 leadership re-organized me under the general application development group serving both pharmacy and retail business
 applications.
 
-Fred’s has been around a long time. Like many such organizations, it maintains legacy infrastructure and technical debt.
+Fred's has been around a long time. Like many such organizations, it maintains legacy infrastructure and technical debt.
 Leadership in recent years has been making great strides in the modernization of systems and procedures. The development
 team is currently undergoing some significant rewrites creating modern [.NET
 Core](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) microservices hosted in the cloud. I
@@ -41,5 +41,5 @@ I have grown tremendously in technical ability and customer service during my te
 by current management. I even got to learn a few oddball skills like [JAMS](https://www.jamsscheduler.com/) and [Elixir
 Repertoire](https://elixirtech.com/repertoire-2/).
 
-I am thankful for the team, projects, and experiences that I have had at Fred’s. I sincerely hope that my time provided
+I am thankful for the team, projects, and experiences that I have had at Fred's. I sincerely hope that my time provided
 as much value to the company as it did to me. I wish the team the best of luck moving forward.

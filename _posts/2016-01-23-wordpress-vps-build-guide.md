@@ -62,10 +62,10 @@ learning curve and to iterate rapidly without extra overhead. I decided to “op
 
 ## Design Decisions
 
-The first inspiration I received to try this stack was [Mark Jaquith](https://markjaquith.com/)’s talk, “[Next
+The first inspiration I received to try this stack was [Mark Jaquith](https://markjaquith.com/)'s talk, “[Next
 Generation WordPress Hosting
 Stack](https://wordpress.tv/2014/10/16/mark-jaquith-next-generation-wordpress-hosting-stack/ "WordPress TV").” It is
-worth a listen, and I based this build guide largely on Mark’s talk.
+worth a listen, and I based this build guide largely on Mark's talk.
 
 ### Host OS
 
@@ -83,7 +83,7 @@ FastCGI helps reduce the I/O back to the PHP engine, further reducing the latenc
 
 ### Database Server
 
-I chose [MariaDB](https://mariadb.org/) purely based on others’ opinions that it slightly edges out
+I chose [MariaDB](https://mariadb.org/) purely based on others' opinions that it slightly edges out
 [MySQL](https://www.mysql.com/) in performance, etc. I do not have a strong preference, however, between MariaDB, MySQL,
 or [Percona](https://www.percona.com/). Any of them should work fine. It is important to perform at least some basic
 optimizations on the database server, though, such as enabling query caching. There are a variety of tuning scripts,
@@ -92,19 +92,19 @@ further.
 
 ### PHP Execution Engine
 
-The battle between [PHP-FPM](https://php-fpm.org/) and Facebook’s newer [HHVM](https://hhvm.com/) for PHP processing is
+The battle between [PHP-FPM](https://php-fpm.org/) and Facebook's newer [HHVM](https://hhvm.com/) for PHP processing is
 heating up with the recent release of PHP 7. The benchmarks that I see still show HHVM outperforming php7-fpm, though it
 is much closer than with previous iterations of PHP-FPM.
 
 ### Object Caching
 
-Object caching via [Redis](https://redis.io/) is the last server-side optimization that reduces the server’s latency.
+Object caching via [Redis](https://redis.io/) is the last server-side optimization that reduces the server's latency.
 Because WordPress relies on large queries to the database every time it serves a page, caching chunks of these query
 results in memory saves a significant amount of time and load on the database server.
 
 ### Encryption and Transfer Protocol
 
-Also, in this guide, I describe how to configure TLS encryption using the new and free [Let’s
+Also, in this guide, I describe how to configure TLS encryption using the new and free [Let's
 Encrypt](https://letsencrypt.org/) service (I have recommended a 4096-bit RSA key because I am a bit of a security nut,
 but a 2048-bit key should be perfectly fine). Not only is encryption so easy today, and highly recommended since
 WordPress collects credentials and other personal information, but it paves the way for configuring HTTP/2. NGINX now
@@ -113,11 +113,11 @@ concurrent requests much more efficiently.
 
 ### Deprecated
 
-I spent quite awhile testing and using Google’s [PageSpeed
+I spent quite awhile testing and using Google's [PageSpeed
 Module](https://developers.google.com/speed/pagespeed/module/) (also available for Apache) to perform optimizations on
 the front-end DOM contents before leaving the server. Minification, image compression, etc. are all valuable ways of
 speeding up page load times, but I was never able to get the benefits to justify themselves in my setups. The latency
-introduced by PageSpeed’s processing outweighed the benefits.
+introduced by PageSpeed's processing outweighed the benefits.
 
 ### Not Tested
 

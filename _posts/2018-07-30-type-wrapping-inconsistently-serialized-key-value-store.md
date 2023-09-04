@@ -33,12 +33,12 @@ controls like filters, pickers, and text boxes. The RDBMS table looks something 
 As you can see in this small sample, the `Pref` values are a bit of a “garbage bin” (naming credit to my colleague).
 They are generally (but not always) serialized to a `VARCHAR` looking something like:
 
-<div class="wp-block-syntaxhighlighter-code ">```
+```
     
 <Key1>= <Value1> <Key2>= <Value2>
 ```
 
-</div>There can be any number of key/value pairs. Values can be of any type (such as `INTEGER`, `VARCHAR`, `BOOLEAN`, `TIMESTAMP`) and can also be a comma-separated list. There are even instances of comma-separated lists of different types (such as {`VARCHAR`, `TIMESTAMP`, `TIMESTAMP`}). Because the serialization is currently a responsibility of the view layer, format and naming are inconsistent from module-to-module.
+There can be any number of key/value pairs. Values can be of any type (such as `INTEGER`, `VARCHAR`, `BOOLEAN`, `TIMESTAMP`) and can also be a comma-separated list. There are even instances of comma-separated lists of different types (such as {`VARCHAR`, `TIMESTAMP`, `TIMESTAMP`}). Because the serialization is currently a responsibility of the view layer, format and naming are inconsistent from module-to-module.
 
 The view layer is unfortunately also the owner of which types each value represents. Actually, in many cases, the type is never explicitly stated at all; it is just inferred based on the branching or binding logic that consumes it. We found the following patterns throughout the view layer just before the data is needed or to save:
 

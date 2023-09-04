@@ -38,7 +38,7 @@ help protect against this type of privacy invasion.
 
 ## An Analogy
 
-Let’s say that, for some reason, every time you make a purchase at a retail store, you had to report to a single
+Let's say that, for some reason, every time you make a purchase at a retail store, you had to report to a single
 universal organization to let them know who you are, where you are, and what you purchased. This team, in return,
 provides you with a convenient and virtually free payment protocol to use in any retail store that you want. That
 organization and their advertising partners then have the ability to profile your shopping habits to better market to
@@ -56,7 +56,7 @@ intrusion Decentraleyes is aiming to block.
 
 When a web browser makes a request for a common library from one of these CDNs to render any given site, Decentraleyes
 intercepts the request and serves the file from a local store. The concept is simple, but it provides a two-fold
-benefit. CDN vendors are unable to track users’ habits across the web, and browsing speed and bandwidth use are slightly
+benefit. CDN vendors are unable to track users' habits across the web, and browsing speed and bandwidth use are slightly
 optimized because this data is already on the local computer.
 
 One of my most used browser bookmarks, Weather Underground, requires 16 such resources from CDNs. After installing
@@ -71,7 +71,7 @@ below), and you should be good to go. You can configure a few options in the add
 privacy conscious, there is a checkbox to “block requests for missing resources” which prevents the browser from ever
 loading such libraries from a CDN, even if Decentraleyes does not have it stored locally. For most users, leaking this
 bit of privacy is worth it to be still able to use non-broken websites. I have been testing the plugin on Mac, Windows,
-and Android for over 24 hours, loading over 1,000 instances of libraries from the plugin’s store and have been very
+and Android for over 24 hours, loading over 1,000 instances of libraries from the plugin's store and have been very
 pleased. Shout out to [Thomas](https://github.com/Synzvato "Thomas Synzvato - GitHub") for the excellent plugin.
 
 [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)

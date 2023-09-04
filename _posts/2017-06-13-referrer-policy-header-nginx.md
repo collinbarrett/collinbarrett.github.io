@@ -47,7 +47,7 @@ I will not re-post the definitions here, but there are a variety of policies to 
 
 Note that browser support varies as of the time of writing since this is a relatively new feature. When I first tried to implement the “same-origin” policy on one of my sites, I saw the error below in the Chrome console. Chromium [only supports some of these policies](https://bugs.chromium.org/p/chromium/issues/detail?id=627968&q=Referrer-Policy%20header%20strict&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified) currently. Until the Chromium team resolves this issue, I think I will keep my sites at “no-referrer” to err on the side of privacy. If “same-origin” gets more widely adopted, I will try that so as to protect the integrity of my internal analytics.
 
-> Failed to set referrer policy: The value ‘same-origin’ is not one of ‘no-referrer’, ‘no-referrer-when-downgrade’, ‘origin’, ‘origin-when-cross-origin’, or ‘unsafe-url’. The referrer policy has been left unchanged.
+> Failed to set referrer policy: The value ‘same-origin' is not one of ‘no-referrer', ‘no-referrer-when-downgrade', ‘origin', ‘origin-when-cross-origin', or ‘unsafe-url'. The referrer policy has been left unchanged.
 
 ## Sending Referrer Policy Header with NGINX
 
