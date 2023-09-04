@@ -9,5 +9,5 @@ redirect_from: /blog/
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 {% for post in sorted_posts %}
-* {{ post.date | date: "%Y-%m-%d" }} &#124; [{{ post.title }}]({{ post.url }})
+* {{ post.date | date: "%m.%d.%y" }} &#124; [{{ post.title }}]({{ post.url }})
 {% endfor %}
