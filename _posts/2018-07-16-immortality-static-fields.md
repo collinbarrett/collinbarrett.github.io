@@ -37,61 +37,61 @@ constructors, I tried instantiating them at declaration.
 
 Mainly, I wanted to replace this:
 
-```
+```csharp
 public class MyServiceClass
 {
-private readonly DataContext _context;
-private readonly Lazy&lt;MyRepo1&gt; _myRepo1;
-private readonly Lazy&lt;MyRepo2&gt; _myRepo2;
-private readonly Lazy&lt;MyRepo3&gt; _myRepo3;
-private readonly Lazy&lt;MyRepo4&gt; _myRepo4;
-private readonly Lazy&lt;MyRepo5&gt; _myRepo5;
-private readonly MyParamClass _myParamClass;
+    private readonly DataContext _context;
+    private readonly Lazy<MyRepo1> _myRepo1;
+    private readonly Lazy<MyRepo2> _myRepo2;
+    private readonly Lazy<MyRepo3> _myRepo3;
+    private readonly Lazy<MyRepo4> _myRepo4;
+    private readonly Lazy<MyRepo5> _myRepo5;
+    private readonly MyParamClass _myParamClass;
 
-public MyServiceClass()
-{
-_context = new DataContext();
-_myRepo1 = new Lazy&lt;MyRepo1&gt;(() =&gt; new MyRepo1(context));
-_myRepo2 = new Lazy&lt;MyRepo2&gt;(() =&gt; new MyRepo2(context));
-_myRepo3 = new Lazy&lt;MyRepo3&gt;(() =&gt; new MyRepo3(context));
-_myRepo4 = new Lazy&lt;MyRepo4&gt;(() =&gt; new MyRepo4(context));
-_myRepo5 = new Lazy&lt;MyRepo5&gt;(() =&gt; new MyRepo5(context));
-}
+    public MyServiceClass()
+    {
+        _context = new DataContext();
+        _myRepo1 = new Lazy<MyRepo1>(() => new MyRepo1(_context));
+        _myRepo2 = new Lazy<MyRepo2>(() => new MyRepo2(_context));
+        _myRepo3 = new Lazy<MyRepo3>(() => new MyRepo3(_context));
+        _myRepo4 = new Lazy<MyRepo4>(() => new MyRepo4(_context));
+        _myRepo5 = new Lazy<MyRepo5>(() => new MyRepo5(_context));
+    }
 
-public MyServiceClass(MyParamClass myParamClass)
-{
-_myParamClass = myParamClass;
-_context = new DataContext();
-_myRepo1 = new Lazy&lt;MyRepo1&gt;(() =&gt; new MyRepo1(context));
-_myRepo2 = new Lazy&lt;MyRepo2&gt;(() =&gt; new MyRepo2(context));
-_myRepo3 = new Lazy&lt;MyRepo3&gt;(() =&gt; new MyRepo3(context));
-_myRepo4 = new Lazy&lt;MyRepo4&gt;(() =&gt; new MyRepo4(context));
-_myRepo5 = new Lazy&lt;MyRepo5&gt;(() =&gt; new MyRepo5(context));
-}
+    public MyServiceClass(MyParamClass myParamClass)
+    {
+        _myParamClass = myParamClass;
+        _context = new DataContext();
+        _myRepo1 = new Lazy<MyRepo1>(() => new MyRepo1(_context));
+        _myRepo2 = new Lazy<MyRepo2>(() => new MyRepo2(_context));
+        _myRepo3 = new Lazy<MyRepo3>(() => new MyRepo3(_context));
+        _myRepo4 = new Lazy<MyRepo4>(() => new MyRepo4(_context));
+        _myRepo5 = new Lazy<MyRepo5>(() => new MyRepo5(_context));
+    }
 }
 ```
 
 With this:
 
-```
+```csharp
 public class MyServiceClass
 {
-private readonly DataContext _context = new DataContext();
-private readonly Lazy&lt;MyRepo1&gt; _myRepo1 = new Lazy&lt;MyRepo1&gt;(() =&gt; new MyRepo1(context));
-private readonly Lazy&lt;MyRepo2&gt; _myRepo2 = new Lazy&lt;MyRepo2&gt;(() =&gt; new MyRepo2(context));
-private readonly Lazy&lt;MyRepo3&gt; _myRepo3 = new Lazy&lt;MyRepo3&gt;(() =&gt; new MyRepo3(context));
-private readonly Lazy&lt;MyRepo4&gt; _myRepo4 = new Lazy&lt;MyRepo4&gt;(() =&gt; new MyRepo4(context));
-private readonly Lazy&lt;MyRepo5&gt; _myRepo5 = new Lazy&lt;MyRepo5&gt;(() =&gt; new MyRepo5(context));
-private readonly MyParamClass _myParamClass;
+    private readonly DataContext _context = new DataContext();
+    private readonly Lazy<MyRepo1> _myRepo1 = new Lazy<MyRepo1>(() => new MyRepo1(_context));
+    private readonly Lazy<MyRepo2> _myRepo2 = new Lazy<MyRepo2>(() => new MyRepo2(_context));
+    private readonly Lazy<MyRepo3> _myRepo3 = new Lazy<MyRepo3>(() => new MyRepo3(_context));
+    private readonly Lazy<MyRepo4> _myRepo4 = new Lazy<MyRepo4>(() => new MyRepo4(_context));
+    private readonly Lazy<MyRepo5> _myRepo5 = new Lazy<MyRepo5>(() => new MyRepo5(_context));
+    private readonly MyParamClass _myParamClass;
 
-public MyServiceClass()
-{
-}
+    public MyServiceClass()
+    {
+    }
 
-public MyServiceClass(MyParamClass myParamClass)
-{
-_myParamClass = myParamClass;
-}
+    public MyServiceClass(MyParamClass myParamClass)
+    {
+        _myParamClass = myParamClass;
+    }
 }
 ```
 
@@ -101,11 +101,11 @@ Initializing the repositories at declaration, however, throws a compiler error o
 
 I was moving a little bit too quickly, and this seemed like a simple fix. Just stuff a `static` keyword on the `DataContext` declaration, watch the red squiggles fade away, and call it done.
 
-```
+```csharp
 public class MyServiceClass
 {
-private static readonly DataContext context = new DataContext();
-...
+    private static readonly DataContext context = new DataContext();
+    ...
 }
 ```
 
@@ -117,10 +117,10 @@ Thankfully, the service class threw all kinds of errors on a repository retrieva
 
 **Update 7.18.18**: [DEV Community member Asti](https://dev.to/asti) pointed out that I could have also changed my second constructor to something like below to reduce the duplication:
 
-```
+```csharp
 public MyServiceClass(MyParamClass myParamClass) : this()
 {
-_myParamClass = myParamClass;
+    _myParamClass = myParamClass;
 }
 ```
 
