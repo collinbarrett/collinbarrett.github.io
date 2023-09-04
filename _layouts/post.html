@@ -3,7 +3,9 @@ layout: default
 ---
 
 {% if page.image %}
-<img src="{{ page.image }}" />
+<div class="header-image">
+    <img src="{{ page.image }}" />
+</div>
 {% endif %}
 
 <small>{{ page.date | date: "%-d %B %Y" }}</small>
