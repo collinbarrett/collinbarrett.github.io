@@ -138,7 +138,8 @@ kbd {
 }
 
 header {
-  width: 270px;
+  // width: 270px;
+  width: 290px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -207,7 +208,7 @@ strong {
 
 section {
   // width: 500px;
-  width: calc(100% - 270px - 90px);
+  width: calc(100% - 290px - 90px);
   float: right;
   padding-bottom: 50px;
 }
