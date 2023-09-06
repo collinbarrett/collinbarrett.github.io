@@ -21,12 +21,12 @@ tags:
 ## Call for Caching
 
 The [product](/joining-shelby-systems/) I support has chart widgets on several pages. We need to refactor some of their
-inefficient queries, but we were recently under pressure to achieve a quick [performance](/tag/performance/) boost. My
-team attempted to install [caching](/tag/cache/) so that the chart datasets were only retrieved once per day.
+inefficient queries, but we were recently under pressure to achieve a quick performance boost. My
+team attempted to install caching so that the chart datasets were only retrieved once per day.
 
 ## Flawed Approach
 
-A colleague used [ASP.NET](/tag/dotnet/)‘s HttpContext.Cache to persist the dataset in memory. The solution trimmed
+A colleague used ASP.NET‘s HttpContext.Cache to persist the dataset in memory. The solution trimmed
 widget names to use as the key and reduced page load speeds on repeat visits.
 
 After the release, we received reports from some customers hosted on shared servers. In a few cases, users saw chart

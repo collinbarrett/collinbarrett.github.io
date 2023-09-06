@@ -32,7 +32,7 @@ honestly wish I could have been around to see the completion of that migration, 
 in store for them.
 
 I have grown tremendously in technical ability and customer service during my tenure. My skills in design patterns,
-[.NET](/tag/dotnet/), [SQL Server](/tag/database/), SSIS, ORMs ([Entity Framework](https://docs.microsoft.com/en-us/ef/)
+.NET, SQL Server, SSIS, ORMs ([Entity Framework](https://docs.microsoft.com/en-us/ef/)
 &amp; [Dapper](https://github.com/DapperLib/Dapper)), UI ([Kendo UI](https://www.telerik.com/kendo-ui) &amp;
 [DevExpress](https://www.devexpress.com/)), and build tools
 ([VSTS](https://azure.microsoft.com/en-us/services/devops/pipelines/) &amp;

@@ -71,7 +71,7 @@ wanted to ensure that the site more clearly portrayed the message of their nonpr
 communication and support streams with the community.
 
 Our team of software developers and the GiveCamp Memphis community at large was more skilled with
-[WordPress](/tag/wordpress/) than Wix, so we decided to rebuild the site from scratch. We were able to move quickly,
+WordPress than Wix, so we decided to rebuild the site from scratch. We were able to move quickly,
 however, since we already had a lot of great copy we could migrate over from their existing site. This decision also
 provided the long-term benefit of eliminating the ongoing service fees of Wix.
 
@@ -104,7 +104,7 @@ platforms are more than adequate.
 
 However, since we were working on a university campus, all of these services seemed to block us or require extensive
 validation for us to use them. We tried MailJet, SendGrid, and [Sendinblue](https://www.sendinblue.com/) with no luck
-getting our account validated on a Saturday evening. Signing up through my consumer [VPN](/tag/vpn/) provider did not
+getting our account validated on a Saturday evening. Signing up through my consumer VPN provider did not
 seem to help bypass these restrictions either.
 
 We ended up using Mr. Craft's personal Google account to configure the new website to relay mail through Gmail. This

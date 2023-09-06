@@ -37,7 +37,7 @@ EF migration, performs a test seed, and pushes the migration back to the contrib
 
 I launched the [first ](https://web.archive.org/web/20161129125628/https://filterlists.com/)and
 [second](https://web.archive.org/web/20180215171316/https://filterlists.com/) designs of FilterLists back in 2015 and
-2017 as a simple [WordPress](/tag/wordpress/) installation with a table builder plugin. At the time, it only indexed a
+2017 as a simple WordPress installation with a table builder plugin. At the time, it only indexed a
 maximum of about 300 lists, and I managed updates myself through the WordPress back-end.
 
 Community members could submit new lists through a contact form on the site, and I would have to update the table
@@ -158,7 +158,7 @@ The odd cast to `IEnumerable<object>` in the call to `HasData()` is to ensure th
   adventure*, in my opinion.
 
   The handful of community members who help me maintain the FilterLists dataset should not need to know anything about
-  [.NET](/tag/dotnet/), EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand
+  .NET, EF Core, etc. Unfortunately, they do have to know a bit about how databases work to understand
   the [foreign key relationships in the JSON
   files](https://github.com/collinbarrett/FilterLists/wiki/Data-Model_sidebar), but I wanted to keep it as easy as
   possible for folks to contribute.

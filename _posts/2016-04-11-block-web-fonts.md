@@ -40,7 +40,7 @@ If you care to do the same, the rest of this piece will explain why and how.
 
 As a user of the internet, I want the web, of course, to be visually appealing. However, I also want the web to be fast.
 If I am trying to load a one-off news article for a quick peruse, I do not necessarily care to wait for my browser to
-download unnecessary resources such as [advertisements](/tag/advertisements/), social media widgets, and web fonts.
+download unnecessary resources such as advertisements, social media widgets, and web fonts.
 Furthermore, when using my rated data plan on my mobile device, I do not always care to pay for bandwidth used to
 download mere aesthetics such as fonts.
 
@@ -63,7 +63,7 @@ initiated. Whether the font is cached locally or not, however, the client browse
 connection to the third-party domain.
 
 There are some privacy concerns when your browser makes the link to the font network's domain. While they deny the
-practice, these services have the ability of [profiling](/tag/tracking/) your browser (using browser fingerprinting with
+practice, these services have the ability of profiling your browser (using browser fingerprinting with
 your IP address and HTTP referer header) to track what sites you visit, building a valuable profile about you that they
 could sell to marketers. I like to think the best of companies, but since I cannot know for sure what business decisions
 they make behind closed doors, I choose to take whatever steps I can to protect my privacy.

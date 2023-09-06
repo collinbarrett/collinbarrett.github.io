@@ -20,8 +20,8 @@ tags:
 
 ## Clearing the Cruft
 
-When I develop web applications in [Visual Studio](/tag/visual-studio/), I often need to resolve issues that are
-dependent on the state of the [cache](/tag/cache/) or cookies. By default, debugging in a browser from Visual Studio
+When I develop web applications in Visual Studio, I often need to resolve issues that are
+dependent on the state of the cache or cookies. By default, debugging in a browser from Visual Studio
 opens a new browser window but does not purge any preexisting cache or cookies.
 
 ## Private/Incognito Browsing: Always Fresh
@@ -44,7 +44,7 @@ To configure browsers to debug in this mode:
 
 ## Sample Browser Configurations
 
-### [Chrome](/tag/chrome/)
+### Chrome
 
 <dl>
     <dt>Program:</dt>
@@ -63,7 +63,7 @@ Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-download
     <dd>`-private`</dd>
     <dt>Friendly Name:</dt>
     <dd>`Internet Explorer - InPrivate`</dd>
-</dl>### [Firefox](/tag/firefox/)
+</dl>### Firefox
 
 <dl>
     <dt>Program:</dt>

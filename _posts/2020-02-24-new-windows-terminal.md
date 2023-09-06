@@ -33,10 +33,10 @@ me, this has included:
 - [ansible](https://docs.ansible.com/ansible/2.4/command_line_tools.html)
 - \*nix and Windows file systems
 
-As a [.NET developer](/tag/dotnet/), Windows is my ideal platform due to first-class tooling ([Visual
+As a .NET developer, Windows is my ideal platform due to first-class tooling ([Visual
 Studio](/tag/visual-studio/)). That could be changing; but, for now, Windows makes sense as a primary environment.
 
-Despite using Windows, I began learning CLIs when I first started managing [Ubuntu](/tag/linux/) instances for hosting
+Despite using Windows, I began learning CLIs when I first started managing Ubuntu instances for hosting
 various applications. When trying to navigate around my Windows file system, I often struggle remembering to type `dir`
 instead of `ls` (for listing files), `;` instead of `&&` (for chaining operations), etc.
 
