@@ -81,7 +81,7 @@ Examples:
 
 ## The New Windows Terminal
 
-For the past year or two, I have used [Cmder](https://cmder.net/) with its default ConEmu emulator. It provides a
+For the past year or two, I have used [Cmder](https://cmder.app/) with its default ConEmu emulator. It provides a
 virtual \*nix abstraction on top of the Windows API. It is a solid tool, but I have experienced it to be a bit sluggish
 at times.
 
