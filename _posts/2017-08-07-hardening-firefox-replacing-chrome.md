@@ -60,7 +60,7 @@ To further harden Firefox, I am currently using the following Add-ons:
 networks. [Learn more](/decentraleyes-block-cdn-tracking/).
 - [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) – To run the [Anti-Adblock
 Killer](https://reek.github.io/anti-adblock-killer/) user script.
-- [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) – To prioritize encrypted
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere) – To prioritize encrypted
 connections.
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) – In [Hard
 Mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode). To block advertisements, tracking scripts, and
