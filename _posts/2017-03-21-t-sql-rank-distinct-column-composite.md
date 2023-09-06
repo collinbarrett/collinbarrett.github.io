@@ -6,7 +6,6 @@ excerpt: 'A T-SQL solution using the RANK() function for selecting the most rece
 multiple columns.'
 layout: post-wp-import
 permalink: /t-sql-rank-distinct-column-composite
-redirect_from: /t-sql-rank-distinct-column-composite/
 image: /assets/img/tSqlRank_collinmbarrett.png
 categories:
 - Code

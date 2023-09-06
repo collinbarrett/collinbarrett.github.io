@@ -6,7 +6,6 @@ excerpt: 'A how-to guide to speeding up websites by dynamically caching WordPres
 non-static content like HTML.'
 layout: post-wp-import
 permalink: /wordpress-cloudflare-dynamic-caching
-redirect_from: /wordpress-cloudflare-dynamic-caching/
 image: /assets/img/dynamicallyCachingWordPressOnCloudFlare_collinmbarrett.png
 categories:
 - Code

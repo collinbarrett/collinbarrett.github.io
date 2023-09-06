@@ -2,11 +2,6 @@
 layout: default
 title: Home
 permalink: /
-redirect_from:
-- /start/
-- /start
-- /about/
-- /about
 ---
 
 👋🏻 Howdy! I'm a seasoned full-stack .NET software engineer based in Memphis, TN.

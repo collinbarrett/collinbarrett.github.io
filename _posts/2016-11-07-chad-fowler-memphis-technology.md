@@ -6,7 +6,6 @@ excerpt: 'Chad Fowler delivered the keynote at TechCamp Memphis ''16. He challen
 false limitations in Memphis technology.'
 layout: post-wp-import
 permalink: /chad-fowler-memphis-technology
-redirect_from: /chad-fowler-memphis-technology/
 image: /assets/img/chadFowlerMemphisTechnology_collinmbarrett.jpg
 categories:
 - Code

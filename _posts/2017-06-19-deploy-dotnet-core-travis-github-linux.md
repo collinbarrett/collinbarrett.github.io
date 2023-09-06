@@ -6,7 +6,6 @@ excerpt: 'A high-level demo of how I configured automated builds and deploys of 
 from GitHub to a Linux (Ubuntu) server.'
 layout: post-wp-import
 permalink: /deploy-dotnet-core-travis-github-linux
-redirect_from: /deploy-dotnet-core-travis-github-linux/
 image: /assets/img/dotNetCoreTravisCi_collinmbarrett.jpg
 categories:
 - Code

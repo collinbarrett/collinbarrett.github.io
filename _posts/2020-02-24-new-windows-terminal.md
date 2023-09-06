@@ -6,7 +6,6 @@ excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss m
 and preferred shells.'
 layout: post-wp-import
 permalink: /new-windows-terminal
-redirect_from: /new-windows-terminal/
 image: /assets/img/windowsTerminal_collinmbarrett.png
 categories:
 - Code

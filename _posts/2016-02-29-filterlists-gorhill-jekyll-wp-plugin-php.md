@@ -6,7 +6,6 @@ excerpt: 'FilterLists got a bit of publicity and I began working on a new featur
 plugin development along the way.'
 layout: post-wp-import
 permalink: /filterlists-gorhill-jekyll-wp-plugin-php
-redirect_from: /filterlists-gorhill-jekyll-wp-plugin-php/
 image: /assets/img/filterListsGorhillJekyllWpPluginPhp_collinmbarrett.jpg
 categories:
 - Code

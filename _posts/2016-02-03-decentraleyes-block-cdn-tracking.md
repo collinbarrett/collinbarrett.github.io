@@ -6,7 +6,6 @@ excerpt: 'Decentraleyes is an add-on for Firefox that blocks CDN tracking by int
 libraries and serves them from a local store.'
 layout: post-wp-import
 permalink: /decentraleyes-block-cdn-tracking
-redirect_from: /decentraleyes-block-cdn-tracking/
 image: /assets/img/decentraleyesBlockCdnTracking_collinmbarrett.png
 categories:
 - InfoSec

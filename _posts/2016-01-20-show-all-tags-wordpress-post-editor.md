@@ -6,7 +6,6 @@ excerpt: 'How to show all tags in the WordPress post editor when clicking the "C
 the sidebar.'
 layout: post-wp-import
 permalink: /show-all-tags-wordpress-post-editor
-redirect_from: /show-all-tags-wordpress-post-editor/
 image: /assets/img/showAllTagsWordPressPostEditor_collinmbarrett.jpg
 categories:
 - Code

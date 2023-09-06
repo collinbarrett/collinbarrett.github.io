@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'Two methods for executing an SSIS package installed on a SQL Server instance from a C#/.NET application.'
 layout: post-wp-import
 permalink: /execute-ssis-csharp-dotnet
-redirect_from: /execute-ssis-csharp-dotnet/
 image: /assets/img/ssis_collinmbarrett.jpg
 categories:
 - Code

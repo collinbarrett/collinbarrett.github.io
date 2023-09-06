@@ -6,7 +6,6 @@ excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-a
 in classes, structs, and interfaces.'
 layout: post-wp-import
 permalink: /stylecop-ordering-resharper
-redirect_from: /stylecop-ordering-resharper/
 image: /assets/img/styleCopResharper_collinmbarrett.png
 categories:
 - Code

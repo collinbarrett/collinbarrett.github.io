@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'A quick overview of how I replaced the keyboard in my Dell XPS 13 9370 after it took a bath in hot tea.'
 layout: post-wp-import
 permalink: /dell-xps-13-9370-keyboard-replacement
-redirect_from: /dell-xps-13-9370-keyboard-replacement/
 image: /assets/img/keyboardDellXps9370_collinmbarrett.jpg
 categories:
 - Code

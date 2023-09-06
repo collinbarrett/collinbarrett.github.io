@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'I am excited to join the Financials product development team as a web developer at Shelby Systems today.'
 layout: post-wp-import
 permalink: /joining-shelby-systems
-redirect_from: /joining-shelby-systems/
 image: /assets/img/shelbySystems_collinmbarrett.jpg
 categories:
 - Code

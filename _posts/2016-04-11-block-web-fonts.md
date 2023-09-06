@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'How to configure your browser to block web fonts to speed up your web browsing and protect your privacy.'
 layout: post-wp-import
 permalink: /block-web-fonts
-redirect_from: /block-web-fonts/
 image: /assets/img/blockWebFonts_collinmbarrett.jpg
 categories:
 - InfoSec

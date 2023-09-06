@@ -6,7 +6,6 @@ excerpt: 'Using Firefox instead of Chrome on the desktop, and how I am hardening
 privacy.'
 layout: post-wp-import
 permalink: /hardening-firefox-replacing-chrome
-redirect_from: /hardening-firefox-replacing-chrome/
 image: /assets/img/firefox_collinmbarrett.jpg
 categories:
 - InfoSec

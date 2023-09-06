@@ -6,7 +6,6 @@ excerpt: 'How to edit a previous version of a file in a TFVC local workspace in 
 getting latest on check-out.'
 layout: post-wp-import
 permalink: /editing-previous-version-tfvc
-redirect_from: /editing-previous-version-tfvc/
 image: /assets/img/visualStudio_collinmbarrett.jpg
 categories:
 - Code

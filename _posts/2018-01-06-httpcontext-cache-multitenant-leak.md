@@ -7,7 +7,6 @@ leakage in our hosting environment. Keys must always have enough unique informat
 value.'
 layout: post-wp-import
 permalink: /httpcontext-cache-multitenant-leak
-redirect_from: /httpcontext-cache-multitenant-leak/
 image: /assets/img/cpu_multitenantCacheLeak_collinmbarrett.jpg
 categories:
 - Code

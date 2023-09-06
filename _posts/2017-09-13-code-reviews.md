@@ -6,7 +6,6 @@ excerpt: 'Reflections on the first few weeks of implementing regular code review
 methodology.'
 layout: post-wp-import
 permalink: /code-reviews
-redirect_from: /code-reviews/
 image: /assets/img/legoCoder_collinmbarrett.jpg
 categories:
 - Code

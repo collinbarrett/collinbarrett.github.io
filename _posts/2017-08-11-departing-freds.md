@@ -6,7 +6,6 @@ excerpt: 'Today is my last day as a software developer with Fred''s. I am very t
 opportunities that this role has provided.'
 layout: post-wp-import
 permalink: /departing-freds
-redirect_from: /departing-freds/
 image: /assets/img/fredsInc_collinmbarrett.jpg
 categories:
 - Code

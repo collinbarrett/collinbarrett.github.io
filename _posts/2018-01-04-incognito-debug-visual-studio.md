@@ -7,7 +7,6 @@ This solution allows every debugging session to be free of preexisting cache and
 Internet Explorer, and Opera. Edge support is not yet available.'
 layout: post-wp-import
 permalink: /incognito-debug-visual-studio
-redirect_from: /incognito-debug-visual-studio/
 image: /assets/img/debugVisualStudioIncognito_collinmbarrett.jpg
 categories:
 - Code

@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'A quick and dirty test of HTTP/2 Server Push on WordPress.'
 layout: post-wp-import
 permalink: /http2-server-push-wordpress
-redirect_from: /http2-server-push-wordpress/
 image: /assets/img/http2ServerPush_collinmbarrett.jpg
 categories:
 - Code

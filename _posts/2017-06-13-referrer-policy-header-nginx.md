@@ -5,7 +5,6 @@ author: 'Collin M. Barrett'
 excerpt: 'A brief overview of the Referrer Policy header and how to send it with NGINX.'
 layout: post-wp-import
 permalink: /referrer-policy-header-nginx
-redirect_from: /referrer-policy-header-nginx/
 image: /assets/img/privacyReferrerPolicy_collinmbarrett.jpg
 categories:
 - InfoSec

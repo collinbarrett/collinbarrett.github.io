@@ -6,7 +6,6 @@ excerpt: 'I deeply enjoyed joining 100+ developers and designers to build websit
 Memphis 2020.'
 layout: post-wp-import
 permalink: /givecamp-memphis-2020
-redirect_from: /givecamp-memphis-2020/
 image: /assets/img/giveCampMemphis_collinmbarrett.png
 categories:
 - Code

@@ -6,7 +6,6 @@ excerpt: 'A practical, real-world example of Big-O Notation inspired by Joey Luc
 Wing.'
 layout: post-wp-import
 permalink: /big-o-notation-polling-west-wing
-redirect_from: /big-o-notation-polling-west-wing/
 image: /assets/img/bigONotationPollingWestWing_collinmbarrett.jpg
 categories:
 - Code

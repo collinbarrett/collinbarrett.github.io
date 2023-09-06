@@ -6,7 +6,6 @@ excerpt: 'An example of how to use Visual Studio regex find and replace with a w
 of code.'
 layout: post-wp-import
 permalink: /wildcard-regex-find-replace-visual-studio
-redirect_from: /wildcard-regex-find-replace-visual-studio/
 image: /assets/img/regexFindReplaceGlassesComputer_collinmbarrett.jpg
 categories:
 - Code
