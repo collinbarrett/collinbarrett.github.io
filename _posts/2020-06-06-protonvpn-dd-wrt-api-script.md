@@ -57,7 +57,7 @@ ProtonVPN ([ProtonVPN docs](https://protonvpn.com/support/vpn-router-ddwrt/)).
 
 ## Entware
 
-To parse the JSON results from the ProtonVPN API, I wanted to use the popular [`jq`](https://stedolan.github.io/jq/")
+To parse the JSON results from the ProtonVPN API, I wanted to use the popular [`jq`](https://jqlang.github.io/jq/)
 command-line tool. DD-WRT does not ship with this tool out of the box,
 however, so I first had to install the Entware package manager.
 
