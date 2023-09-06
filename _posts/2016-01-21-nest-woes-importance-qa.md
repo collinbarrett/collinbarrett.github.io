@@ -33,22 +33,22 @@ nailing it (i.e., Buffer). Find below a timeline of our Nest experience.
 
 ## The Bugs
 
-- Mar 2, 2014 – Ordered Nest Thermostat v2 and Nest Protect
-- Mar 5, 2014 – Replacement Nest Thermostat Ordered – I cannot remember the exact details, but the original unit shipped
+- Mar 2, 2014 - Ordered Nest Thermostat v2 and Nest Protect
+- Mar 5, 2014 - Replacement Nest Thermostat Ordered - I cannot remember the exact details, but the original unit shipped
 to us was faulty in some way. I think it might have had something to do with the mounting apparatus. The issue is worth
 noting here, but I recognize that some small amount of manufacturing error is possible for any product.
-- Aug 14, 2015 – Protect False Positive – I was in Northern Michigan at a family reunion while my wife was home in
+- Aug 14, 2015 - Protect False Positive - I was in Northern Michigan at a family reunion while my wife was home in
 Memphis on this Friday night. She called me saying the Protect was alarming for smoke detection; however, she did not
 notice any form of smoke or fire hazard in the house. I do not think she had even been baking that night (which is
 [rather unusual](https://jennythebaker.com/ "Jenny the Baker")). After I waited on hold for well over an hour with Nest
 support, and Jenny had the fire department come to check it out, Nest chalked it up to a hardware defect and sent a
 replacement. False positives are better than the opposite; but, for the price of the unit, I would not expect to see a
 failure after only a year of use on a device as important as smoke and carbon monoxide detector.
-- Jan 3rd, 2016 – Thermostat Early On Bug – The schedule was set to 63°F overnight during sleeping hours, 69°F at 7 am
+- Jan 3rd, 2016 - Thermostat Early On Bug - The schedule was set to 63°F overnight during sleeping hours, 69°F at 7 am
 just before we would wake up, and then to drop back down to 63°F at 9:30 am during the church service. I woke up at 7:40
 am to find the Nest set to 63°F, reading a current temp of 65°F, and indicating “Pre-Heating” as if it was preparing for
 the 63°F at 9:30 am. However, it should remain set to 69°F until 9:30 am.
-- Jan 5th, 2016 – Furnace and A/C Bug – This may or may not have been a bug with the Nest. However, we had noticed since
+- Jan 5th, 2016 - Furnace and A/C Bug - This may or may not have been a bug with the Nest. However, we had noticed since
 about the middle of December that the House took an unusual amount of time to heat up. Some days the furnace could not
 even get the interior temperature up to the reasonable value of 69°F. We finally reported it to our property manager,
 and the HVAC technician came out a few days later to discover that the A/C unit was running every time the furnace was
@@ -57,14 +57,14 @@ the Nest Thermostat looked correct, but he suggested maybe a wire got crossed ou
 call. We have lived in this house for three winters now, and this is the first time we had experienced this issue. We
 will find out when we go to turn the A/C main back on in the Spring, but it seems like this could be a weird Nest flaw
 as well.
-- Jan 18th, 2016 – Thermostat Battery Drain Bug \[Report\] – [The New York Times
+- Jan 18th, 2016 - Thermostat Battery Drain Bug \[Report\] - [The New York Times
 reported<sup>1</sup>](https://www.nytimes.com/2016/01/14/fashion/nest-thermostat-glitch-battery-dies-software-freeze.html
 "Nest Thermostat Glitch Leaves Users in the Cold - The New York Times") that Nest users saw the battery on the devices
 completely drained. The unit was powering off leaving their owners to freeze. All of the major media outlets were
 reporting on the issue as it affected a rather large number of users. There should be failsafe after failsafe when it
 comes to the power supply of a critical device like this. Consumers expect their thermostat always to be powered on and
 functioning.
-- Jan 19th, 2016 – Thermostat Early On Bug – This seems like it could be a recurrence of the Jan. 3rd bug, but we had
+- Jan 19th, 2016 - Thermostat Early On Bug - This seems like it could be a recurrence of the Jan. 3rd bug, but we had
 not seen the bug at all in between these dates. The schedule was set to 64°F overnight during sleeping hours, 69°F at 5
 am just before we would wake up, and then to drop back down to 59°F at 6:30 am during the work day when we are away. On
 this morning, when I rolled out of bed at 5:45 am, the thermostat was set to 59°F when it should have been 69°F.

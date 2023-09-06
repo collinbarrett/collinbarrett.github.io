@@ -87,7 +87,7 @@ to filter out requests for web fonts. For this guide, it is assumed that you hav
 your device.
 
 - Supported Browser: [Firefox](https://www.mozilla.org/en-US/firefox/) or [Chrome](https://www.google.com/chrome/)
-- uBlock Origin – [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/ "uBlock Origin for Firefox") |
+- uBlock Origin - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/ "uBlock Origin for Firefox") |
 [Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en "uBlock Origin
 for Chrome") | [GitHub](https://github.com/gorhill/uBlock "uBlock Origin on GitHub")
 
@@ -168,7 +168,7 @@ starting here if you consider yourself a beginner.
 If you already have uBlock Origin installed on the browser that you are currently reading this article in, just click
 the “Add” link below to subscribe automatically to this list.
 
-Fanboy's Anti Third-Party Fonts – [View](https://fanboy.co.nz/fanboy-antifonts.txt "View Fanboy's Anti Third-Party
+Fanboy's Anti Third-Party Fonts - [View](https://fanboy.co.nz/fanboy-antifonts.txt "View Fanboy's Anti Third-Party
 Fonts") | [Add](abp:subscribe?location=https://fanboy.co.nz/fanboy-antifonts.txt&title=Fanboy%20Third-Party%20Fonts "Add
 Fanboy's Anti Third-Party Fonts to uBlock Origin or Adblock Plus")
 

@@ -55,13 +55,13 @@ adjust them as needed. That is the path I am following by updating my own
 
 To further harden Firefox, I am currently using the following Add-ons:
 
-- [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) – To block canvas fingerprinting.
-- [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) – To block tracking by content delivery
+- [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) - To block canvas fingerprinting.
+- [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) - To block tracking by content delivery
 networks. [Learn more](/decentraleyes-block-cdn-tracking/).
-- [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) – To run the [Anti-Adblock
+- [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) - To run the [Anti-Adblock
 Killer](https://reek.github.io/anti-adblock-killer/) user script.
-- [HTTPS Everywhere](https://www.eff.org/https-everywhere) – To prioritize encrypted
+- [HTTPS Everywhere](https://www.eff.org/https-everywhere) - To prioritize encrypted
 connections.
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) – In [Hard
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) - In [Hard
 Mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode). To block advertisements, tracking scripts, and
 undesirable/unneeded content.

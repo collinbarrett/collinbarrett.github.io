@@ -76,7 +76,7 @@ pushed, resources are received by the full round-trip request/response lifecycle
 <figure aria-describedby="caption-attachment-4222" class="wp-caption aligncenter" id="attachment_4222"
     style="width: 249px">[![No HTTP/2 Server Push
     Waterfall](/assets/img/noServerPush_collinmbarrett-249x300.jpg)](/assets/img/noServerPush_collinmbarrett.jpg)
-    <figcaption class="wp-caption-text" id="caption-attachment-4222">No HTTP/2 Server Push Waterfall –
+    <figcaption class="wp-caption-text" id="caption-attachment-4222">No HTTP/2 Server Push Waterfall -
         [WebPageTest](https://www.webpagetest.org/result/170615_1Q_2JV/3/details/#waterfall_view_step1)</figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ average vs. more like 25ms when not pushed. This disparity would likely be even 
     style="width: 249px">[![HTTP/2 Server Push Scripts & Stylesheets
     Waterfall](/assets/img/scriptsStylesheetsServerPush_collinmbarrett-249x300.jpg)](/assets/img/scriptsStylesheetsServerPush_collinmbarrett.jpg)
     <figcaption class="wp-caption-text" id="caption-attachment-4223">HTTP/2 Server Push Scripts &amp; Stylesheets
-        Waterfall – [WebPageTest](https://www.webpagetest.org/result/170615_2A_2H5/7/details/#waterfall_view_step1)
+        Waterfall - [WebPageTest](https://www.webpagetest.org/result/170615_2A_2H5/7/details/#waterfall_view_step1)
     </figcaption>
 </figure>
 
@@ -103,7 +103,7 @@ network congestion).
     style="width: 269px">[![HTTP/2 Server Push Scripts, Stylesheets, Fonts, & Logo
     Waterfall](/assets/img/allServerPush_collinmbarrett-269x300.jpg)](/assets/img/allServerPush_collinmbarrett.jpg)
     <figcaption class="wp-caption-text" id="caption-attachment-4224">HTTP/2 Server Push Scripts, Stylesheets, Fonts,
-        &amp; Logo Waterfall –
+        &amp; Logo Waterfall -
         [WebPageTest](https://www.webpagetest.org/result/170615_8F_2CP/9/details/#waterfall_view_step1)</figcaption>
 </figure>
 

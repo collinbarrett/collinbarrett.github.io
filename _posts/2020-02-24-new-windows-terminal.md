@@ -101,10 +101,10 @@ Microsoft is [working on a settings UI](https://twitter.com/cinnamon_msft/status
 
 ### My Current Shells
 
-- **MinGW-w64** – Git for Windows automatically installs MinGW. It provides that \*nix-ish abstraction on Windows that I enjoy so much. I use this shell regularly for git and other development CLIs.
-- **Ubuntu-18.04** – The current release of Windows 10 has version 1 of the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq). I currently use this Ubuntu instance exclusively as an [Ansible control node for updating my web servers](/resume/projects/#cbhost-ansible). I would like to shift to using it more frequently, and I am looking forward to WSL 2, specifically for [its improvements to Docker Desktop](https://docs.docker.com/docker-for-windows/wsl-tech-preview/).
-- **Powershell** – I do not know Powershell. I have to touch it once in a blue moon, and when I do, it is mostly copy/paste from StackOverflow.
-- **cmd** – I rarely use cmd anymore. I prefer the \*nix-ish syntax for navigating around Windows. But, it is nice to keep handy for the sentimental value.
+- **MinGW-w64** - Git for Windows automatically installs MinGW. It provides that \*nix-ish abstraction on Windows that I enjoy so much. I use this shell regularly for git and other development CLIs.
+- **Ubuntu-18.04** - The current release of Windows 10 has version 1 of the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq). I currently use this Ubuntu instance exclusively as an [Ansible control node for updating my web servers](/resume/projects/#cbhost-ansible). I would like to shift to using it more frequently, and I am looking forward to WSL 2, specifically for [its improvements to Docker Desktop](https://docs.docker.com/docker-for-windows/wsl-tech-preview/).
+- **Powershell** - I do not know Powershell. I have to touch it once in a blue moon, and when I do, it is mostly copy/paste from StackOverflow.
+- **cmd** - I rarely use cmd anymore. I prefer the \*nix-ish syntax for navigating around Windows. But, it is nice to keep handy for the sentimental value.
 
 ## Next Steps
 

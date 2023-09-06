@@ -162,9 +162,9 @@ organizations at the time this article was published.*
 
 ## Thanks,
 
-- Nonprofits – For taking action to solve some tough problems in our city
-- Organizers – For the incredible number of hours volunteered year-round to make this thing happen
-- Volunteers – For spending a weekend enriching this city
-- Sponsors – For funding tools, space, talent, food, and swag
+- Nonprofits - For taking action to solve some tough problems in our city
+- Organizers - For the incredible number of hours volunteered year-round to make this thing happen
+- Volunteers - For spending a weekend enriching this city
+- Sponsors - For funding tools, space, talent, food, and swag
 
 I am sincerely looking forward to 2021.
