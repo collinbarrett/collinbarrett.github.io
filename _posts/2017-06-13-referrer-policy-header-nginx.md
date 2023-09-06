@@ -67,4 +67,4 @@ We can verify that NGINX is sending the header by inspecting the resource in Chr
 
 ## Blocking as a Visitor
 
-All this got me to thinking what I could do, if anything, as a user to block the referrer header from being sent. Web developers can utilize one or both of the two methods above, but what if I want the sites I visit to not know from where I came independent of their decision to implement a Referrer Policy? It seems like there may be some plugin-based solutions like [this one](https://chrome.google.com/webstore/detail/noref/dkpkjedlegmelkogpgamcaemgbanohip), but that is an area I certainly want to investigate further.
+All this got me to thinking what I could do, if anything, as a user to block the referrer header from being sent. Web developers can utilize one or both of the two methods above, but what if I want the sites I visit to not know from where I came independent of their decision to implement a Referrer Policy? It seems like there may be some plugin-based solutions, but that is an area I certainly want to investigate further.
