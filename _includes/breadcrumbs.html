@@ -1,15 +1,25 @@
 <!--https://jekyllcodex.org/without-plugin/breadcrumbs/-->
 
-<div id="breadcrumbs">
+<nav id="breadcrumbs" aria-label="Breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="/">
+      <span itemprop="name">Home</span>
+    </a>
+    <meta itemprop="position" content="1" />
+  </span>
   {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-  <a href="/">Home</a>
   {% for crumb in crumbs offset: 1 %}
+  /
   {% if forloop.last %}
-  / {{ page.title }}
+  <span itemprop="name">{{ page.title }}</span>
   {% else %}
-  / <a
-    href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{
-    crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+  <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item"
+      href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">
+      <span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span>
+    </a>
+    <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
+  </span>
   {% endif %}
   {% endfor %}
-</div>
+</nav>
