@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: page
 title: Blog
 permalink: /blog
 ---
-
-# Blog
 
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 {% for post in sorted_posts %}
