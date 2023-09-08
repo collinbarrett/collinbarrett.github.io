@@ -1,7 +1,6 @@
 ---
 title: 'Optimizing ProtonVPN Server Selection by DD-WRT with DNS'
 date: '2020-02-27T06:55:12-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'I created a custom URL to connect to ProtonVPN from DD-WRT that selects from a pool of premium servers in the
 nearest city.'
 layout: post-wp-import

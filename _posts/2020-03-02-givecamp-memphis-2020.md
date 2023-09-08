@@ -1,7 +1,6 @@
 ---
 title: 'GiveCamp Memphis 2020'
 date: '2020-03-02T07:30:00-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'I deeply enjoyed joining 100+ developers and designers to build websites for 20 Memphis nonprofits at GiveCamp
 Memphis 2020.'
 layout: post-wp-import

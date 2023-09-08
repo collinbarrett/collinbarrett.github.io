@@ -1,7 +1,6 @@
 ---
 title: 'Executing an SSIS Package from .NET'
 date: '2017-06-28T06:41:32-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'Two methods for executing an SSIS package installed on a SQL Server instance from a C#/.NET application.'
 layout: post-wp-import
 permalink: /execute-ssis-csharp-dotnet

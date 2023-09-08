@@ -1,7 +1,6 @@
 ---
 title: 'Nest Woes and the Importance of QA'
 date: '2016-01-21T07:43:18-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'An outline of our Nest Thermostat and Protect over the past six months explains the need for QA at IoT
 companies to be top-notch.'
 layout: post-wp-import

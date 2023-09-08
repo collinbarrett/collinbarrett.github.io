@@ -1,7 +1,6 @@
 ---
 title: 'UNPIVOTing Data with T-SQL'
 date: '2017-06-12T12:26:36-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'An example of how to use the T-SQL UNPIVOT operator to transform columns to rows.'
 layout: post-wp-import
 permalink: /t-sql-unpivoting-data

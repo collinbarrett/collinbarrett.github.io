@@ -1,7 +1,6 @@
 ---
 title: 'FilterLists: Directory for Blocking Ads and Trackers'
 date: '2016-02-17T04:00:52-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'I built FilterLists this weekend, the community-driven, independent, and comprehensive directory of all public
 filter lists for advertisements and trackers.'
 layout: post-wp-import

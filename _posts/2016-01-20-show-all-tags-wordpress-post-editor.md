@@ -1,7 +1,6 @@
 ---
 title: 'Showing All Tags in the WordPress Post Editor'
 date: '2016-01-20T08:52:09-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'How to show all tags in the WordPress post editor when clicking the "Choose from the most used tags" link in
 the sidebar.'
 layout: post-wp-import

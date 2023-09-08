@@ -1,7 +1,6 @@
 ---
 title: 'Deploying .NET Core via Travis CI from GitHub to Linux'
 date: '2017-06-19T05:30:31-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'A high-level demo of how I configured automated builds and deploys of a .NET Core application using Travis CI
 from GitHub to a Linux (Ubuntu) server.'
 layout: post-wp-import

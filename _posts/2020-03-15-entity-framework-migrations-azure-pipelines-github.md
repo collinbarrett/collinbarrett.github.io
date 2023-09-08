@@ -1,7 +1,6 @@
 ---
 title: 'Data CI: Entity Framework Core Migrations from Azure Pipelines to GitHub'
 date: '2020-03-15T16:27:00-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'I created an Azure Pipeline that automatically performs an Entity Framework Core migration on a GitHub pull
 request of modified JSON data files.'
 layout: post-wp-import

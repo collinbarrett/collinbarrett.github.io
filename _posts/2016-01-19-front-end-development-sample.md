@@ -1,7 +1,6 @@
 ---
 title: 'Front-End Development Sample'
 date: '2016-01-19T09:36:48-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'A front-end development sample I created for an interview. I was provided with a layered PSD to develop a
 render using HTML and CSS.'
 layout: post-wp-import

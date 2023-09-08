@@ -1,7 +1,6 @@
 ---
 title: 'Optimizing Self-Hosted Web Fonts'
 date: '2016-02-23T04:00:16-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'By implementing .woff2 and slimming down my icon font, I reduced the weight of my site''s fonts by about
 50KB.'
 layout: post-wp-import

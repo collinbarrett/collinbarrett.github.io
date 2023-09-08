@@ -1,7 +1,6 @@
 ---
 title: 'HttpContext.Cache Multi-tenant Leak'
 date: '2018-01-06T04:00:17-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'Our team misunderstood the scope of ASP.NET''s HttpContext.Cache. This mishap led to some cross-instance data
 leakage in our hosting environment. Keys must always have enough unique information to identify their respective cache
 value.'

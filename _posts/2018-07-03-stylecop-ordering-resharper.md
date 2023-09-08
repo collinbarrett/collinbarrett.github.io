@@ -1,7 +1,6 @@
 ---
 title: 'Applying StyleCop Ordering with ReSharper File Layout'
 date: '2018-07-03T13:39:15-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'A guide and configuration for using ReSharper''s File Layout to auto-apply StyleCop ordering rules to elements
 in classes, structs, and interfaces.'
 layout: post-wp-import

@@ -8,9 +8,11 @@ sass:
 logo: /assets/img/logo_collinmbarrett.png
 title: Collin M. Barrett
 tagline: Senior Software Engineer | Memphis, TN
-description: Collin Barrett is a senior software engineer in Memphis, TN specializing in tech like .NET, Azure, Entity Framework, Angular, and React.
+description: Collin M. Barrett is a senior software engineer in Memphis, TN specializing in tech like .NET, Azure, Entity Framework, Angular, and React.
 author:
   twitter: collinbarrett
+  name: Collin M. Barrett
+  url: https://collinmbarrett.com
 feed:
   posts_limit: 9999
   categories:
@@ -21,7 +23,7 @@ twitter:
   username: collinbarrett
   card: summary
 social:
-  name: Collin Barrett
+  name: Collin M. Barrett
   links:
     - https://www.linkedin.com/in/collinbarrett
     - https://github.com/collinbarrett

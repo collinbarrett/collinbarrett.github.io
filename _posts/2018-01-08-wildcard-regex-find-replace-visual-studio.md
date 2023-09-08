@@ -1,7 +1,6 @@
 ---
 title: 'Wildcard Regex Find and Replace in Visual Studio'
 date: '2018-01-08T04:00:07-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'An example of how to use Visual Studio regex find and replace with a wildcard to quickly refactor many lines
 of code.'
 layout: post-wp-import

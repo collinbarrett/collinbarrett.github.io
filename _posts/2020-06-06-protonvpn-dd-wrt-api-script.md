@@ -1,7 +1,6 @@
 ---
 title: 'DD-WRT: Connecting to the Optimal ProtonVPN Server with OpenVPN'
 date: '2020-06-06T16:18:48-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'I wrote a shell script triggered by cron on my DD-WRT router to automatically connect to the optimal ProtonVPN
 server via the OpenVPN Client'
 layout: post-wp-import

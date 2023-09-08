@@ -1,7 +1,6 @@
 ---
 title: 'DIY VPS Build Guide for Fast and Cheap WordPress Hosting'
 date: '2016-01-23T10:25:00-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'A verbose build guide for a modern, high-performance production WordPress VPS. Stack: Ubuntu, NGINX, MariaDB,
 HHVM, Redis, Let''s Encrypt.'
 layout: post-wp-import

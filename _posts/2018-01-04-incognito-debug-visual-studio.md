@@ -1,7 +1,6 @@
 ---
 title: 'Incognito Debugging With Any Browser in Visual Studio'
 date: '2018-01-04T04:00:49-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'How to configure Visual Studio to debug a web application in any Windows browser''s incognito or private mode.
 This solution allows every debugging session to be free of preexisting cache and cookies. Supported in Chrome, Firefox,
 Internet Explorer, and Opera. Edge support is not yet available.'

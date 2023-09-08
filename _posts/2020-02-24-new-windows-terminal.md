@@ -1,7 +1,6 @@
 ---
 title: 'The New Windows Terminal &#8211; Exploring CLIs, Shells, &#038; Terminals'
 date: '2020-02-24T07:31:28-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'I have fallen in love with the New Windows Terminal. Here, I discuss my current CLIs, terminal configuration,
 and preferred shells.'
 layout: post-wp-import

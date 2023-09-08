@@ -1,7 +1,6 @@
 ---
 title: 'Decentraleyes: Block CDN Tracking'
 date: '2016-02-03T04:00:19-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'Decentraleyes is an add-on for Firefox that blocks CDN tracking by intercepting requests to common JavaScript
 libraries and serves them from a local store.'
 layout: post-wp-import

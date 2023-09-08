@@ -1,7 +1,6 @@
 ---
 title: 'ReSharper vs. CodeRush: A Quick &#8216;n Dirty, Unfair Comparison'
 date: '2018-03-09T03:00:01-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'My product team is evaluating purchasing JetBrains ReSharper or DevExpress CodeRush to assist with improving
 code quality in our .NET application portfolio. I jotted down some unfair observations of the two products after using
 ReSharper for a couple of years and CodeRush for a couple of days.'

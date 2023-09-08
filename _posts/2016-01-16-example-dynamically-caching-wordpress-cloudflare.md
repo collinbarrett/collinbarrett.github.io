@@ -1,7 +1,6 @@
 ---
 title: 'Example of Dynamically Caching WordPress on Cloudflare'
 date: '2016-01-16T10:45:41-06:00'
-author: 'Collin M. Barrett'
 excerpt: 'The performance improvements speak for themselves in this example of dynamically caching WordPress on
 CloudFlare from a traditional shared hosting server.'
 layout: post-wp-import

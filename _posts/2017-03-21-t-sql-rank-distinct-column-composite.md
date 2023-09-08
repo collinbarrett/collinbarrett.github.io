@@ -1,7 +1,6 @@
 ---
 title: 'SELECT Most Recent for Each Distinct Column Composite with T-SQL RANK()'
 date: '2017-03-21T20:35:22-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'A T-SQL solution using the RANK() function for selecting the most recent record for each distinct composite of
 multiple columns.'
 layout: post-wp-import

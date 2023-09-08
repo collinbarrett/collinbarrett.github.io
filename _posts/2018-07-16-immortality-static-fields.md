@@ -1,7 +1,6 @@
 ---
 title: 'The Immortality of C# Static Fields'
 date: '2018-07-16T05:00:52-05:00'
-author: 'Collin M. Barrett'
 excerpt: 'A tale of improperly using a static field, preventing a colleague from doing the same, and a primer on why
 static fields should be avoided.'
 layout: post-wp-import
