@@ -33,3 +33,5 @@ social:
     - https://twitter.com/collinbarrett
     - https://www.facebook.com/collinmbarrett
     - https://www.instagram.com/collinmbarrett
+# manually increment when css is modified to bust cache
+css_version: 1
