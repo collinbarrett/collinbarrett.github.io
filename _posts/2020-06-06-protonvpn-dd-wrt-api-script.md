@@ -22,6 +22,12 @@ tags:
 - Wi-Fi
 ---
 
+**Update 9.17.2023:**
+
+Added [Shell Command](#shell-command) for running on-demand.
+
+- - - - - -
+
 **Update 6.27.2022:**
 
 Added most recent script to GitHub rather than updating this post. ProtonVPN now supports customized OpenVPN username
@@ -104,6 +110,16 @@ from the list.
 echo "$LOGICALS" | jq '.LogicalServers | map(select(.Status == 1 and .Tier == 2 and .Features == 8 and (.City |
 (contains("Atlanta") or contains("Dallas") or contains("Chicago"))))) | [sort_by(.Score, .Load)[]][0] |
 .Servers[0].EntryIP'
+```
+
+## Shell Command
+
+Here's an alternate simple variant that can be manually run on demand to get the current optimal server name and IP.
+
+```bash
+curl -sk -H "Cache-Control: no-cache" -H "Accept: application/json" https://api.protonmail.ch/vpn/logicals \
+  | jq -r '[.LogicalServers | sort_by(.Score, .Load)[0] | {Name: .Name, EntryIP: .Servers[0].EntryIP}] | "\(.[0].Name) - \(.[0].EntryIP)"' \
+  | xargs echo
 ```
 
 ## Shell Script
