@@ -118,7 +118,15 @@ Here's an alternate simple variant that can be manually run on demand to get the
 
 ```bash
 curl -sk -H "Cache-Control: no-cache" -H "Accept: application/json" https://api.protonmail.ch/vpn/logicals \
-  | jq -r '[.LogicalServers | sort_by(.Score, .Load)[0] | {Name: .Name, EntryIP: .Servers[0].EntryIP}] | "\(.[0].Name) - \(.[0].EntryIP)"' \
+  | jq -r '
+    [
+      .LogicalServers
+      | map(select(.City != null and (.City | contains("Dallas"))))
+      | sort_by(.Score, .Load)[0]
+      | {Name: .Name, EntryIP: .Servers[0].EntryIP}
+    ]
+    | "\(.[0].Name) - \(.[0].EntryIP)"
+  ' \
   | xargs echo
 ```
 
