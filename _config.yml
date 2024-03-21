@@ -1,6 +1,6 @@
 plugins:
-- jekyll-feed
-- jekyll-sitemap
+  - jekyll-feed
+  - jekyll-sitemap
 sass:
   sass_dir: assets/css/_sass
 logo: /assets/img/logo_collinmbarrett.png
@@ -14,8 +14,8 @@ author:
 feed:
   posts_limit: 9999
   categories:
-  - Code
-  - InfoSec
+    - Code
+    - InfoSec
   tags: true
 twitter:
   username: collinbarrett
@@ -28,8 +28,6 @@ social:
     - https://stackoverflow.com/users/2343739/collin-barrett
     - https://www.goodreads.com/collinbarrett
     - https://www.meetup.com/members/186166841/
-    - https://twitter.com/collinbarrett
     - https://www.facebook.com/collinmbarrett
-    - https://www.instagram.com/collinmbarrett
 # manually increment when css is modified to bust cache
 css_version: 5
