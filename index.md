@@ -10,7 +10,7 @@ permalink: /
 
 With fifteen years of experience, I've wielded code to tackle challenges across various industries—banking, HR, manufacturing, accounting, retail, and defense. Currently, I'm on a product team at [Arcoro](https://arcoro.com/) that delivers HR software to thousands of construction companies. My tech stack includes, but is not limited to, C#, ASP.NET Core, Entity Framework Core, Azure, Angular, and React.
 
-In 2015, I founded [FilterLists](https://filterlists.com/), born out of my passion for internet privacy and as a sandbox to learn, practice, and showcase new skills. I'm honored to be on the Steering Committee for [GiveCamp Memphis](https://givecampmemphis.org/) and the board of [Memphis Made](https://wearememphismade.com/) (_not_ [the brewery](https://www.memphismadebrewing.com/)) as the Tech Chair.
+In 2015, I founded [FilterLists](https://filterlists.com/), born out of my passion for internet privacy and as a sandbox to learn, practice, and showcase new skills. I'm also honored to be on the Steering Committee for [GiveCamp Memphis](https://givecampmemphis.org/), helping to serve Memphis nonprofits and develop community in a unique annual hackathon.
 
 I'm an avid learner, continuously sharpening my skills through a steady diet of [books](https://www.goodreads.com/collinbarrett), blogs, podcasts, and [meetups](https://www.meetup.com/members/186166841/). I hold a B.S. in Computer Engineering from [Cedarville University](https://www.cedarville.edu/academic-schools-and-departments/engineering-and-computer-science) and a [Microsoft Azure Developer Associate](https://learn.microsoft.com/en-us/users/collinbarrett/credentials/32c03a8f29583bce) certification.
 
