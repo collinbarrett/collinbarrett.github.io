@@ -1,6 +1,6 @@
 # Maintenance Guide for collinbarrett.github.io
 
-## Current Status (December 2025)
+## Current Status
 
 ### Dependencies Overview
 This site uses GitHub Pages' managed Jekyll environment, which means GitHub automatically handles most maintenance. You're currently using:
@@ -336,5 +336,4 @@ The Jekyll 3.x dependency managed by GitHub is perfectly fine for your use case.
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: December 6, 2025  
-**Next Review**: March 6, 2026
+**Review Frequency**: Quarterly (every 3 months)

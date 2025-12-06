@@ -212,5 +212,4 @@ https://github.com/collinbarrett/collinbarrett.github.io/issues
 
 ---
 
-**Last Updated**: December 6, 2025  
-**Next Review**: March 6, 2026
+**Review Frequency**: Annually or when DNS issues occur

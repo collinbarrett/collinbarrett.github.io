@@ -1,5 +1,4 @@
 # Website Status Report
-**Generated**: December 6, 2025  
 **Domain**: collinmbarrett.com  
 **GitHub Pages**: collinbarrett.github.io
 
@@ -8,8 +7,7 @@
 The GitHub Pages website is properly configured and deploying successfully. If you're experiencing issues accessing the site, please see the DNS Configuration section below.
 
 ## Recent Deployment
-- **Last Successful Deploy**: August 3, 2025
-- **Workflow Status**: ✅ Passing
+- **Workflow Status**: ✅ Passing (check [Actions](https://github.com/collinbarrett/collinbarrett.github.io/actions) for latest)
 - **CNAME Configuration**: ✅ Correct
 
 ## Common Issues & Solutions
@@ -106,15 +104,8 @@ To prevent future issues, consider setting up:
 
 ## Maintenance Log
 
-### December 2025
-- ✅ Investigated reported downtime
-- ✅ Verified site infrastructure
-- ✅ Documented DNS requirements
-- ✅ Added maintenance recommendations
-
-### August 2025
-- ✅ Updated social.html
-- ✅ Adjusted bio content
+### Recent Updates
+See commit history for detailed maintenance log: https://github.com/collinbarrett/collinbarrett.github.io/commits/main
 
 ## Quick Reference
 

@@ -225,6 +225,5 @@ Your site is well-built and follows best practices. The only concern is ensuring
 
 ---
 
-**Last Health Check**: December 6, 2025  
-**Next Recommended Check**: March 6, 2026  
-**Status**: ✅ Healthy (pending DNS verification)
+**Status**: ✅ Healthy (pending DNS verification)  
+**Next Recommended Check**: Quarterly (every 3 months)
