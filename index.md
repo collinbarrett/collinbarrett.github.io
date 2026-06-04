@@ -18,7 +18,7 @@ I'm an avid learner, continuously sharpening my skills through a steady diet of 
 
 I was raised in Kalamazoo, MI, and moved to TN in 2012. Memphis has been home ever since.
 
-When I'm not working or traveling, I spend time enjoying my [Christ City Church](https://christcity.org/) community, walking my black lab Bailey around our Binghampton neighborhood, [exploring local eateries](https://www.google.com/maps/contrib/113780082327097075301/reviews), re-watching episodes of "The Office," and savoring quality coffee.
+When I'm not working or traveling, I spend time enjoying my [Christ City Church](https://christcity.org/) community, walking my black lab Bailey around my Binghampton neighborhood, [exploring local eateries](https://www.google.com/maps/contrib/113780082327097075301/reviews), re-watching episodes of "The Office," and savoring quality coffee.
 
 ## 📝 Blog
 
