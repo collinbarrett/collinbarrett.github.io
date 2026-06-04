@@ -16,9 +16,9 @@ I'm an avid learner, continuously sharpening my skills through a steady diet of 
 
 ## 🏡 Life
 
-I was raised in Kalamazoo, MI, and met my wife during our undergraduate studies in OH. We moved to TN in 2012 so Jenny could complete her [Memphis Teacher Residency](https://memphistr.org/). She's now a middle school ELA teacher and girls' soccer coach at [The Collegiate School of Memphis](https://www.collegiatememphis.org/) and is also the mastermind behind [jennythebaker.com](https://jennythebaker.com/).
+I was raised in Kalamazoo, MI, and moved to TN in 2012. Memphis has been home ever since.
 
-When we're not working or traveling, our time is spent enjoying our [Christ City Church](https://christcity.org/) community, walking our black lab Bailey around our Binghampton neighborhood, [exploring local eateries](https://www.google.com/maps/contrib/113780082327097075301/reviews), re-watching episodes of "The Office," and savoring quality coffee.
+When I'm not working or traveling, I spend time enjoying my [Christ City Church](https://christcity.org/) community, walking my black lab Bailey around our Binghampton neighborhood, [exploring local eateries](https://www.google.com/maps/contrib/113780082327097075301/reviews), re-watching episodes of "The Office," and savoring quality coffee.
 
 ## 📝 Blog
 
